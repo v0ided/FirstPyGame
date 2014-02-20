@@ -19,6 +19,7 @@ class BaseObject(pygame.sprite.Sprite):
         y = var_dict.get('y', 'no')
         w = var_dict.get('w', 'no')
         h = var_dict.get('h', 'no')
+        #Not None because 0 = False
         if x != 'no' and y != 'no' and w != 'no' and h != 'no':
             self.rect = pygame.Rect(x, y, w, h)
         else:
@@ -91,14 +92,20 @@ def _check_power_crane(player, powerbox):
     return True
 
 
+##CRANE TOGGLE POWER ACTION##
 def do_power_crane(player, powerbox, level):
-    level.get_group(powerbox.group).toggle_power()
-    print('Powering Crane')
+    for obj in level.objects:
+        if obj.type == CRANE_OBJECT:
+            obj.toggle_power()
+            print('Powering Crane')
+            return
+    print('Could not find crane.')
+
 
 
 ##OBJECT STATE CHANGE CONDITIONS##
-def _check_state_change(player, object):
-    return True
+#def _check_state_change(player, object):
+    #return True
 
 
 #def do_state_change(player, object, level):

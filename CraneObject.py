@@ -1,6 +1,7 @@
 from GroupObject import *
 
 
+#todo: Convert string to object for arm and magnet
 class CraneObject(GroupObject):
     def __init__(self, var_dict):
         GroupObject.__init__(self, var_dict)
@@ -14,8 +15,8 @@ class CraneObject(GroupObject):
         #Contains coordinates for each destination
         self.dests = []
         self.cur_dest = 0
-        self.arm = None
-        self.magnet = None
+        self.arm = var_dict['arm']
+        self.magnet = var_dict['magnet']
         self.moving = False
 
         #These variables' values will be set in __setup_vars(var_dict)
