@@ -12,10 +12,7 @@ class Behavior():
     #Must Return True on Successfull use, False otherwise
     def behave(self, obj1, obj2, level):
         if self._check_conditions(obj1, obj2):
-            print("base behaving")
             self.action(obj1, obj2, level)
             return True
         else:
             return False
-
-

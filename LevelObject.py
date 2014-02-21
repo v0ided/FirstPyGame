@@ -31,16 +31,6 @@ class LevelObject(BaseObject):
         self.obey_gravity = to_bool(var_dict['gravity'])
         self.visible = True
 
-        #Load Behaviors from dictionary
-        current_b = 1
-        b_id = 'behavior' + str(current_b)
-        str_behaviors = []
-        while b_id in var_dict:
-            str_behaviors.append(var_dict[b_id])
-            current_b += 1
-            b_id = 'behavior' + str(current_b)
-        self.set_behaviors(str_behaviors)
-
     def draw(self, screen, translated):
         self.idle_anim.blit(screen, translated)
 

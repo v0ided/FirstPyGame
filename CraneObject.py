@@ -1,26 +1,32 @@
 from GroupObject import *
 
 
-#todo: Convert string to object for arm and magnet
+#todo: Change graphic/name for magnet to claw :)
 class CraneObject(GroupObject):
     def __init__(self, var_dict):
         GroupObject.__init__(self, var_dict)
 
         self.type = CRANE_OBJECT
-        #These x and y values are for movement of the moving crane arm/magnet, not the actual object itself
-        self.x = 0
-        self.y = 0
 
         #list of tuples representing coordinates and wait time ie dest[0] = (x,y,wait)
         #Contains coordinates for each destination
         self.dests = []
         self.cur_dest = 0
-        self.arm = var_dict['arm']
-        self.magnet = var_dict['magnet']
+        #Arm and Magnet objects have to be declared before the crane object or they will be set to None
+        self.arm = next((x for x in BaseObject._objects if x.name == var_dict['arm']), None)
+        self.magnet = next((i for i in BaseObject._objects if i.name == var_dict['magnet']), None)
+
+        if not self.arm or not self.magnet:
+            print("Couldn't find arm or magnet for crane.")
+
+        #These x and y values represent the crane's posistion when telling it to move somewhere (ie the arm/claw)
+        self.x = self.magnet.rect.x
+        self.y = self.magnet.rect.y + self.magnet.rect.h
+
         self.moving = False
 
         #These variables' values will be set in __setup_vars(var_dict)
-        self.name = 'GroupObject'
+        self.name = var_dict['name']
         self.xmin = var_dict['xmin']
         self.xmax = var_dict['xmax']
         self.ymin = var_dict['ymin']
@@ -38,18 +44,6 @@ class CraneObject(GroupObject):
         self._power = False
         self.state = OFF
 
-    #Called by add(obj) for every object added
-    def _configure(self, obj):
-        if obj.job == 'Arm':
-            self.arm = obj
-        elif obj.job == 'Magnet':
-            self.magnet = obj
-            #Use lower left corner of magnet in start pos as crane home posistion
-            self.xhome = self.magnet.rect.x
-            self.yhome = self.magnet.rect.y + self.magnet.rect.h
-            self.x = self.magnet.rect.x
-            self.y = self.magnet.rect.y + self.magnet.rect.h
-
     def _next_dest(self):
         print('Moving to destination: ' + str(self.cur_dest))
         if self.cur_dest + 1 >= len(self.dests):
@@ -65,7 +59,6 @@ class CraneObject(GroupObject):
             return self.cur_dest + 1
 
     #def _pickup(self):
-
 
     def _move(self):
         if self._power and self.arm and self.magnet:
@@ -92,7 +85,7 @@ class CraneObject(GroupObject):
                     self.dests[self.__get_next_dest_id()][WAIT].start_timer()
                     self._waiting = True
 
-    def groupBehave(self):
+    def update(self):
         self._move()
 
     def add_dest(self, x, y, wait):
@@ -109,6 +102,7 @@ class CraneObject(GroupObject):
         self.cur_dest = 0
 
     def toggle_power(self):
+        print(self.name + " toggling power.")
         if self._power:
             self._power = False
         else:

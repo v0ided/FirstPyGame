@@ -4,6 +4,8 @@ from Behavior import Behavior
 
 
 class BaseObject(pygame.sprite.Sprite):
+    _objects = []
+
     def __init__(self, var_dict):
         pygame.sprite.Sprite.__init__(self)
         self._layer = 0
@@ -25,6 +27,19 @@ class BaseObject(pygame.sprite.Sprite):
         else:
             print(self.name + " is missing a value")
             self.rect = pygame.Rect(0, 0, 0, 0)
+
+        #Create a new dict based on filtered results for var_dict (keys containing 'behavior')
+        str_behaviors = {x: i for x, i in var_dict.items() if x.find('behavior') > -1}
+        #Adds the value for each dict item to behavior list for the object (Does not guarantee the behavior exists)
+        self.set_behaviors(str_behaviors.values())
+        print(self.name + " behaviors: " + str(len(self.behaviors)))
+
+        BaseObject._objects.append(self)
+
+    @staticmethod
+    def object_by_name(obj_name):
+        obj = next((x for x in BaseObject._objects if x.name == obj_name), None)
+        return obj
 
     def interact(self, player, level):
         if not self._use_timer:
@@ -94,12 +109,13 @@ def _check_power_crane(player, powerbox):
 
 ##CRANE TOGGLE POWER ACTION##
 def do_power_crane(player, powerbox, level):
-    for obj in level.objects:
-        if obj.type == CRANE_OBJECT:
-            obj.toggle_power()
-            print('Powering Crane')
-            return
-    print('Could not find crane.')
+    cranes = [crane for crane in level.objects if crane.type == CRANE_OBJECT]
+    if len(cranes) > 0:
+        if len(cranes) > 1:
+            print("Multiple cranes found. Powering first added.")
+        cranes[0].toggle_power()
+    else:
+        print('No crane found.')
 
 
 
