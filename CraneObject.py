@@ -14,7 +14,7 @@ class CraneObject(GroupObject):
         self.cur_dest = 0
         #Arm and Magnet objects have to be declared before the crane object or they will be set to None
         self.arm = next((x for x in BaseObject._objects if x.name == var_dict['arm']), None)
-        self.magnet = next((i for i in BaseObject._objects if i.name == var_dict['magnet']), None)
+        self.magnet = next((i for i in BaseObject._objects if i.name == var_dict['claw']), None)
 
         if not self.arm or not self.magnet:
             print("Couldn't find arm or magnet for crane.")

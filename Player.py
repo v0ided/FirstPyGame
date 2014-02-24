@@ -22,7 +22,7 @@ class PlayerSprite(BaseObject):
         self.is_jump_delay = False
         self.j_delay_timer = Timer(370, self.fin_jump_delay)
         self.jump_timer = Timer(200, self._stop_jump)
-        self._layer = 5
+        self._layer = 10
         #array of objects currently colliding with
         #used to track objects that are possible to interact with
         self.pos_interact = []
@@ -181,7 +181,6 @@ class PlayerSprite(BaseObject):
         self._change_vel(DIR_UP, 2)
 
     def _do_jump(self):
-        print('Doing jump.')
         self._change_vel(DIR_UP, self.jumpvel)
 
     def _stop_jump(self):

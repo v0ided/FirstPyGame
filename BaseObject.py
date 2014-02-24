@@ -58,11 +58,11 @@ class BaseObject(pygame.sprite.Sprite):
 
     def set_behaviors(self, behaviors):
         for behavior in behaviors:
-            if behavior == 'pickup':
+            if behavior.lower() == 'pickup':
                 self.behaviors.append(Behavior(_check_plyr_pickup, do_plyr_pickup))
-            elif behavior == 'place':
+            elif behavior.lower() == 'place':
                 self.behaviors.append(Behavior(_check_plyr_place, do_plyr_place))
-            elif behavior == 'toggle_power':
+            elif behavior.lower() == 'toggle_power':
                 self.behaviors.append(Behavior(_check_power_crane, do_power_crane))
 
     def draw(self, screen, rect_loc):
