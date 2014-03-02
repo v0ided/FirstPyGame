@@ -1,7 +1,13 @@
 from GroupObject import *
 
 
-#todo: Change graphic/name for magnet to claw :)
+#Names for indicies inside tuple stored in dest list
+X = 0
+Y = 1
+WAIT = 2
+
+
+#todo: Change graphic for arm parts/claw to one, animate for set path (Stop trying to be too dynamic!)
 class CraneObject(GroupObject):
     def __init__(self, var_dict):
         GroupObject.__init__(self, var_dict)
@@ -9,23 +15,22 @@ class CraneObject(GroupObject):
         self.type = CRANE_OBJECT
 
         #list of tuples representing coordinates and wait time ie dest[0] = (x,y,wait)
-        #Contains coordinates for each destination
+        #Contains coordinates and wait time for each destination
         self.dests = []
         self.cur_dest = 0
         #Arm and Magnet objects have to be declared before the crane object or they will be set to None
         self.arm = next((x for x in BaseObject._objects if x.name == var_dict['arm']), None)
-        self.magnet = next((i for i in BaseObject._objects if i.name == var_dict['claw']), None)
 
-        if not self.arm or not self.magnet:
+        if not self.arm:
             print("Couldn't find arm or magnet for crane.")
 
         #These x and y values represent the crane's posistion when telling it to move somewhere (ie the arm/claw)
-        self.x = self.magnet.rect.x
-        self.y = self.magnet.rect.y + self.magnet.rect.h
+        self.x = self.arm.rect.right
+        self.y = self.arm.rect.bottom
 
         self.moving = False
 
-        #These variables' values will be set in __setup_vars(var_dict)
+        #These variables' values will be set in self.__setup_vars(var_dict)
         self.name = var_dict['name']
         self.xmin = var_dict['xmin']
         self.xmax = var_dict['xmax']
@@ -61,23 +66,21 @@ class CraneObject(GroupObject):
     #def _pickup(self):
 
     def _move(self):
-        if self._power and self.arm and self.magnet:
+        if self._power and self.arm:
+            #if destx to the right of x
             if self.dests[self.cur_dest][X] > self.x:
                 self.arm.rect.x += self.xspeed
-                self.magnet.rect.x += self.xspeed
                 self.x += self.xspeed
+            #if destx is to the left of x
             elif self.dests[self.cur_dest][X] < self.x:
                 self.arm.rect.x -= self.xspeed
-                self.magnet.rect.x -= self.xspeed
                 self.x -= self.xspeed
+            #if desty below y
             elif self.dests[self.cur_dest][Y] > self.y:
-                self.magnet.rect.y += self.yspeed
-                self.arm.idle_anim.scale((self.arm.rect.w, self.arm.rect.h + self.yspeed))
                 self.arm.rect.y += self.yspeed
                 self.y += self.yspeed
+            #if desty above y
             elif self.dests[self.cur_dest][Y] < self.y:
-                self.magnet.rect.y -= self.yspeed
-                self.arm.idle_anim.scale((self.arm.rect.w, self.arm.rect.h - self.yspeed))
                 self.arm.rect.y -= self.yspeed
                 self.y -= self.yspeed
             else:

@@ -1,9 +1,5 @@
 from BaseObject import *
 
-X = 0
-Y = 1
-WAIT = 2
-
 
 class GroupObject(BaseObject):
     def __init__(self, var_dict):

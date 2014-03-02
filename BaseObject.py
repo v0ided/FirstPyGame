@@ -71,6 +71,27 @@ class BaseObject(pygame.sprite.Sprite):
     def collide(self, obj):
         pass
 
+    def move_to(self, x, y, ALIGN=TOP_LEFT):
+        if ALIGN == TOP_LEFT:
+            self.rect.x = x
+            self.rect.y = y
+        elif ALIGN == CENTER:
+            self.rect.center = (x, y)
+        elif ALIGN == MID_TOP:
+            self.rect.midtop = (x, y)
+        elif ALIGN == TOP_RIGHT:
+            self.rect.topright = (x, y)
+        elif ALIGN == MID_RIGHT:
+            self.rect.midright = (x, y)
+        elif ALIGN == BOT_RIGHT:
+            self.rect.bottomright = (x, y)
+        elif ALIGN == MID_BOT:
+            self.rect.midbottom = (x, y)
+        elif ALIGN == BOT_LEFT:
+            self.rect.bottomleft = (x, y)
+        elif ALIGN == MID_LEFT:
+            self.rect.midleft = (x, y)
+
 
 ##PLAYER PICKUP CONDITIONS##
 def _check_plyr_pickup(player, obj):

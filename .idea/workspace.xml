@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38379229-7bb7-4fd6-b654-bc831fa4c776" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\Staircase.bmp" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/design files/Crane Arm.ai" afterPath="$PROJECT_DIR$/data/design files/Crane Arm.ai" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/design files/Crane Body.ai" afterPath="$PROJECT_DIR$/data/design files/Crane Body.ai" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/design files/Crane.ai" afterPath="$PROJECT_DIR$/data/design files/Crane.ai" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/Crane.bmp" afterPath="$PROJECT_DIR$/data/Crane.bmp" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Joint.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CraneArm.bmp" afterPath="$PROJECT_DIR$/data/CraneArm.bmp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/CraneBody.bmp" afterPath="$PROJECT_DIR$/data/CraneBody.bmp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/design files/player_standing1.ai" afterPath="$PROJECT_DIR$/data/design files/player_standing1.ai" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/BaseObject.py" afterPath="$PROJECT_DIR$/BaseObject.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Constants.py" afterPath="$PROJECT_DIR$/Constants.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CraneObject.py" afterPath="$PROJECT_DIR$/CraneObject.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Player.py" afterPath="$PROJECT_DIR$/Player.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GroupObject.py" afterPath="$PROJECT_DIR$/GroupObject.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/level_data/objects1.ini" afterPath="$PROJECT_DIR$/data/level_data/objects1.ini" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,16 +36,25 @@
       <file leaf-file-name="BaseObject.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BaseObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="23" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2210">
+            <state line="37" column="0" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Constants.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Constants.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="25" column="7" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="765">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Player.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Player.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="47" selection-start="2974" selection-end="2974" vertical-scroll-proportion="1.5825826" vertical-offset="0" max-vertical-offset="4029">
+            <state line="167" column="0" selection-start="6943" selection-end="6943" vertical-scroll-proportion="0.0" vertical-offset="2686" max-vertical-offset="4029">
               <folding />
             </state>
           </provider>
@@ -57,7 +63,7 @@
       <file leaf-file-name="Behavior.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Behavior.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+            <state line="10" column="0" selection-start="277" selection-end="277" vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="391">
               <folding />
             </state>
           </provider>
@@ -66,7 +72,7 @@
       <file leaf-file-name="GroupObject.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GroupObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="510">
+            <state line="12" column="23" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
               <folding />
             </state>
           </provider>
@@ -75,43 +81,25 @@
       <file leaf-file-name="LevelObject.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LevelObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="97" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1003">
+            <state line="27" column="54" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Timer.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Timer.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="28" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1071">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HelpFunctions.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/HelpFunctions.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="833">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CraneObject.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="CraneObject.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CraneObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="42" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+            <state line="30" column="27" selection-start="1056" selection-end="1056" vertical-scroll-proportion="-1.2477204" vertical-offset="1331" max-vertical-offset="1989">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Level.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Level.py">
+      <file leaf-file-name="main.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="32" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2091">
+            <state line="13" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="850">
               <folding />
             </state>
           </provider>
@@ -142,19 +130,20 @@
         <option value="$PROJECT_DIR$/LevelObjectBehaviors.py" />
         <option value="$PROJECT_DIR$/Timer.py" />
         <option value="$PROJECT_DIR$/GroupObjFactory.py" />
-        <option value="$PROJECT_DIR$/Constants.py" />
         <option value="$PROJECT_DIR$/ObjectList.py" />
         <option value="$PROJECT_DIR$/HelpFunctions.py" />
         <option value="$PROJECT_DIR$/ObjFactory.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/Camera.py" />
-        <option value="$PROJECT_DIR$/GroupObject.py" />
         <option value="$PROJECT_DIR$/Level.py" />
         <option value="$PROJECT_DIR$/LevelObject.py" />
         <option value="$PROJECT_DIR$/Behavior.py" />
-        <option value="$PROJECT_DIR$/BaseObject.py" />
-        <option value="$PROJECT_DIR$/CraneObject.py" />
         <option value="$PROJECT_DIR$/Player.py" />
+        <option value="$PROJECT_DIR$/Constants.py" />
+        <option value="$PROJECT_DIR$/BaseObject.py" />
+        <option value="$PROJECT_DIR$/GroupObject.py" />
+        <option value="$PROJECT_DIR$/Joint.py" />
+        <option value="$PROJECT_DIR$/CraneObject.py" />
       </list>
     </option>
   </component>
@@ -230,6 +219,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -254,7 +244,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -455,22 +444,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23489933" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12578125" sideWeight="0.797235" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22818792" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20246086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20246086" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23489933" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -510,36 +499,23 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="5" />
+      <option name="time" value="6" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Timer.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HelpFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="833">
-          <folding />
-        </state>
+        <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="833" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CraneObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="36" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1938">
-          <folding />
-        </state>
+        <state line="30" column="36" selection-start="1231" selection-end="1231" vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1938" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="36" selection-start="3310" selection-end="3310" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="2159">
-          <folding />
-        </state>
+        <state line="95" column="36" selection-start="3310" selection-end="3310" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="2159" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ObjFactory.py">
@@ -551,7 +527,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850" />
+        <state line="32" column="31" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Camera.py">
@@ -596,28 +574,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HelpFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="833">
-          <folding />
-        </state>
+        <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="833" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CraneObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2040">
-          <folding />
-        </state>
+        <state line="12" column="0" selection-start="370" selection-end="370" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2040" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="59" column="31" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="2159">
-          <folding />
-        </state>
+        <state line="59" column="31" selection-start="1908" selection-end="1908" vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="2159" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850" />
+        <state line="32" column="31" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Camera.py">
@@ -662,28 +636,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HelpFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="22" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="833">
-          <folding />
-        </state>
+        <state line="33" column="22" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="833" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CraneObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2023">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2023" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2159">
-          <folding />
-        </state>
+        <state line="11" column="45" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="867" max-vertical-offset="2159" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="31" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="850" />
+        <state line="32" column="31" selection-start="964" selection-end="964" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="850">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Camera.py">
@@ -728,23 +698,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/HelpFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="22" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="833">
-          <folding />
-        </state>
+        <state line="33" column="22" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="561" max-vertical-offset="833" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CraneObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2023">
-          <folding />
-        </state>
+        <state line="6" column="0" selection-start="139" selection-end="139" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="2023" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="45" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2159">
-          <folding />
-        </state>
+        <state line="11" column="45" selection-start="353" selection-end="353" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2159" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ObjFactory.py">
@@ -757,28 +721,9 @@
         <state line="22" column="44" selection-start="763" selection-end="763" vertical-scroll-proportion="0.08108108" vertical-offset="252" max-vertical-offset="918" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Constants.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyganim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="3924" selection-end="3924" vertical-scroll-proportion="0.33333334" vertical-offset="1206" max-vertical-offset="14620" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/HelpFunctions.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GroupObject.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="47" selection-end="47" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <folding />
-        </state>
+        <state line="17" column="0" selection-start="433" selection-end="433" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Camera.py">
@@ -788,14 +733,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Timer.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="28" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.055555556" vertical-offset="167" max-vertical-offset="833" />
+        <state line="11" column="28" selection-start="237" selection-end="237" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1071" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ObjFactory.py">
@@ -805,9 +743,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LevelObject.py">
+    <entry file="file://$PROJECT_DIR$/Level.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="97" selection-start="605" selection-end="605" vertical-scroll-proportion="0.0" vertical-offset="286" max-vertical-offset="952">
+        <state line="29" column="39" selection-start="905" selection-end="905" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="0" selection-start="341" selection-end="341" vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="833">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyganim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="463" column="0" selection-start="19972" selection-end="19972" vertical-scroll-proportion="0.33333334" vertical-offset="7625" max-vertical-offset="14620" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Constants.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="7" selection-start="314" selection-end="314" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
@@ -819,30 +774,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Level.py">
+    <entry file="file://$PROJECT_DIR$/Player.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="32" selection-start="781" selection-end="781" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2091">
+        <state line="167" column="0" selection-start="6943" selection-end="6943" vertical-scroll-proportion="0.0" vertical-offset="2686" max-vertical-offset="4029">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CraneObject.py">
+    <entry file="file://$PROJECT_DIR$/GroupObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="42" selection-start="650" selection-end="650" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1938">
+        <state line="12" column="23" selection-start="294" selection-end="294" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="23" selection-start="236" selection-end="236" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2210">
+        <state line="37" column="0" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.0" vertical-offset="1720" max-vertical-offset="2567">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Player.py">
+    <entry file="file://$PROJECT_DIR$/Joint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="47" selection-start="2974" selection-end="2974" vertical-scroll-proportion="1.5825826" vertical-offset="0" max-vertical-offset="4029">
+        <state line="22" column="56" selection-start="740" selection-end="740" vertical-scroll-proportion="0.58712715" vertical-offset="0" max-vertical-offset="637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LevelObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="54" selection-start="1014" selection-end="1014" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CraneObject.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="27" selection-start="1056" selection-end="1056" vertical-scroll-proportion="-1.2477204" vertical-offset="1331" max-vertical-offset="1989">
           <folding />
         </state>
       </provider>
