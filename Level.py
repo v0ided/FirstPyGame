@@ -22,7 +22,6 @@ class Level():
         self.objects = pygame.sprite.LayeredUpdates()
         self.gravity = .5
         self.camera = Camera(800, 600)
-        self.groups = {}
         self.filename = filename
         self._load_objects()
         self.player = self._get_player_from_objects()
@@ -57,7 +56,6 @@ class Level():
             obj.update()
             if obj.obey_gravity:
                 obj.do_gravity(self.gravity)
-        self.group_obj_update()
 
         self.check_collisions()
         self.camera.update(self.player)
@@ -79,7 +77,7 @@ class Level():
                     continue
                 a_obj.collide(b_obj)
 
-    def spawn_object(self, obj):
+    def place_object(self, obj):
         #first determine spawn location, object should already have properties set
         for col_obj in self.objects:
             if col_obj.collidable:
@@ -90,23 +88,6 @@ class Level():
                 if obj.rect.colliderect(col_obj.rect):
                     obj.rect.bottom = col_obj.rect.top
         obj.obey_gravity = True
-
-    def _create_groups(self):
-        for obj in self.objects:
-            #If object is in a group
-            if obj.group != 'no':
-                #If group object for group exists yet
-                if obj.group in self.groups:
-                    #Checks if obj is in group already, if not adds to group
-                    self.groups[obj.group].add(obj)
-
-    def group_obj_update(self):
-        for grp_name in self.groups:
-            self.groups[grp_name].groupBehave()
-
-    def get_group(self, name):
-        if name in self.groups.keys():
-            return self.groups[name]
 
     def objects_at(self, x, y, w=0, h=0):
         col_objects = []

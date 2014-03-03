@@ -196,17 +196,14 @@ class PlayerSprite(BaseObject):
     def drop(self, level):
         self.drop_item = self.held_item
         self.held_item = None
-        level.spawn_object(self.drop_item)
+        level.place_object(self.drop_item)
 
     def pickup(self, obj):
         self.held_item = obj
         self.held_item.obey_gravity = False
         self.held_item._layer = self._layer + 1
         self.held_item.rect.y = self.rect.centery + (self.rect.w / 6)
-        if self.direction == DIR_RIGHT:
-            self.held_item.rect.x = self.rect.centerx
-        elif self.direction == DIR_LEFT:
-            self.held_item.rect.x = self.rect.centerx
+        self.held_item.rect.x = self.rect.centerx
 
         #save offsets from the top left of player sprite
         self.held_ofs_x = self.held_item.rect.x - self.rect.x

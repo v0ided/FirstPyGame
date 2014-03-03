@@ -1,16 +1,23 @@
-from GroupObject import *
-
+from BaseObject import BaseObject
+from Constants import *
+import pygame
+from Timer import Timer
 
 #Names for indicies inside tuple stored in dest list
 X = 0
 Y = 1
 WAIT = 2
+ACTION = 3
+
+#Actions to be performed when a destination is reached
+NONE = 0
+PICKUP = 1
+DROP = 2
 
 
-#todo: Change graphic for arm parts/claw to one, animate for set path (Stop trying to be too dynamic!)
-class CraneObject(GroupObject):
+class CraneObject(BaseObject):
     def __init__(self, var_dict):
-        GroupObject.__init__(self, var_dict)
+        BaseObject.__init__(self, var_dict)
 
         self.type = CRANE_OBJECT
 
@@ -43,12 +50,24 @@ class CraneObject(GroupObject):
 
         #Create home destination
         self.add_dest(self.xhome, self.yhome, 500)
-        self.add_dest(800, 450, 5000)
-        self.add_dest(100, 450, 5000)
+        self.add_dest(800, 250, 5000, PICKUP)
+        self.add_dest(100, 250, 5000, DROP)
         self._waiting = False
         self._power = False
         self.state = OFF
 
+        #Objects that are possible to pick up and held objects
+        self.pos_pickup = []
+        self.held_objects = []
+
+        #Area of the crane that objects can be picked up from
+        pickup_w = 75
+        pickup_h = 50
+        pickup_x = self.rect.right - pickup_w
+        pickup_y = self.rect.bottom - pickup_h
+        self.pickup_area = pygame.Rect(pickup_x, pickup_y, pickup_w, pickup_h)
+
+    #Called when the crane is done waiting at dest and is about to move to the next
     def _next_dest(self):
         print('Moving to destination: ' + str(self.cur_dest))
         if self.cur_dest + 1 >= len(self.dests):
@@ -57,47 +76,86 @@ class CraneObject(GroupObject):
             self.cur_dest += 1
         self._waiting = False
 
+    #Called when first arriving at a dest
     def __get_next_dest_id(self):
         if self.cur_dest + 1 >= len(self.dests):
             return 0
         else:
             return self.cur_dest + 1
 
-    #def _pickup(self):
+    #I think Crane is stuck here, needs to ignore object collision while it is a held_object?
+    #Or ignore it from multiple pickup_attempts
+    def _pickup(self):
+        for obj in self.pos_pickup:
+            if obj not in self.held_objects:
+                self.held_objects.append(obj)
+                obj.obey_gravity = False
+                #todo: Organize multiple objects in the pickup space, check if still room in pickup_area
+                obj.rect.x = self.pickup_area.x
+                obj.rect.y = self.pickup_area.y
+
+    def _drop(self):
+        for obj in self.held_objects:
+            obj.obey_gravity = True
+        del self.held_objects[:]
+
+    def collide(self, obj):
+        if self.rect.colliderect(obj.rect):
+            #if obj._layer == self._layer:
+                #if not self.pickup_area.colliderect(obj.rect):
+                    #self._power = False
+            if self.pickup_area.colliderect(obj.rect):
+                self.pos_pickup.append(obj)
+        else:
+            if obj in self.pos_pickup:
+                    self.pos_pickup.remove(obj)
 
     def _move(self):
         if self._power and self.arm:
             #if destx to the right of x
             if self.dests[self.cur_dest][X] > self.x:
                 self.arm.rect.x += self.xspeed
+                self.pickup_area.x += self.xspeed
                 self.x += self.xspeed
             #if destx is to the left of x
             elif self.dests[self.cur_dest][X] < self.x:
                 self.arm.rect.x -= self.xspeed
+                self.pickup_area.x -= self.xspeed
                 self.x -= self.xspeed
             #if desty below y
             elif self.dests[self.cur_dest][Y] > self.y:
                 self.arm.rect.y += self.yspeed
+                self.pickup_area.y += self.yspeed
                 self.y += self.yspeed
             #if desty above y
             elif self.dests[self.cur_dest][Y] < self.y:
                 self.arm.rect.y -= self.yspeed
+                self.pickup_area.y -= self.yspeed
                 self.y -= self.yspeed
             else:
                 if not self._waiting:
                     self.dests[self.__get_next_dest_id()][WAIT].start_timer()
                     self._waiting = True
+                    self.__do_dest_action()
+
+    #Does the current dest action, may be NONE, actions are integer variables declared at top of source
+    def __do_dest_action(self):
+        action = self.dests[self.cur_dest][ACTION]
+        if action == PICKUP:
+            self._pickup()
+        elif action == DROP:
+            self._drop()
 
     def update(self):
         self._move()
 
-    def add_dest(self, x, y, wait):
+    def add_dest(self, x, y, wait, action=NONE):
         width = self.xmax - self.xmin
         height = self.ymax - self.ymin
         bounds = pygame.Rect(self.xmin, self.ymin, width, height)
         if bounds.collidepoint(x, y):
             wait_t = Timer(wait, self._next_dest)
-            self.dests.append((x, y, wait_t))
+            self.dests.append((x, y, wait_t, action))
         else:
             print('Invalid Coordinates found: ' + str(x) + "," + str(y))
 
