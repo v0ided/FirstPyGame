@@ -1,6 +1,7 @@
 import os
 import collections
 import pygame
+from Constants import *
 
 
 def load_image(name, colorkey=None):
@@ -19,9 +20,18 @@ def load_image(name, colorkey=None):
 
 def to_num(s):
     try:
-        return int(s)
+        s = int(s)
+        return s
     except ValueError:
-        return float(s)
+        pass
+
+    try:
+        s = float(s)
+        return s
+    except ValueError:
+        pass
+
+    return s
 
 
 def get_iterable(x):

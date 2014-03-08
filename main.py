@@ -32,7 +32,7 @@ def main():
         else:
             level.player.iswalking = False
         if pygame.key.get_pressed()[pygame.K_SPACE]:
-            if level.player.is_jumping is not True and level.player.is_airborne is not True:
+            if level.player.jump_state == NOT_JUMPING and level.player.airborne is not True:
                 level.player.start_jump()
         if pygame.key.get_pressed()[pygame.K_a]:
             level.player.interact(None, level)

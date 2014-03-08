@@ -43,10 +43,7 @@ class Level():
             var_dict = {'name': objname}
             for option in parser[objname]:
                 value = parser[objname][option]
-                if value.strip().isdigit():
-                    var_dict[option] = to_num(value)
-                else:
-                    var_dict[option] = value
+                var_dict[option] = to_num(value)
 
             self.objects.add(ObjFactory(obj_type, var_dict))
 

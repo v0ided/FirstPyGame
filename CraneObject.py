@@ -31,10 +31,6 @@ class CraneObject(BaseObject):
         if not self.arm:
             print("Couldn't find arm or magnet for crane.")
 
-        #These x and y values represent the crane's posistion when telling it to move somewhere (ie the arm/claw)
-        self.x = self.arm.rect.right
-        self.y = self.arm.rect.bottom
-
         self.moving = False
 
         #These variables' values will be set in self.__setup_vars(var_dict)
@@ -50,21 +46,25 @@ class CraneObject(BaseObject):
 
         #Create home destination
         self.add_dest(self.xhome, self.yhome, 500)
-        self.add_dest(800, 250, 5000, PICKUP)
+        self.add_dest(820, 250, 5000, PICKUP)
         self.add_dest(100, 250, 5000, DROP)
         self._waiting = False
         self._power = False
         self.state = OFF
+
+        #These x and y values represent the crane's posistion when telling it to move somewhere (ie the arm/claw)
+        self.x = self.arm.rect.right
+        self.y = self.arm.rect.bottom
 
         #Objects that are possible to pick up and held objects
         self.pos_pickup = []
         self.held_objects = []
 
         #Area of the crane that objects can be picked up from
-        pickup_w = 75
-        pickup_h = 50
-        pickup_x = self.rect.right - pickup_w
-        pickup_y = self.rect.bottom - pickup_h
+        pickup_w = 60
+        pickup_h = 30
+        pickup_x = self.x - pickup_w
+        pickup_y = self.y - pickup_h
         self.pickup_area = pygame.Rect(pickup_x, pickup_y, pickup_w, pickup_h)
 
     #Called when the crane is done waiting at dest and is about to move to the next
@@ -83,8 +83,6 @@ class CraneObject(BaseObject):
         else:
             return self.cur_dest + 1
 
-    #I think Crane is stuck here, needs to ignore object collision while it is a held_object?
-    #Or ignore it from multiple pickup_attempts
     def _pickup(self):
         for obj in self.pos_pickup:
             if obj not in self.held_objects:
@@ -93,6 +91,7 @@ class CraneObject(BaseObject):
                 #todo: Organize multiple objects in the pickup space, check if still room in pickup_area
                 obj.rect.x = self.pickup_area.x
                 obj.rect.y = self.pickup_area.y
+                print(obj.name + ' - pickup action called')
 
     def _drop(self):
         for obj in self.held_objects:
@@ -100,12 +99,15 @@ class CraneObject(BaseObject):
         del self.held_objects[:]
 
     def collide(self, obj):
-        if self.rect.colliderect(obj.rect):
+        if self.pickup_area.colliderect(obj.rect):
             #if obj._layer == self._layer:
                 #if not self.pickup_area.colliderect(obj.rect):
                     #self._power = False
-            if self.pickup_area.colliderect(obj.rect):
-                self.pos_pickup.append(obj)
+            #if self.pickup_area.colliderect(obj.rect):
+                if obj not in self.pos_pickup:
+                    if obj != self.arm:
+                        print(obj.name + ' added to possible pickups.')
+                        self.pos_pickup.append(obj)
         else:
             if obj in self.pos_pickup:
                     self.pos_pickup.remove(obj)
@@ -114,29 +116,35 @@ class CraneObject(BaseObject):
         if self._power and self.arm:
             #if destx to the right of x
             if self.dests[self.cur_dest][X] > self.x:
-                self.arm.rect.x += self.xspeed
-                self.pickup_area.x += self.xspeed
-                self.x += self.xspeed
+                self._change_vel(DIR_RIGHT, self.xspeed)
             #if destx is to the left of x
             elif self.dests[self.cur_dest][X] < self.x:
-                self.arm.rect.x -= self.xspeed
-                self.pickup_area.x -= self.xspeed
-                self.x -= self.xspeed
+                self._change_vel(DIR_LEFT, self.xspeed)
             #if desty below y
             elif self.dests[self.cur_dest][Y] > self.y:
-                self.arm.rect.y += self.yspeed
-                self.pickup_area.y += self.yspeed
-                self.y += self.yspeed
+                self._change_vel(DIR_DOWN, self.yspeed)
             #if desty above y
             elif self.dests[self.cur_dest][Y] < self.y:
-                self.arm.rect.y -= self.yspeed
-                self.pickup_area.y -= self.yspeed
-                self.y -= self.yspeed
+                self._change_vel(DIR_UP, self.yspeed)
             else:
                 if not self._waiting:
+                    self.xvel = 0
+                    self.yvel = 0
                     self.dests[self.__get_next_dest_id()][WAIT].start_timer()
                     self._waiting = True
                     self.__do_dest_action()
+        self._update_pos()
+
+    def _update_pos(self):
+        self.x += self.xvel
+        self.y += self.yvel
+        self.pickup_area.x += self.xvel
+        self.pickup_area.y += self.yvel
+        self.arm.rect.x += self.xvel
+        self.arm.rect.y += self.yvel
+        for held_obj in self.held_objects:
+            held_obj.rect.x += self.xvel
+            held_obj.rect.y += self.yvel
 
     #Does the current dest action, may be NONE, actions are integer variables declared at top of source
     def __do_dest_action(self):

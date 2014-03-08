@@ -17,6 +17,11 @@ class BaseObject(pygame.sprite.Sprite):
         self.name = var_dict.get('name', None)
         self.obey_gravity = False
         self.collidable = False
+        self.xvel = 0
+        self.yvel = 0
+        self.maxXvel = .5
+        self.maxYvel = .5
+        self.move_dir = DIR_LEFT
         x = var_dict.get('x', 'no')
         y = var_dict.get('y', 'no')
         w = var_dict.get('w', 'no')
@@ -71,7 +76,10 @@ class BaseObject(pygame.sprite.Sprite):
     def collide(self, obj):
         pass
 
-    def move_to(self, x, y, ALIGN=TOP_LEFT):
+    def move(self):
+        self._update_pos()
+
+    def teleport_to(self, x, y, ALIGN=TOP_LEFT):
         if ALIGN == TOP_LEFT:
             self.rect.x = x
             self.rect.y = y
@@ -91,6 +99,24 @@ class BaseObject(pygame.sprite.Sprite):
             self.rect.bottomleft = (x, y)
         elif ALIGN == MID_LEFT:
             self.rect.midleft = (x, y)
+
+    def _change_vel(self, move_dir, move_vel):
+        if move_dir == DIR_RIGHT:
+            if self.xvel + move_vel < self.maxXvel:
+                self.xvel += move_vel
+        elif move_dir == DIR_LEFT:
+            if self.xvel - move_vel > 0 - self.maxXvel:
+                self.xvel -= move_vel
+        elif move_dir == DIR_UP:
+            if self.yvel + move_vel > 0 - self.maxYvel:
+                self.yvel -= move_vel
+        elif move_dir == DIR_DOWN:
+            if self.yvel + move_vel < self.maxYvel:
+                self.yvel += move_vel
+
+    def _update_pos(self):
+        self.rect.x += self.xvel
+        self.rect.y += self.yvel
 
 
 ##PLAYER PICKUP CONDITIONS##

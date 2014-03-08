@@ -17,11 +17,10 @@ class PlayerSprite(BaseObject):
         self.iswalking = False
         self.on_object = None
         self.col_object = None
-        self.is_jumping = False
-        self.is_airborne = True
-        self.is_jump_delay = False
-        self.j_delay_timer = Timer(370, self.fin_jump_delay)
-        self.jump_timer = Timer(200, self._stop_jump)
+        self.jump_state = NOT_JUMPING
+        self.airborne = True
+        self.j_delay_timer = Timer(500, self.__next_jump_state, False)
+        self.jump_timer = Timer(200, self.__next_jump_state, False)
         self._layer = 10
         #array of objects currently colliding with
         #used to track objects that are possible to interact with
@@ -59,7 +58,7 @@ class PlayerSprite(BaseObject):
         self.walking_anim.play()
 
     def draw(self, screen, rect_loc):
-        if self.is_jumping is True:
+        if self.jump_state > 0:
             self.jumping_anim.play()
             self.walking_anim.stop()
             self.jumping_anim.blit(screen, rect_loc)
@@ -102,16 +101,16 @@ class PlayerSprite(BaseObject):
         if self.on_object is not None:
             #Check if player is still on object
             if self.on_object.rect.collidepoint(self.rect.midbottom):
-                self.is_airborne = False
+                self.airborne = False
                 #If player is on an object and yvel is being modified by do_jump(), stop the jump
                 #if self._is_jumping():
                  #   self._stop_jump()
             else:
                 self.on_object = None
         else:
-            self.is_airborne = True
+            self.airborne = True
 
-        if self._is_jumping() is True:
+        if self.jump_state == JUMP:
             self._do_jump()
 
         self.update_pos()
@@ -160,32 +159,24 @@ class PlayerSprite(BaseObject):
         self.walking_anim.flip(True, False)
         self.jumping_anim.flip(True, False)
 
+    def __next_jump_state(self):
+        if self.jump_state == NOT_JUMPING:
+            self.jump_state = JUMP_DELAY
+            self.j_delay_timer.start_timer()
+        elif self.jump_state == JUMP_DELAY:
+            self.jump_state = JUMP
+            self.jump_timer.start_timer()
+            self._change_vel(DIR_UP, 2)
+        elif self.jump_state == JUMP:
+            self.jump_state = NOT_JUMPING
+        else:
+            print("Invalid player jump state: " + str(self.jump_state))
+
     def start_jump(self):
-        print('Starting jump.')
-        self.is_jumping = True
-        self.is_jump_delay = True
-        self.j_delay_timer.start_timer()
-
-    #This checks if the players is still traveling upwards during a jump
-    #It will NOT return true if jump is currently in jump delay or
-        #if the jump has ended but the player hasn't hit ground yet
-    def _is_jumping(self):
-        if self.is_jumping:
-            if not self.is_jump_delay:
-                return True
-        return False
-
-    def fin_jump_delay(self):
-        self.is_jump_delay = False
-        self.jump_timer.start_timer()
-        self._change_vel(DIR_UP, 2)
+        self.__next_jump_state()
 
     def _do_jump(self):
         self._change_vel(DIR_UP, self.jumpvel)
-
-    def _stop_jump(self):
-        print('Stopping jump.')
-        self.is_jumping = False
 
     def update(self):
         self.move()
@@ -208,20 +199,6 @@ class PlayerSprite(BaseObject):
         #save offsets from the top left of player sprite
         self.held_ofs_x = self.held_item.rect.x - self.rect.x
         self.held_ofs_y = self.held_item.rect.y - self.rect.y
-
-    def _change_vel(self, move_dir, move_vel):
-        if move_dir == DIR_RIGHT:
-            if self.xvel + move_vel < self.maxXvel:
-                self.xvel += move_vel
-        elif move_dir == DIR_LEFT:
-            if self.xvel - move_vel > 0 - self.maxXvel:
-                self.xvel -= move_vel
-        elif move_dir == DIR_UP:
-            if self.yvel + move_vel > 0 - self.maxYvel:
-                self.yvel -= move_vel
-        elif move_dir == DIR_DOWN:
-            if self.yvel + move_vel < self.maxYvel:
-                self.yvel += move_vel
 
     def update_pos(self):
         self.rect.x += self.xvel
