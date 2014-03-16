@@ -2,7 +2,7 @@ import configparser
 from HelpFunctions import *
 from LevelObject import *
 from Camera import Camera
-from ObjFactory import *
+from LevelObjFactory import *
 
 
 class Background(pygame.sprite.Sprite):
@@ -73,18 +73,6 @@ class Level():
                 if a_obj == b_obj:
                     continue
                 a_obj.collide(b_obj)
-
-    def place_object(self, obj):
-        #first determine spawn location, object should already have properties set
-        for col_obj in self.objects:
-            if col_obj.collidable:
-                if obj is col_obj:
-                    continue
-                if col_obj is self.player:
-                    continue
-                if obj.rect.colliderect(col_obj.rect):
-                    obj.rect.bottom = col_obj.rect.top
-        obj.obey_gravity = True
 
     def objects_at(self, x, y, w=0, h=0):
         col_objects = []

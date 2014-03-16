@@ -131,7 +131,7 @@ def _check_plyr_pickup(player, obj):
 ##PLAYER PICKUP ACTION##
 def do_plyr_pickup(player, obj, level):
         print("Pickup behaving")
-        player.pickup(obj)
+        player.pickup(obj, level)
 
 
 ##PLAYER PLACE CONDITIONS##

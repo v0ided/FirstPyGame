@@ -3,17 +3,6 @@ from Constants import *
 import pygame
 from Timer import Timer
 
-#Names for indicies inside tuple stored in dest list
-X = 0
-Y = 1
-WAIT = 2
-ACTION = 3
-
-#Actions to be performed when a destination is reached
-NONE = 0
-PICKUP = 1
-DROP = 2
-
 
 class CraneObject(BaseObject):
     def __init__(self, var_dict):
@@ -25,7 +14,7 @@ class CraneObject(BaseObject):
         #Contains coordinates and wait time for each destination
         self.dests = []
         self.cur_dest = 0
-        #Arm and Magnet objects have to be declared before the crane object or they will be set to None
+        #Arm has to be declared before the crane object or they will be set to None
         self.arm = next((x for x in BaseObject._objects if x.name == var_dict['arm']), None)
 
         if not self.arm:
@@ -47,7 +36,7 @@ class CraneObject(BaseObject):
         #Create home destination
         self.add_dest(self.xhome, self.yhome, 500)
         self.add_dest(820, 250, 5000, PICKUP)
-        self.add_dest(100, 250, 5000, DROP)
+        self.add_dest(100, 250, 5000, PLACE)
         self._waiting = False
         self._power = False
         self.state = OFF
@@ -151,13 +140,13 @@ class CraneObject(BaseObject):
         action = self.dests[self.cur_dest][ACTION]
         if action == PICKUP:
             self._pickup()
-        elif action == DROP:
+        elif action == PLACE:
             self._drop()
 
     def update(self):
         self._move()
 
-    def add_dest(self, x, y, wait, action=NONE):
+    def add_dest(self, x, y, wait, action=NOTHING):
         width = self.xmax - self.xmin
         height = self.ymax - self.ymin
         bounds = pygame.Rect(self.xmin, self.ymin, width, height)
@@ -165,7 +154,7 @@ class CraneObject(BaseObject):
             wait_t = Timer(wait, self._next_dest)
             self.dests.append((x, y, wait_t, action))
         else:
-            print('Invalid Coordinates found: ' + str(x) + "," + str(y))
+            print('Invalid coordinates found: ' + str(x) + "," + str(y))
 
     def go_home(self):
         self.cur_dest = 0

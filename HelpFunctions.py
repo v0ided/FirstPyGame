@@ -1,5 +1,6 @@
 import os
 import collections
+import glob
 import pygame
 from Constants import *
 
@@ -16,6 +17,13 @@ def load_image(name, colorkey=None):
             colorkey = image.get_at((0, 0))
         image.set_colorkey(colorkey, pygame.RLEACCEL)
     return image, image.get_rect()
+
+
+def search_file(term):
+    results = []
+    for file in glob.glob("*" + term + "*"):
+        results.append(file)
+    return results
 
 
 def to_num(s):

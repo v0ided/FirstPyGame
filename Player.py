@@ -186,13 +186,14 @@ class PlayerSprite(BaseObject):
 
     def drop(self, level):
         self.drop_item = self.held_item
+        self.drop_item.obey_gravity = True
         self.held_item = None
-        level.place_object(self.drop_item)
+        #level.place_object(self.drop_item)
 
-    def pickup(self, obj):
+    def pickup(self, obj, level):
         self.held_item = obj
         self.held_item.obey_gravity = False
-        self.held_item._layer = self._layer + 1
+        level.objects.change_layer(self.held_item, self._layer)
         self.held_item.rect.y = self.rect.centery + (self.rect.w / 6)
         self.held_item.rect.x = self.rect.centerx
 

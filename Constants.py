@@ -18,8 +18,9 @@ GROUP_OBJECT = 3
 CRANE_OBJECT = 4
 
 #BEHAVIORS
-PICKUP = 0
-PLACE = 1
+NOTHING = 0
+PICKUP = 1
+PLACE = 2
 TURN_ON = 3
 
 #STATES FOR GROUP OBJECTS
@@ -41,3 +42,14 @@ MID_LEFT = 8
 NOT_JUMPING = 0
 JUMP_DELAY = 1
 JUMP = 2
+
+#GUI OBJECT TYPES
+GUI_OBJ = 0
+TXT_BOX = 1
+LIST_BOX = 2
+
+#Names for indicies inside tuple stored in dest list
+X = 0
+Y = 1
+WAIT = 2
+ACTION = 3
