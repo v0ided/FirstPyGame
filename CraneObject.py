@@ -1,4 +1,5 @@
 from BaseObject import BaseObject
+from LevelObject import LevelObject
 from Constants import *
 import pygame
 from Timer import Timer
@@ -165,3 +166,15 @@ class CraneObject(BaseObject):
             self._power = False
         else:
             self._power = True
+
+    def seralize(self, config):
+        BaseObject.seralize(self, config)
+        config.set(self.name, 'xmin', str(self.xmin))
+        config.set(self.name, 'ymin', str(self.ymin))
+        config.set(self.name, 'xmax', str(self.xmax))
+        config.set(self.name, 'ymax', str(self.ymax))
+        config.set(self.name, 'xhome', str(self.xhome))
+        config.set(self.name, 'yhome', str(self.yhome))
+        config.set(self.name, 'xspeed', str(self.xspeed))
+        config.set(self.name, 'yspeed', str(self.yspeed))
+        config.set(self.name, 'arm', self.arm.name)

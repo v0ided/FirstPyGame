@@ -53,3 +53,7 @@ X = 0
 Y = 1
 WAIT = 2
 ACTION = 3
+
+#Input Types
+KEY = 0
+MOUSE = 1

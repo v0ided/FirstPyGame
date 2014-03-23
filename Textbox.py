@@ -12,13 +12,12 @@ class Textbox(GuiObject):
         self.text = ""
         self.img = None
         self.type = TXT_BOX
-        self.active = True
         self.changed = True
 
     def get(self, character):
         if character == pygame.K_BACKSPACE:
             self.backspace()
-        else:
+        elif pygame.K_ESCAPE < character < pygame.K_DELETE:
             self.text += chr(character)
         self.changed = True
 
@@ -34,10 +33,14 @@ class Textbox(GuiObject):
             self.changed = False
 
     def backspace(self):
-        self.text = self.text[:-1]
-        self.changed = True
+        if len(self.text) > 0:
+            self.text = self.text[:-1]
+            self.changed = True
 
     def display(self, screen):
         pygame.draw.rect(screen, self.bg_color, (self.cords[X], self.cords[Y], self.w, self.h), 0)
         if self.img is not None:
             screen.blit(self.img, (self.cords[X] + self.margin, self.cords[Y] + self.margin))
+
+    def get_text(self):
+        return self.text

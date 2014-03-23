@@ -21,10 +21,9 @@ def load_image(name, colorkey=None):
 
 def search_file(term):
     results = []
-    for file in glob.glob("*" + term + "*"):
+    for file in glob.glob('data/' + "*" + term + "*"):
         results.append(file)
     return results
-
 
 def to_num(s):
     try:
@@ -57,5 +56,14 @@ def to_bool(bool_str):
     else:
         return None
 
-#def if_exisit_get(objdict, key):
+
+def obj_type_str(obj_type):
+    if obj_type == BASE_OBJECT:
+        return "BaseObject"
+    if obj_type == LEVEL_OBJECT:
+        return "LevelObject"
+    if obj_type == PLAYER:
+        return "Player"
+    if obj_type == CRANE_OBJECT:
+        return "CraneObject"
 

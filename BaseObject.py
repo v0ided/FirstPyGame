@@ -1,7 +1,6 @@
-from Constants import *
 from Timer import *
 from Behavior import Behavior
-
+from HelpFunctions import *
 
 class BaseObject(pygame.sprite.Sprite):
     _objects = []
@@ -117,6 +116,16 @@ class BaseObject(pygame.sprite.Sprite):
     def _update_pos(self):
         self.rect.x += self.xvel
         self.rect.y += self.yvel
+
+    #Argument is configparser object
+    def seralize(self, config):
+        config.set(self.name, 'type', obj_type_str(self.type))
+        config.set(self.name, 'x', str(self.rect.x))
+        config.set(self.name, 'y', str(self.rect.y))
+        config.set(self.name, 'w', str(self.rect.w))
+        config.set(self.name, 'h', str(self.rect.h))
+        config.set(self.name, 'gravity', str(self.obey_gravity))
+        config.set(self.name, 'collide', str(self.collidable))
 
 
 ##PLAYER PICKUP CONDITIONS##

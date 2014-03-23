@@ -16,7 +16,7 @@ class Level():
     def __init__(self, w, h, filename):
         self.width = w
         self.height = h
-        self.background = pygame.Surface((w, h))
+        self.background = pygame.Surface((self.width, self.height))
         self.background = self.background.convert()
         self.background.fill((153, 217, 234))
         self.objects = pygame.sprite.LayeredUpdates()
@@ -36,7 +36,6 @@ class Level():
         obj_filename = os.path.join('data', 'level_data', self.filename)
         parser = configparser.ConfigParser()
         parser.read(obj_filename)
-
         object_list = parser.sections()
         for objname in object_list:
             obj_type = parser[objname]['type']
@@ -44,7 +43,7 @@ class Level():
             for option in parser[objname]:
                 value = parser[objname][option]
                 var_dict[option] = to_num(value)
-
+            print(obj_type)
             self.objects.add(ObjFactory(obj_type, var_dict))
 
     def update(self):
@@ -62,7 +61,7 @@ class Level():
         for sprite_layer in self.objects.layers():
             for sprite in self.objects.get_sprites_from_layer(sprite_layer):
                 if self.camera.on_screen(sprite.rect) and sprite.visible:
-                    translated = self.camera.translate(sprite.rect)
+                    translated = self.camera.translate_to(sprite.rect)
                     sprite.draw(screen, translated)
 
     #calls collide for each object against each object besides itself

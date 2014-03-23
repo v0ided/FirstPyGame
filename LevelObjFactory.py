@@ -12,3 +12,4 @@ def ObjFactory(obj_type, var_dict):
         return CraneObject(var_dict)
     else:
         print("Unknown type sent to object factory.")
+
