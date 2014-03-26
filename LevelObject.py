@@ -15,14 +15,18 @@ class LevelObject(BaseObject):
             self.idle_anim = pyganim.PygAnimation([(os.path.join(var_dict['file1']), .75),
                                                    (os.path.join(var_dict['file2']), .75)])
         elif 'file1' in var_dict.keys():
+            print(var_dict['file1'])
             self.files.append(var_dict['file1'])
             self.idle_anim = pyganim.PygAnimation([(os.path.join(var_dict['file1']), 1)])
 
-        if var_dict['trans'] == 'yes':
+        if to_bool(var_dict['trans']):
             self.idle_anim.set_colorkey((255, 255, 255))
 
         #If width or height is 0, use default w/h
-        if var_dict['w'] != 0 or var_dict['h'] != 0:
+        if var_dict['w'] == 0 or var_dict['h'] == 0:
+            self.rect.w = self.idle_anim.getRect().w
+            self.rect.h = self.idle_anim.getRect().h
+        else:
             self.idle_anim.scale((var_dict['w'], var_dict['h']))
         self.rect.x = var_dict['x']
         self.rect.y = var_dict['y']

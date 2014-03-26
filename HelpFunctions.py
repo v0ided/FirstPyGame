@@ -25,6 +25,7 @@ def search_file(term):
         results.append(file)
     return results
 
+
 def to_num(s):
     try:
         s = int(s)

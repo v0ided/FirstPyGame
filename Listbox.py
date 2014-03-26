@@ -20,13 +20,12 @@ class Listbox(GuiObject):
     def update_list(self, items_list, changed):
         if changed and items_list:
             self.items_dict.clear()
+            self.selected = 0
             index = 0
             for text in items_list:
                 img = self.font.render(text, True, (0, 0, 0))
                 self.items_dict[text] = img
-                size = self.font.size(text)
-                width = size[0]
-                height = size[1]
+                width, height = self.font.size(text)
                 if width > self.w:
                     self.w = width - 30
                 if index <= self.rows:
@@ -42,29 +41,32 @@ class Listbox(GuiObject):
     #get selected text
     def get_selected(self):
         index = 0
-        for i in self.items_dict.keys():
+        for key in self.items_dict.keys():
             if index == self.selected:
-                return i
+                return key
             index += 1
 
-    def display(self, screen):
+    def draw(self, screen):
         s = pygame.Surface((self.w, self.h))
         s.set_alpha(110)
         s.fill((255, 255, 255))
         screen.blit(s, (self.cords[X], self.cords[Y]))
-        item_x = self.cords[X]
-        item_y = self.cords[Y]
+        #Starting point for item x,y
+        item_x, item_y = self.cords
         if self.items_dict:
-            index = 0
-            for img in self.items_dict.values():
+            item_imgs = self.items_dict.values()
+            for index, img in enumerate(item_imgs):
+                # If the index equals selected or resides after selected
+                # and is less than the amount of rows after selected
                 if self.selected <= index < self.selected + self.rows:
+                    #if item is currently selected, draw a special box around it
                     if index == self.selected:
                         pygame.draw.rect(screen, (200, 200, 200),
                                         (item_x, item_y, img.get_width() + self.margin,
                                          img.get_height() + self.margin), 0)
+                    #draw item text
                     screen.blit(img, (item_x + self.margin, item_y + self.margin))
                     item_y += self.font.get_height() + 10
-                index += 1
 
     def get_text(self):
         return self.get_selected()

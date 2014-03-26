@@ -42,7 +42,7 @@ class CraneObject(BaseObject):
         self._power = False
         self.state = OFF
 
-        #These x and y values represent the crane's posistion when telling it to move somewhere (ie the arm/claw)
+        #These x and y values represent the crane's position when telling it to move somewhere (ie the arm/claw)
         self.x = self.arm.rect.right
         self.y = self.arm.rect.bottom
 
@@ -168,6 +168,8 @@ class CraneObject(BaseObject):
             self._power = True
 
     def seralize(self, config):
+        #Seralize referenced arm object first
+        self.arm.seralize(config)
         BaseObject.seralize(self, config)
         config.set(self.name, 'xmin', str(self.xmin))
         config.set(self.name, 'ymin', str(self.ymin))

@@ -16,7 +16,7 @@ class GuiObject():
         self.attached = []
         self.visible = True
 
-    def display(self, screen):
+    def draw(self, screen):
         pass
 
     def update(self):
@@ -30,6 +30,10 @@ class GuiObject():
 
     def get_text(self):
         return None
+
+    #provides the ability for a gui object to catch user input
+    def input(self, key):
+        pass
 
 
 
