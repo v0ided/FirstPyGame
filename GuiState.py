@@ -4,6 +4,7 @@ import pygame
 from Constants import *
 from Textbox import Textbox
 from Listbox import Listbox
+from Keybindings import Keybindings
 
 
 class GuiState():
@@ -11,7 +12,7 @@ class GuiState():
         #List of all gui objects the manager controls
         self.objects = []
         #keyboard character/function to execute
-        self.bindings = {}
+        self.keybindings = Keybindings()
         #mouse button/function to execute
         self.mouse_bindings = {}
         #Object in self.objects that has the current focus for input
@@ -59,32 +60,11 @@ class GuiState():
 
     def input(self, key):
         #If a key binding exists, do action
-        if self.check_binding(key):
+        if self.keybindings.check(key):
             return
         #if focus object
         if self._has_focus:
             self._has_focus.input(key)
-
-    def bind(self, get_args, function, pressed):
-        if function and pressed:
-            if pressed in self.bindings.keys():
-                print("Overwriting key binding: " + str(pressed))
-            self.bindings[pressed] = (get_args, function)
-        else:
-            print('Function or get_args or key invalid in bind call.')
-
-    def unbind(self, key):
-        if key in self.bindings.keys():
-            del self.bindings[key]
-
-    def check_binding(self, key):
-        if key in self.bindings.keys():
-            args = None
-            if self.bindings.get(key)[0]:
-                args = self.bindings.get(key)[0]()
-            self.bindings[key][1](args)
-            return True
-        return False
 
     def check_mouse_binding(self, event_type):
         if event_type in self.mouse_bindings.keys():
@@ -104,30 +84,3 @@ class GuiState():
 
     def make_active(self):
         self.active = True
-
-
-class ObjSearchGui(GuiState):
-    def __init__(self, active=True):
-        GuiState.__init__(self, active)
-
-    def get_file_from_input(self):
-        if self.get_obj("results"):
-            return self.get_obj("results").get_text()
-        else:
-            print("no results text box found")
-            return ""
-
-    def tog_obj_search(self, arg):
-        if self._has_focus:
-                self.remove(self._has_focus)
-                self.remove(self.get_obj('results'))
-                self._has_focus = None
-                self.visible = False
-        else:
-            self.visible = True
-            self._has_focus = self.get_obj("c_obj")
-            #Create a text box and add a listbox to display filtered results
-            txt_box = self.add(TXT_BOX, "c_obj", pygame.mouse.get_pos(), None)
-            results_pos = (txt_box.cords[X], txt_box.cords[Y] + txt_box.h + 45)
-            results = self.add(LIST_BOX, "results", results_pos, None)
-            txt_box.attach(results)

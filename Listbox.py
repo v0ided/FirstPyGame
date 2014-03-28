@@ -32,11 +32,17 @@ class Listbox(GuiObject):
                     self.h = (height + 7) * len(self.items_dict)
                 index += 1
 
-    def select_next(self):
+    #direction must be a value of 0(DIR_UP) or 1(DIR_DOWN)
+    def select_next(self, direction):
         if self.selected >= len(self.items_dict) - 1:
             self.selected = 0
+        elif self.selected <= 0:
+            self.selected = len(self.items_dict) - 1
         else:
-            self.selected += 1
+            if direction == DIR_UP:
+                self.selected += 1
+            elif direction == DIR_DOWN:
+                self.selected -= 1
 
     #get selected text
     def get_selected(self):

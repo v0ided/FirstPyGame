@@ -32,6 +32,12 @@ class Level():
                 return obj
         return None
 
+    def get_obj(self, obj_name):
+        for obj in self.objects:
+            if obj_name == obj.name:
+                return obj
+        return None
+
     def _load_objects(self):
         obj_filename = os.path.join('data', 'level_data', self.filename)
         parser = configparser.ConfigParser()
