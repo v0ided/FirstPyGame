@@ -20,7 +20,7 @@ class Listbox(GuiObject):
     def update_list(self, items_list, changed):
         if changed and items_list:
             self.items_dict.clear()
-            self.selected = 0
+            #self.selected = 0
             index = 0
             for text in items_list:
                 img = self.font.render(text, True, (0, 0, 0))
@@ -34,15 +34,18 @@ class Listbox(GuiObject):
 
     #direction must be a value of 0(DIR_UP) or 1(DIR_DOWN)
     def select_next(self, direction):
-        if self.selected >= len(self.items_dict) - 1:
-            self.selected = 0
-        elif self.selected <= 0:
-            self.selected = len(self.items_dict) - 1
-        else:
-            if direction == DIR_UP:
-                self.selected += 1
-            elif direction == DIR_DOWN:
+
+        if direction == DIR_UP:
+            if self.selected < 0:
+                self.selected = len(self.items_dict) - 1
+            else:
+                print(self.selected)
                 self.selected -= 1
+        elif direction == DIR_DOWN:
+            if self.selected > len(self.items_dict) - 1:
+                self.selected = 0
+            else:
+                self.selected += 1
 
     #get selected text
     def get_selected(self):

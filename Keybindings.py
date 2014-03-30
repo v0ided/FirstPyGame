@@ -1,11 +1,15 @@
 __author__ = 'thvoidedline'
-
+from Timer import Timer
 from Binding import Binding
 
 
 class Keybindings():
+    _delay_timer = None
+    _is_delay = False
+
     def __init__(self):
         self._bindings = []
+        Keybindings._delay_timer = Timer(300, Keybindings._fin_delay)
 
     def __getitem__(self, item):
         try:
@@ -14,30 +18,55 @@ class Keybindings():
             print('Invalid keybinding index')
             return None
 
+    @staticmethod
+    def _start_delay():
+        Keybindings._is_delay = True
+        Keybindings._delay_timer.start_timer()
+
+    @staticmethod
+    def _fin_delay():
+        print('delay finished')
+        Keybindings._is_delay = False
+        if Keybindings._delay_timer:
+            Keybindings._delay_timer.stop_timer()
+
     def check(self, key):
-        for bind in self._bindings:
-            if key == bind.key():
-                bind.function()
+        if self._is_delay:
+            print('waiting')
+        else:
+            print('checking')
+            for bind in self._bindings:
+                if bind.enable:
+                    if key == bind.key():
+                        bind.function()
+                        Keybindings._start_delay()
+                        return
 
     def add(self, binding):
         if binding:
             if isinstance(binding, Binding):
                 self._bindings.append(binding)
 
-    def remove(self, binding):
-        if binding in self._bindings:
-            self._bindings.remove(binding)
+    def remove(self, key):
+        for bind in self._bindings:
+            if bind.key == key:
+                self._bindings.remove(bind)
 
     #Controls if binding will execute function on keypress
-    def toggle(self, binding, state=None):
-        if binding in self._bindings:
-            if state is None:
-                if self._bindings.enable is True:
-                    self._bindings.enable = False
+    #binding_type = the subclass type for the bind you want to toggle state of
+    #  This works because every binding has its own subclass, which allows other keybindings to toggle inappropriate or
+    #  conflicting bindings without specifying a specific key or having a reference to the instance
+    def toggle(self, binding_type, on=None):
+        for bind in self._bindings:
+            if isinstance(bind, binding_type):
+                print('toggling bind')
+                if on is None:
+                    if bind.enable is True:
+                        bind.enable = False
+                    else:
+                        bind.enable = True
                 else:
-                    self._bindings.enable = True
-            else:
-                if isinstance(state, bool):
-                    self._bindings.enable = state
-                else:
-                    print('Invalid state. State must be boolean.')
+                    if isinstance(on, bool):
+                        bind.enable = on
+                    else:
+                        print('Invalid state. State must be boolean.')

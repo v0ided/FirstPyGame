@@ -48,15 +48,16 @@ class LevelClearBind(Binding):
             level.clear_level()
 
 
-#todo: check order of arguments
 class PrePlaceObjectBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)
 
     def function(self):
         if self.args:
-            gui_state, obj_name, level = self.args
-            level.pre_place_object(gui_state.get_obj(obj_name))
+            obj_name, obj_search_gui, level, sel_obj_gui = self.args
+            level.pre_place_object(obj_search_gui.get_obj(obj_name).get_text())
+            obj_search_gui.toggle_active(False)
+            sel_obj_gui.keybindings.toggle(PlaceObjectBind, True)
 
 
 class PlaceObjectBind(Binding):
@@ -65,7 +66,7 @@ class PlaceObjectBind(Binding):
 
     def function(self):
         if self.args:
-            level = self.args[0]
+            level, obj_search_gui = self.args
             level.place_object()
 
 
@@ -75,24 +76,23 @@ class ToggleSearchBind(Binding):
 
     def function(self):
         if self.args:
-            gui_state = self.args[0]
-            gui_state.make_active()
-            if gui_state._has_focus:
-                gui_state.remove(gui_state._has_focus)
-                gui_state.remove(gui_state.get_obj('results'))
-                gui_state._has_focus = None
-                gui_state.visible = False
+            obj_search_gui, sel_obj_gui = self.args
+            if obj_search_gui._has_focus:
+                print(obj_search_gui._has_focus)
+                obj_search_gui.toggle_active(False)
             else:
-                gui_state.visible = True
-                gui_state._has_focus = gui_state.get_obj("c_obj")
-                #Create a text box and add a listbox to display filtered results
-                txt_box = gui_state.add(TXT_BOX, "c_obj", pygame.mouse.get_pos(), None)
-                results_pos = (txt_box.cords[X], txt_box.cords[Y] + txt_box.h + 45)
-                results = gui_state.add(LIST_BOX, "results", results_pos, None)
-                txt_box.attach(results)
+                obj_search_gui.toggle_active(True)
+                sel_obj_gui.keybindings.toggle(PlaceObjectBind, False)
+
+                textbox = obj_search_gui.get_obj("c_obj")
+                listbox = obj_search_gui.get_obj("results")
+                mouse_pos = pygame.mouse.get_pos()
+
+                obj_search_gui._has_focus = textbox
+                textbox.cords = mouse_pos
+                listbox.cords = (textbox.cords[X], textbox.cords[Y] + textbox.h + 25)
 
 
-#todo: fix
 class ListboxUpBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)
@@ -103,7 +103,6 @@ class ListboxUpBind(Binding):
             gui_state.get_obj(obj_name).select_next(DIR_UP)
 
 
-#todo: fix
 class ListboxDownBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)

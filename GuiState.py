@@ -18,14 +18,13 @@ class GuiState():
         #Object in self.objects that has the current focus for input
         self._has_focus = None
         #Toggle display of objects and action of keybindings for state
-        self.active = active
+        self._active = active
         #Toggle visibility of gui objects, keybindings will still be active if False
         self.visible = True
 
     def add(self, obj_type, name, cords, var_dict):
         if obj_type == TXT_BOX:
             self.objects.append(Textbox(name, cords))
-            self._has_focus = self.objects[-1]
             return self.objects[-1]
         elif obj_type == LIST_BOX:
             item_list = None
@@ -82,5 +81,19 @@ class GuiState():
         print('Object not found.')
         return ""
 
-    def make_active(self):
-        self.active = True
+    def is_active(self):
+        return self._active
+
+    def toggle_active(self, state=None):
+        #If state is an argument, set self._active to the opposite of argument and let the toggle code do the work
+        if state is not None:
+            self._active = not state
+
+        if self._active:
+            self._active = False
+            self._has_focus = None
+            self.visible = False
+        else:
+            self._active = True
+            self.visible = True
+            self._has_focus = None
