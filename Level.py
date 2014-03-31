@@ -13,9 +13,15 @@ class Background(pygame.sprite.Sprite):
 
 
 class Level():
-    def __init__(self, w, h, filename):
+    def __init__(self, w, h, filename, data_dir=None):
         self.width = w
         self.height = h
+
+        self._data_dir = data_dir
+        if not self._data_dir:
+            self._data_dir = os.path.join('data')
+        os.chdir(self._data_dir)
+
         self.background = pygame.Surface((self.width, self.height))
         self.background = self.background.convert()
         self.background.fill((153, 217, 234))
@@ -39,7 +45,7 @@ class Level():
         return None
 
     def _load_objects(self):
-        obj_filename = os.path.join('data', 'level_data', self.filename)
+        obj_filename = os.path.join(self.filename)
         parser = configparser.ConfigParser()
         parser.read(obj_filename)
         object_list = parser.sections()
@@ -49,7 +55,6 @@ class Level():
             for option in parser[objname]:
                 value = parser[objname][option]
                 var_dict[option] = to_num(value)
-            print(obj_type)
             self.objects.add(ObjFactory(obj_type, var_dict))
 
     def update(self):

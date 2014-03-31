@@ -47,6 +47,8 @@ JUMP = 2
 GUI_OBJ = 0
 TXT_BOX = 1
 LIST_BOX = 2
+WINDOW = 3
+TEXT = 4
 
 #Names for indicies inside tuple stored in dest list
 X = 0

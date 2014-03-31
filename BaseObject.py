@@ -2,6 +2,7 @@ from Timer import *
 from Behavior import Behavior
 from HelpFunctions import *
 
+
 class BaseObject(pygame.sprite.Sprite):
     _objects = []
 

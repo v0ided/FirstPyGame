@@ -2,8 +2,10 @@ __author__ = 'thvoidedline'
 
 import pygame
 from Constants import *
-from Textbox import Textbox
-from Listbox import Listbox
+from GuiTextbox import Textbox
+from GuiListbox import Listbox
+from GuiWindow import GuiWindow
+from GuiText import GuiText
 from Keybindings import Keybindings
 
 
@@ -22,17 +24,34 @@ class GuiState():
         #Toggle visibility of gui objects, keybindings will still be active if False
         self.visible = True
 
-    def add(self, obj_type, name, cords, var_dict):
+    def add(self, obj_type, name, cords, **kwargs):
         if obj_type == TXT_BOX:
             self.objects.append(Textbox(name, cords))
             return self.objects[-1]
         elif obj_type == LIST_BOX:
             item_list = None
-            if var_dict:
-                if 'items_list' in var_dict:
-                    item_list = var_dict['items_list']
+            if kwargs:
+                if 'item_list' in kwargs:
+                    item_list = kwargs['item_list']
             self.objects.append(Listbox(name, cords, item_list))
             return self.objects[-1]
+        elif obj_type == WINDOW:
+            if 'w' in kwargs and 'h' in kwargs and 'font_color' in kwargs and 'bg_color' in kwargs:
+                w = kwargs['w']
+                h = kwargs['h']
+                bg_color = kwargs['bg_color']
+                font_color = kwargs['font_color']
+                self.objects.append(GuiWindow(name, cords, w, h, bg_color, font_color))
+            else:
+                print("Gui Window was not created - did not have proper arguments")
+        elif obj_type == TEXT:
+            if 'font_color' in kwargs and 'font_size' in kwargs and 'text' in kwargs:
+                font_color = kwargs['font_color']
+                font_size = kwargs['font_size']
+                text = kwargs['text']
+                self.objects.append(GuiText(name, cords, font_color, font_size, text))
+            else:
+                print("Gui Text was not created - did not have proper arguments")
         else:
             print('Invalid gui object passed to factory.')
         return None

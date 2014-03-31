@@ -21,7 +21,7 @@ def load_image(name, colorkey=None):
 
 def search_file(term):
     results = []
-    for file in glob.glob('data/' + "*" + term + "*"):
+    for file in glob.glob('../' + 'data/' + "*" + term + "*"):
         results.append(file)
     return results
 

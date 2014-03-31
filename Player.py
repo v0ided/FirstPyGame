@@ -35,22 +35,22 @@ class PlayerSprite(BaseObject):
         self.visible = True
 
         #Jumping Animation:
-        self.jumping_anim = pyganim.PygAnimation([(os.path.join('data', 'PlayerJumping1.bmp'), 0.1),
-                                                  (os.path.join('data', 'PlayerJumping2.bmp'), 0.1),
-                                                  (os.path.join('data', 'PlayerJumping3.bmp'), 0.2),
-                                                  (os.path.join('data', 'PlayerJumping4.bmp'), 0.4),
-                                                  (os.path.join('data', 'PlayerJumping5.bmp'), 0.4),
-                                                  (os.path.join('data', 'PlayerStanding.bmp'), 1)])
+        self.jumping_anim = pyganim.PygAnimation([(os.path.join('PlayerJumping1.bmp'), 0.1),
+                                                  (os.path.join('PlayerJumping2.bmp'), 0.1),
+                                                  (os.path.join('PlayerJumping3.bmp'), 0.2),
+                                                  (os.path.join('PlayerJumping4.bmp'), 0.4),
+                                                  (os.path.join('PlayerJumping5.bmp'), 0.4),
+                                                  (os.path.join('PlayerStanding.bmp'), 1)])
         self.jumping_anim.set_colorkey((255, 255, 255))
 
         #Walking Animation:
-        self.walking_anim = pyganim.PygAnimation([(os.path.join('data', 'PlayerStanding.bmp'), 0.25),
-                                                  (os.path.join('data', 'PlayerWalking1.bmp'), 0.25),
-                                                  (os.path.join('data', 'PlayerWalking2.bmp'), 0.25),
-                                                  (os.path.join('data', 'PlayerWalking3.bmp'), 0.25),
-                                                  (os.path.join('data', 'PlayerWalking4.bmp'), 0.25),
-                                                  (os.path.join('data', 'PlayerWalking5.bmp'), 0.25),
-                                                  (os.path.join('data', 'PlayerWalking6.bmp'), 0.25)])
+        self.walking_anim = pyganim.PygAnimation([(os.path.join('PlayerStanding.bmp'), 0.25),
+                                                  (os.path.join('PlayerWalking1.bmp'), 0.25),
+                                                  (os.path.join('PlayerWalking2.bmp'), 0.25),
+                                                  (os.path.join('PlayerWalking3.bmp'), 0.25),
+                                                  (os.path.join('PlayerWalking4.bmp'), 0.25),
+                                                  (os.path.join('PlayerWalking5.bmp'), 0.25),
+                                                  (os.path.join('PlayerWalking6.bmp'), 0.25)])
         self.walking_anim.set_colorkey((255, 255, 255))
         self.rect.x = var_dict['x']
         self.rect.y = var_dict['y']

@@ -7,8 +7,8 @@ from Constants import *
 
 
 class Textbox(GuiObject):
-    def __init__(self, name, cords):
-        GuiObject.__init__(self, name, cords)
+    def __init__(self, name, cords, wnd_color=(255, 255, 255), font_color=(0, 0, 0)):
+        GuiObject.__init__(self, name, cords, wnd_color, font_color)
         self.text = ""
         self.img = None
         self.type = TXT_BOX

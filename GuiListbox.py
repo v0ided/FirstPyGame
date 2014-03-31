@@ -8,7 +8,7 @@ from Constants import*
 
 class Listbox(GuiObject):
     def __init__(self, name, cords, items_list=None):
-        GuiObject.__init__(self, name, cords)
+        GuiObject.__init__(self, name, cords, (255, 255, 255), (0, 0, 0))
         self.items_dict = {}
         self.update_list(items_list, True)
         self.type = LIST_BOX
@@ -23,7 +23,7 @@ class Listbox(GuiObject):
             #self.selected = 0
             index = 0
             for text in items_list:
-                img = self.font.render(text, True, (0, 0, 0))
+                img = self.font.render(text, True, self.font_color)
                 self.items_dict[text] = img
                 width, height = self.font.size(text)
                 if width > self.w:
@@ -34,7 +34,6 @@ class Listbox(GuiObject):
 
     #direction must be a value of 0(DIR_UP) or 1(DIR_DOWN)
     def select_next(self, direction):
-
         if direction == DIR_UP:
             if self.selected < 0:
                 self.selected = len(self.items_dict) - 1
@@ -58,7 +57,7 @@ class Listbox(GuiObject):
     def draw(self, screen):
         s = pygame.Surface((self.w, self.h))
         s.set_alpha(110)
-        s.fill((255, 255, 255))
+        s.fill(self.bg_color)
         screen.blit(s, (self.cords[X], self.cords[Y]))
         #Starting point for item x,y
         item_x, item_y = self.cords
