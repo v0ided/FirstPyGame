@@ -6,14 +6,26 @@ from Constants import *
 
 
 class GuiText(GuiObject):
-    def __init__(self,  name, cords, font_color, font_size, text):
-        GuiObject.__init__(self, name, cords, (0, 0, 0), font_color)
+    def __init__(self,  var_dict):
+        #Width and height will be set once font is rendered
+        GuiObject.__init__(self, var_dict)
         self.type = TEXT
-        self.font_size = font_size
-        self.text = text
-        self.font = pygame.font.SysFont("Calibri", font_size)
+
+        try:
+            self.font_size = var_dict['font_size']
+            self.text = var_dict['text']
+            self.font_color = var_dict['font_color']
+        except KeyError:
+            print('Not all required arguments passed to GuiText')
+            raise
+
+        self.font = pygame.font.SysFont("Calibri", self.font_size)
         self.font_img = self.font.render(self.text, True, self.font_color)
+        self.rect.w, self.rect.h = self.font.size(self.text)
+
+    def get_text(self):
+        return self.text
 
     def draw(self, screen):
         if self.font_img:
-            screen.blit(self.font_img, (self.cords[X] + self.margin, self.cords[Y] + self.margin))
+            screen.blit(self.font_img, self.rect)

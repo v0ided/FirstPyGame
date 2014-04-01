@@ -49,8 +49,9 @@ TXT_BOX = 1
 LIST_BOX = 2
 WINDOW = 3
 TEXT = 4
+BUTTON = 5
 
-#Names for indicies inside tuple stored in dest list
+#Names for indices inside tuple stored in dest list
 X = 0
 Y = 1
 WAIT = 2

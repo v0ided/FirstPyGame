@@ -1,12 +1,9 @@
 __author__ = 'thvoidedline'
 
 import pygame
-from Constants import *
-from GuiTextbox import Textbox
-from GuiListbox import Listbox
-from GuiWindow import GuiWindow
-from GuiText import GuiText
+from GuiObjectFactory import GuiObjFactory
 from Keybindings import Keybindings
+from Constants import *
 
 
 class GuiState():
@@ -24,37 +21,9 @@ class GuiState():
         #Toggle visibility of gui objects, keybindings will still be active if False
         self.visible = True
 
-    def add(self, obj_type, name, cords, **kwargs):
-        if obj_type == TXT_BOX:
-            self.objects.append(Textbox(name, cords))
-            return self.objects[-1]
-        elif obj_type == LIST_BOX:
-            item_list = None
-            if kwargs:
-                if 'item_list' in kwargs:
-                    item_list = kwargs['item_list']
-            self.objects.append(Listbox(name, cords, item_list))
-            return self.objects[-1]
-        elif obj_type == WINDOW:
-            if 'w' in kwargs and 'h' in kwargs and 'font_color' in kwargs and 'bg_color' in kwargs:
-                w = kwargs['w']
-                h = kwargs['h']
-                bg_color = kwargs['bg_color']
-                font_color = kwargs['font_color']
-                self.objects.append(GuiWindow(name, cords, w, h, bg_color, font_color))
-            else:
-                print("Gui Window was not created - did not have proper arguments")
-        elif obj_type == TEXT:
-            if 'font_color' in kwargs and 'font_size' in kwargs and 'text' in kwargs:
-                font_color = kwargs['font_color']
-                font_size = kwargs['font_size']
-                text = kwargs['text']
-                self.objects.append(GuiText(name, cords, font_color, font_size, text))
-            else:
-                print("Gui Text was not created - did not have proper arguments")
-        else:
-            print('Invalid gui object passed to factory.')
-        return None
+    def add(self, obj_type, var_dict):
+        self.objects.append(GuiObjFactory(obj_type, var_dict))
+        return self.objects[-1]
 
     def remove(self, obj):
         if obj in self.objects:
@@ -76,13 +45,18 @@ class GuiState():
                 return obj
         return None
 
-    def input(self, key):
+    def input(self, user_input):
         #If a key binding exists, do action
-        if self.keybindings.check(key):
+        if self.keybindings.check(user_input):
             return
         #if focus object
         if self._has_focus:
-            self._has_focus.input(key)
+            self._has_focus.input(user_input)
+        if user_input == pygame.MOUSEBUTTONUP:
+            m_pos = pygame.mouse.get_pos()
+            click_obj = self.gui_objects_at(m_pos[X], m_pos[Y])
+            if click_obj:
+                click_obj.input(user_input)
 
     def check_mouse_binding(self, event_type):
         if event_type in self.mouse_bindings.keys():
@@ -116,3 +90,10 @@ class GuiState():
             self._active = True
             self.visible = True
             self._has_focus = None
+
+    #check if a gui object is at a SCREEN coordinate
+    def gui_objects_at(self, x, y):
+        for gobj in self.objects:
+            if gobj.rect.collidepoint(x, y):
+                return gobj
+        return None

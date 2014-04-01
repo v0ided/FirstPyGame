@@ -13,7 +13,7 @@ def main():
     pygame.display.set_caption('LevelEdit')
     pygame.mouse.set_visible(1)
     clock = pygame.time.Clock()
-    level = LevelEdit(2000, 800, os.path.join('../', 'data', 'level_data', 'objects1.ini'))
+    level = LevelEdit(2000, 800, os.path.join('..\\', 'data', 'level_data', 'objects1.ini'))
     pygame.display.flip()
     screen.blit(level.background, (0, 0))
 
@@ -25,9 +25,13 @@ def main():
     level_options.keybindings.add(LevelSaveBind(pygame.K_F1, level))
     level_options.keybindings.add(LevelLoadBind(pygame.K_F2, level))
     level_options.keybindings.add(LevelClearBind(pygame.K_F3, level))
-    level_options.add(WINDOW, "leveloptions", (0, 560), w=800, h=40, bg_color=(0, 0, 0), font_color=(234, 234, 234))
-    level_options.add(TEXT, "keymap", (5, 565), font_color=(234, 234, 234), font_size=24,
-                      text="Save Level - F1  Load Level - F2  Clear Level - F3")
+    level_options.add(WINDOW, {'name': "leveloptions", 'cords': (0, 560), 'w': 800, 'h': 40, 'bg_color': (0, 0, 0),
+                               'font_color': (234, 234, 234)})
+    level_options.add(TEXT, {'name': "keymap", 'cords': (5, 565), 'font_color': (234, 234, 234), 'font_size': 20,
+                      'text': "Save Level - F1 Load Level - F2 Clear Level - F3 | Level: " + level.filename})
+    level_options.add(BUTTON, {'name': 'load_level', 'cords': (700, 510), 'bg_color': (0, 0, 0),
+                               'font_color': (234, 234, 234), 'font_size': 14,
+                               'text': "Load Level", 'action': level.load_level})
 
     sel_obj_gui.keybindings.add(PlaceObjectBind(pygame.MOUSEBUTTONUP, level, obj_search_gui))
     sel_obj_gui.keybindings.add(PlaceObjectBind(pygame.K_RETURN, level, obj_search_gui))
@@ -37,9 +41,9 @@ def main():
     obj_search_gui.keybindings.add(ListboxUpBind(pygame.K_UP, "results", obj_search_gui))
     obj_search_gui.keybindings.add(ListboxDownBind(pygame.K_DOWN, "results", obj_search_gui))
 
-    txt_box = obj_search_gui.add(TXT_BOX, "c_obj", pygame.mouse.get_pos())
-    results_pos = (txt_box.cords[X], txt_box.cords[Y] + txt_box.h + 25)
-    results = obj_search_gui.add(LIST_BOX, "results", results_pos)
+    txt_box = obj_search_gui.add(TXT_BOX, {'name': "c_obj", 'cords': pygame.mouse.get_pos(), 'bg_color': (255, 255, 255)})
+    results_pos = (txt_box.rect.x, txt_box.rect.y + txt_box.rect.h + 25)
+    results = obj_search_gui.add(LIST_BOX, {'name': "results", 'cords': results_pos, 'bg_color': (255, 255, 255)})
     txt_box.attach(results)
 
     toggle_search_gui.keybindings.add(ToggleSearchBind(pygame.K_SPACE, obj_search_gui, sel_obj_gui))
@@ -60,7 +64,7 @@ def main():
                     return
             if event.type == pygame.KEYUP:
                 gui_manager.input(event.key)
-            if event.type == pygame.MOUSEBUTTONDOWN or event.type == pygame.MOUSEBUTTONUP:
+            if event.type == pygame.MOUSEBUTTONUP:
                 gui_manager.input(event.type)
             if event.type > pygame.USEREVENT:
                 Timer.handle_event(event.type)

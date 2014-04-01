@@ -51,10 +51,10 @@ class LevelEdit(Level):
             print("Saved Level.")
 
     def load_level(self):
-        pass
+        print('Loading level..')
 
     def edit_object(self, obj):
-        pass
+        print("Edit Object..")
 
     def remove_object(self, obj):
         if obj in self.objects:

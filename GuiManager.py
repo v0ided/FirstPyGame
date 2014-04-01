@@ -4,10 +4,10 @@ class GuiManager():
     def __init__(self):
         self.states = {}
 
-    def input(self, key):
+    def input(self, user_input):
         for state_type, state_obj in self.states.items():
             if state_obj.is_active():
-                state_obj.input(key)
+                state_obj.input(user_input)
 
     def update(self):
         for state_type, state_obj in self.states.items():

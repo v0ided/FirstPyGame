@@ -3,15 +3,18 @@ from Constants import *
 
 
 class GuiObject():
-    def __init__(self, name, cords, wnd_color, font_color):
-        self.name = name
-        self.cords = cords
+    def __init__(self, var_dict):
+        try:
+            self.name = var_dict['name']
+            cords = var_dict['cords']
+            self.rect = pygame.Rect(cords[X], cords[Y], 1, 1)
+        except LookupError:
+            print("Not all required arguments were passed to GuiObject")
+            raise
+
+        self.font_color = (0, 0, 0)
         self.font = pygame.font.SysFont("Calibri", 24)
-        self.w = 0
-        self.h = 0
         self.margin = 5
-        self.bg_color = wnd_color
-        self.font_color = font_color
         self.type = GUI_OBJ
         self.attached = []
         self.visible = True
@@ -32,7 +35,7 @@ class GuiObject():
         return None
 
     #provides the ability for a gui object to catch user input
-    def input(self, key):
+    def input(self, user_input):
         pass
 
 

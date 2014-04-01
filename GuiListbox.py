@@ -6,11 +6,19 @@ from GuiObject import GuiObject
 from Constants import*
 
 
-class Listbox(GuiObject):
-    def __init__(self, name, cords, items_list=None):
-        GuiObject.__init__(self, name, cords, (255, 255, 255), (0, 0, 0))
+class GuiListbox(GuiObject):
+    def __init__(self, var_dict):
+        GuiObject.__init__(self, var_dict)
         self.items_dict = {}
-        self.update_list(items_list, True)
+
+        try:
+            self.bg_color = var_dict['bg_color']
+            if 'items_list' in var_dict:
+                self.update_list(var_dict['items_list'], True)
+        except KeyError:
+            print("Not all required argumennts given to GuiListbox")
+            raise
+
         self.type = LIST_BOX
         self.selected = 0
         self.rows = 10
@@ -26,10 +34,10 @@ class Listbox(GuiObject):
                 img = self.font.render(text, True, self.font_color)
                 self.items_dict[text] = img
                 width, height = self.font.size(text)
-                if width > self.w:
-                    self.w = width - 30
+                if width > self.rect.w:
+                    self.rect.w = width - 30
                 if index <= self.rows:
-                    self.h = (height + 7) * len(self.items_dict)
+                    self.rect.h = (height + 7) * len(self.items_dict)
                 index += 1
 
     #direction must be a value of 0(DIR_UP) or 1(DIR_DOWN)
@@ -55,12 +63,12 @@ class Listbox(GuiObject):
             index += 1
 
     def draw(self, screen):
-        s = pygame.Surface((self.w, self.h))
+        s = pygame.Surface((self.rect.w, self.rect.h))
         s.set_alpha(110)
         s.fill(self.bg_color)
-        screen.blit(s, (self.cords[X], self.cords[Y]))
+        screen.blit(s, (self.rect.x, self.rect.y))
         #Starting point for item x,y
-        item_x, item_y = self.cords
+        item_x, item_y = self.rect.topleft
         if self.items_dict:
             item_imgs = self.items_dict.values()
             for index, img in enumerate(item_imgs):
@@ -70,7 +78,8 @@ class Listbox(GuiObject):
                     #if item is currently selected, draw a special box around it
                     if index == self.selected:
                         pygame.draw.rect(screen, (200, 200, 200),
-                                        (item_x, item_y, img.get_width() + self.margin,
+                                        (item_x, item_y,
+                                         img.get_width() + self.margin,
                                          img.get_height() + self.margin), 0)
                     #draw item text
                     screen.blit(img, (item_x + self.margin, item_y + self.margin))

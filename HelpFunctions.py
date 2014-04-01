@@ -67,5 +67,3 @@ def obj_type_str(obj_type):
         return "Player"
     if obj_type == CRANE_OBJECT:
         return "CraneObject"
-
-

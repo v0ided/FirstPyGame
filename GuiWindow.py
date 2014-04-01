@@ -6,11 +6,16 @@ import pygame
 
 
 class GuiWindow(GuiObject):
-    def __init__(self, name, cords, w, h, wnd_color, font_color):
-        GuiObject.__init__(self, name, cords, wnd_color, font_color)
+    def __init__(self, var_dict):
+        GuiObject.__init__(self, var_dict)
         self.type = WINDOW
-        self.w = w
-        self.h = h
+        try:
+            self.rect.w = var_dict['w']
+            self.rect.h = var_dict['h']
+            self.bg_color = var_dict['bg_color']
+        except KeyError:
+            print("Not all required arguments given to GuiWindow")
+            raise
 
     def draw(self, screen):
-        pygame.draw.rect(screen, self.bg_color, (self.cords[X], self.cords[Y], self.w, self.h), 0)
+        pygame.draw.rect(screen, self.bg_color, self.rect, 0)

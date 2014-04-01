@@ -78,7 +78,6 @@ class ToggleSearchBind(Binding):
         if self.args:
             obj_search_gui, sel_obj_gui = self.args
             if obj_search_gui._has_focus:
-                print(obj_search_gui._has_focus)
                 obj_search_gui.toggle_active(False)
             else:
                 obj_search_gui.toggle_active(True)
@@ -86,11 +85,15 @@ class ToggleSearchBind(Binding):
 
                 textbox = obj_search_gui.get_obj("c_obj")
                 listbox = obj_search_gui.get_obj("results")
+                assert listbox, "results does not exist"
+                assert textbox, "c_obj does not exist"
+
                 mouse_pos = pygame.mouse.get_pos()
 
                 obj_search_gui._has_focus = textbox
-                textbox.cords = mouse_pos
-                listbox.cords = (textbox.cords[X], textbox.cords[Y] + textbox.h + 25)
+                textbox.rect.x, textbox.rect.y = mouse_pos
+                listbox.rect.x = textbox.rect.x
+                listbox.rect.y = textbox.rect.y + textbox.rect.h + 25
 
 
 class ListboxUpBind(Binding):
