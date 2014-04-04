@@ -19,10 +19,10 @@ def load_image(name, colorkey=None):
     return image, image.get_rect()
 
 
-def search_file(term):
+def search_file(path, term):
     results = []
-    for file in glob.glob('../' + 'data/' + "*" + term + "*"):
-        results.append(file)
+    for file in glob.glob(os.path.join(path, "*" + term + "*")):
+        results.append(os.path.basename(file))
     return results
 
 

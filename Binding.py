@@ -34,9 +34,21 @@ class LevelLoadBind(Binding):
 
     def function(self):
         if self.args:
-            level = self.args[0]
-            level.load_level()
+            load_lvl_dialog = self.args[0]
+            load_lvl_dialog.toggle_active()
+            if load_lvl_dialog.is_active():
+                load_lvl_dialog.has_focus = load_lvl_dialog.get_obj('file_txtbox')
 
+class LevelSaveAsBind(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        if self.args:
+            save_lvl_gui = self.args[0]
+            save_lvl_gui.toggle_active()
+            if save_lvl_gui.is_active():
+                save_lvl_gui.has_focus = save_lvl_gui.get_obj('saveas_txtbox')
 
 class LevelClearBind(Binding):
     def __init__(self, key, *args):
@@ -44,8 +56,8 @@ class LevelClearBind(Binding):
 
     def function(self):
         if self.args:
-            level = self.args[0]
-            level.clear_level()
+            clear_lvl_gui = self.args[0]
+            clear_lvl_gui.toggle_active()
 
 
 class PrePlaceObjectBind(Binding):
@@ -77,7 +89,7 @@ class ToggleSearchBind(Binding):
     def function(self):
         if self.args:
             obj_search_gui, sel_obj_gui = self.args
-            if obj_search_gui._has_focus:
+            if obj_search_gui.has_focus:
                 obj_search_gui.toggle_active(False)
             else:
                 obj_search_gui.toggle_active(True)
@@ -90,7 +102,7 @@ class ToggleSearchBind(Binding):
 
                 mouse_pos = pygame.mouse.get_pos()
 
-                obj_search_gui._has_focus = textbox
+                obj_search_gui.has_focus = textbox
                 textbox.rect.x, textbox.rect.y = mouse_pos
                 listbox.rect.x = textbox.rect.x
                 listbox.rect.y = textbox.rect.y + textbox.rect.h + 25
@@ -114,3 +126,14 @@ class ListboxDownBind(Binding):
         if self.args:
             obj_name, gui_state = self.args
             gui_state.get_obj(obj_name).select_next(DIR_DOWN)
+
+
+class ButtonEnter(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        if self.args:
+            bttn = self.args[0]
+            #simulate a button press
+            bttn.input(pygame.MOUSEBUTTONUP)

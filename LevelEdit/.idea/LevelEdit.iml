@@ -5,6 +5,7 @@
     <content url="file://$MODULE_DIR$/../FirstPyGame">
       <sourceFolder url="file://$MODULE_DIR$/../FirstPyGame" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/../../LevelEdit/LevelEdit" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>

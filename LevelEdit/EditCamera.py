@@ -11,11 +11,11 @@ class EditCamera(Camera):
         self.y_speed = 3
 
     def update(self, mousepos):
-        if mousepos[X] > self.rect.w * 0.75:
+        if mousepos[X] > self.rect.w * 0.85:
             self.rect.x += self.x_speed
-        elif mousepos[X] < self.rect.w * 0.25:
+        elif mousepos[X] < self.rect.w * 0.15:
             self.rect.x -= self.x_speed
-        if mousepos[Y] > self.rect.h * 0.75:
+        if mousepos[Y] > self.rect.h * 0.85:
             self.rect.y += self.y_speed
-        elif mousepos[Y] < self.rect.h * 0.25:
+        elif mousepos[Y] < self.rect.h * 0.15:
             self.rect.y -= self.y_speed

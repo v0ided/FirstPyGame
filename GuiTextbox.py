@@ -29,11 +29,7 @@ class Textbox(GuiObject):
             self.text += chr(key)
         self.changed = True
 
-    #todo: This code doesn't belong in a general textbox gui object
     def update(self):
-        results = search_file(self.text)
-        if self.attached:
-            self.attached[0].update_list(results, self.changed)
         if self.changed:
             size = self.font.size(self.text)
             self.rect.w = size[0] + (self.margin * 2)

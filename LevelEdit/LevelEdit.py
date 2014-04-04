@@ -1,27 +1,28 @@
 import configparser
+import string
+from EditCamera import EditCamera
 from Level import Level
 from LevelObjFactory import ObjFactory
-from EditCamera import EditCamera
 from HelpFunctions import *
 
 
 #New levels created/saved levels loaded by creating a new LevelEdit instance
 class LevelEdit(Level):
-    def __init__(self, w, h, filename=None):
-        #If a blank filename is passed, create a new level file 'new_level_1.ini, if the file exists in working dir,
+    def __init__(self, w, h, filename, data_path):
+        #If a blank filename is passed, create a new level file 'new_level_1.ini, if the file exists in level_data,
         #increment i until a filename that does not exist in working dir is found
-        if os.path.isfile(os.path.join('../', 'data', 'level_data', filename)):
+        if os.path.isfile(os.path.join(data_path, 'level_data', filename)):
             print("Existing level found, loading..")
         else:
-            if filename is None:
+            if filename is "":
                 i = 0
                 while True:
                     i += 1
-                    filename = os.path.join('../', 'data', 'level_data', 'new_level_' + str(i) + '.ini')
-                    if os.path.isfile(filename):
+                    filename = 'new_level_' + str(i) + '.ini'
+                    if not os.path.isfile(os.path.join(data_path, 'level_data', filename)):
                         break
 
-        Level.__init__(self, w, h, filename, os.path.join('../', 'data'))
+        Level.__init__(self, w, h, filename, data_path)
         self.selected_obj = None
         self.camera = EditCamera(800, 600)
 
@@ -36,22 +37,33 @@ class LevelEdit(Level):
         self.camera.update(pygame.mouse.get_pos())
 
     def clear_level(self):
-        del self.objects[:]
+        while self.objects:
+            cur_layer = self.objects.get_top_layer()
+            self.objects.remove_sprites_of_layer(cur_layer)
+        self.selected_obj = None
         self.background.fill((153, 217, 234))
 
-    def save_level(self):
+    def save_level(self, filename=""):
+        #If no filename is given, default to current filename (save)
+        #If a filename is given, set the current filename to the new filename (save as)
+        if filename == "":
+            filename = self._filename
+        else:
+            self._filename = filename
         config = configparser.ConfigParser()
+        sfile = open(os.path.join(self._data_dir, 'level_data', filename), "w")
         for obj in self.objects:
             #If object with this name has already been added, skip it
             if obj.name in config.sections():
                 continue
             obj.seralize(config)
-            sfile = open(self.filename, "w")
-            config.write(sfile)
-            print("Saved Level.")
+        config.write(sfile)
+        print("Saved Level.")
 
-    def load_level(self):
-        print('Loading level..')
+    def load_level(self, new_file):
+        self.clear_level()
+        self._filename = new_file
+        self._load_objects()
 
     def edit_object(self, obj):
         print("Edit Object..")

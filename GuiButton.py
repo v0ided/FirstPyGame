@@ -37,4 +37,8 @@ class GuiButton(GuiObject):
 
     def input(self, user_input):
         if user_input == pygame.MOUSEBUTTONUP:
-            self.action()
+            print('executing action')
+            if self.attached:
+                self.action(self.attached[0].get_text())
+            else:
+                self.action()

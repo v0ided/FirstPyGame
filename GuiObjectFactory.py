@@ -6,6 +6,7 @@ from GuiListbox import GuiListbox
 from GuiWindow import GuiWindow
 from GuiText import GuiText
 from GuiButton import GuiButton
+from GuiObjSearchTextbox import ObjSearchTextbox
 
 
 def GuiObjFactory(obj_type, var_dict):
@@ -19,6 +20,8 @@ def GuiObjFactory(obj_type, var_dict):
         return GuiText(var_dict)
     if obj_type == BUTTON:
         return GuiButton(var_dict)
+    if obj_type == OBJ_S_TXT_BOX:
+        return ObjSearchTextbox(var_dict)
 
     print("Unknown gui object type passed to factory")
     return None

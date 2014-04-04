@@ -15,7 +15,7 @@ class GuiState():
         #mouse button/function to execute
         self.mouse_bindings = {}
         #Object in self.objects that has the current focus for input
-        self._has_focus = None
+        self.has_focus = None
         #Toggle display of objects and action of keybindings for state
         self._active = active
         #Toggle visibility of gui objects, keybindings will still be active if False
@@ -50,13 +50,11 @@ class GuiState():
         if self.keybindings.check(user_input):
             return
         #if focus object
-        if self._has_focus:
-            self._has_focus.input(user_input)
+        if self.has_focus:
+            self.has_focus.input(user_input)
         if user_input == pygame.MOUSEBUTTONUP:
             m_pos = pygame.mouse.get_pos()
-            click_obj = self.gui_objects_at(m_pos[X], m_pos[Y])
-            if click_obj:
-                click_obj.input(user_input)
+            self.click_gui_objects_at(m_pos[X], m_pos[Y])
 
     def check_mouse_binding(self, event_type):
         if event_type in self.mouse_bindings.keys():
@@ -65,7 +63,7 @@ class GuiState():
         return False
 
     def get_focus(self):
-        return self._has_focus
+        return self.has_focus
 
     def object_text(self, name):
         obj = self.get_obj(name)
@@ -84,16 +82,16 @@ class GuiState():
 
         if self._active:
             self._active = False
-            self._has_focus = None
+            self.has_focus = None
             self.visible = False
         else:
             self._active = True
             self.visible = True
-            self._has_focus = None
+            self.has_focus = None
 
-    #check if a gui object is at a SCREEN coordinate
-    def gui_objects_at(self, x, y):
+    #check if a gui object is at a SCREEN coordinate, call input if object is at x,y
+    def click_gui_objects_at(self, x, y):
         for gobj in self.objects:
             if gobj.rect.collidepoint(x, y):
-                return gobj
+                gobj.input(pygame.MOUSEBUTTONUP)
         return None

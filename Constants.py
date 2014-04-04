@@ -50,6 +50,7 @@ LIST_BOX = 2
 WINDOW = 3
 TEXT = 4
 BUTTON = 5
+OBJ_S_TXT_BOX = 6  #ObjectSearchTxtbox
 
 #Names for indices inside tuple stored in dest list
 X = 0
@@ -64,5 +65,11 @@ MOUSE = 1
 #GUI STATES
 MOVE = 0
 LEVEL_OPTIONS = 1
-OBJECT_SEARCH = 2
-SELECT_OBJECT = 3
+LOAD_LEVEL = 2
+SAVE_AS_LEVEL = 3
+CLEAR_LEVEL = 4
+OBJECT_SEARCH = 5
+SELECT_OBJECT = 6
+
+
+

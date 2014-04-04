@@ -13,13 +13,11 @@ class Background(pygame.sprite.Sprite):
 
 
 class Level():
-    def __init__(self, w, h, filename, data_dir=None):
+    def __init__(self, w, h, filename, data_dir):
         self.width = w
         self.height = h
 
         self._data_dir = data_dir
-        if not self._data_dir:
-            self._data_dir = os.path.join('data')
         os.chdir(self._data_dir)
 
         self.background = pygame.Surface((self.width, self.height))
@@ -28,9 +26,12 @@ class Level():
         self.objects = pygame.sprite.LayeredUpdates()
         self.gravity = .5
         self.camera = Camera(800, 600)
-        self.filename = filename
+        self._filename = filename
         self._load_objects()
         self.player = self._get_player_from_objects()
+
+    def get_filename(self):
+        return self._filename
 
     def _get_player_from_objects(self):
         for obj in self.objects:
@@ -45,7 +46,8 @@ class Level():
         return None
 
     def _load_objects(self):
-        obj_filename = os.path.join(self.filename)
+        obj_filename = os.path.join('level_data', self._filename)
+        print(obj_filename)
         parser = configparser.ConfigParser()
         parser.read(obj_filename)
         object_list = parser.sections()
