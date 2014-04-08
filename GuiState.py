@@ -48,13 +48,15 @@ class GuiState():
     def input(self, user_input):
         #If a key binding exists, do action
         if self.keybindings.check(user_input):
-            return
+            return True
         #if focus object
         if self.has_focus:
             self.has_focus.input(user_input)
         if user_input == pygame.MOUSEBUTTONUP:
-            m_pos = pygame.mouse.get_pos()
-            self.click_gui_objects_at(m_pos[X], m_pos[Y])
+            m_x, m_y = pygame.mouse.get_pos()
+            if self.click_gui_objects_at(m_x, m_y):
+                return True
+        return False
 
     def check_mouse_binding(self, event_type):
         if event_type in self.mouse_bindings.keys():
@@ -94,4 +96,5 @@ class GuiState():
         for gobj in self.objects:
             if gobj.rect.collidepoint(x, y):
                 gobj.input(pygame.MOUSEBUTTONUP)
-        return None
+                return True
+        return False

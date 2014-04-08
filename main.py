@@ -1,6 +1,8 @@
 from Level import *
 from Constants import *
 
+DATA_PATH = os.path.join('data')
+
 
 def main():
     pygame.init()
@@ -8,7 +10,7 @@ def main():
     pygame.display.set_caption('Game')
     pygame.mouse.set_visible(0)
     clock = pygame.time.Clock()
-    level = Level(2000, 800, os.path.join('level_data', 'objects1.ini'))
+    level = Level(2000, 800, 'objects1.ini', DATA_PATH)
     pygame.display.flip()
     screen.blit(level.background, (0, 0))
 

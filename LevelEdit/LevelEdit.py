@@ -24,7 +24,7 @@ class LevelEdit(Level):
 
         Level.__init__(self, w, h, filename, data_path)
         self.selected_obj = None
-        self.camera = EditCamera(800, 600)
+        self.camera = EditCamera(800, 600, 2000, 800)
 
     def update(self):
         #update object positions
@@ -35,6 +35,8 @@ class LevelEdit(Level):
 
         self.check_collisions()
         self.camera.update(pygame.mouse.get_pos())
+        m_x, m_y = pygame.mouse.get_pos()
+        self.update_pre_place_pos(m_x, m_y)
 
     def clear_level(self):
         while self.objects:
@@ -86,16 +88,14 @@ class LevelEdit(Level):
                                                     'gravity': 'False'}))
         self.selected_obj = next((x for x in self.objects if x.name == 'pre_place'), None)
 
-    def update_pre_place_pos(self, m_x, m_y):
+    def update_pre_place_pos(self, x, y):
         if self.selected_obj:
-            mouse_rect = pygame.Rect(m_x, m_y, 1, 1)
-            trans_mouse_rect = self.camera.translate_from(mouse_rect)
-            self.selected_obj.rect.x = trans_mouse_rect.x
-            self.selected_obj.rect.y = trans_mouse_rect.y
+            self.selected_obj.rect.x, self.selected_obj.rect.y = self.camera.translate_cords_to(x, y)
 
     def place_object(self):
         if self.selected_obj:
-            self.selected_obj.name = "LevelObject" + str(len(self.objects))
+            if self.selected_obj.name is None:
+                self.selected_obj.name = "LevelObject" + str(len(self.objects))
             self.selected_obj = None
 
     def move_sel_obj(self, direction):
@@ -108,3 +108,18 @@ class LevelEdit(Level):
                 self.selected_obj.rect.y += 15
             elif direction == DIR_LEFT:
                 self.selected_obj.rect.x -= 15
+
+    def input(self, event_type):
+        if event_type == pygame.MOUSEBUTTONUP:
+            if self.selected_obj is None:
+                m_x, m_y = pygame.mouse.get_pos()
+                t_x, t_y = self.camera.translate_cords_to(m_x, m_y)
+                objs = self.objects_at(t_x, t_y)
+
+                #If > 0 objects were clicked on and there is no selected object already, select first object
+                if objs:
+                    self.selected_obj = objs[0]
+                    print(self.selected_obj.name)
+            else:
+                print('Placing object..')
+                self.place_object()

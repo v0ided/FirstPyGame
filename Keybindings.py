@@ -25,22 +25,21 @@ class Keybindings():
 
     @staticmethod
     def _fin_delay():
-        print('delay finished')
         Keybindings._is_delay = False
         if Keybindings._delay_timer:
             Keybindings._delay_timer.stop_timer()
 
     def check(self, key):
         if self._is_delay:
-            print('waiting')
+            pass
         else:
-            print('checking')
             for bind in self._bindings:
                 if bind.enable:
                     if key == bind.key():
                         bind.function()
                         Keybindings._start_delay()
-                        return
+                        return True
+        return False
 
     def add(self, binding):
         if binding:
@@ -59,7 +58,6 @@ class Keybindings():
     def toggle(self, binding_type, on=None):
         for bind in self._bindings:
             if isinstance(bind, binding_type):
-                print('toggling bind')
                 if on is None:
                     if bind.enable is True:
                         bind.enable = False

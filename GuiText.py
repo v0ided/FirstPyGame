@@ -15,16 +15,20 @@ class GuiText(GuiObject):
             self.font_size = var_dict['font_size']
             self.text = var_dict['text']
             self.font_color = var_dict['font_color']
-            self.watch_func = var_dict['watch']
+            if 'watch' not in var_dict:
+                self.watch_func = None
+            else:
+                self.watch_func = var_dict['watch']
         except KeyError:
             print('Not all required arguments passed to GuiText')
             raise
 
         self.font = pygame.font.SysFont("Calibri", self.font_size)
+
+        to_display = self.text
         if callable(self.watch_func):
-            self.font_img = self.font.render(self.text + self.watch_func(), True, self.font_color)
-        else:
-            self.font_img = self.font.render(self.text + self.watch_func, True, self.font_color)
+            to_display += self.watch_func()
+        self.font_img = self.font.render(to_display, True, self.font_color)
 
         self.rect.w, self.rect.h = self.font.size(self.text)
 
@@ -36,5 +40,7 @@ class GuiText(GuiObject):
             screen.blit(self.font_img, self.rect)
 
     def update(self):
-        if self.watch_func:
-            self.font_img = self.font.render(self.text + self.watch_func(), True, self.font_color)
+        to_update = self.text
+        if callable(self.watch_func):
+            to_update += self.watch_func()
+        self.font_img = self.font.render(to_update, True, self.font_color)

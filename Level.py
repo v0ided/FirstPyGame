@@ -86,15 +86,9 @@ class Level():
                     continue
                 a_obj.collide(b_obj)
 
-    def objects_at(self, x, y, w=0, h=0):
-        col_objects = []
-        if w == 0 or h == 0:
-            for obj in self.objects:
-                if obj.rect.collidepoint(x, y):
-                    col_objects.append(obj)
+    def objects_at(self, x, y):
+        col_objs = [obj for obj in self.objects if obj.rect.collidepoint(x, y)]
+        if col_objs:
+            return col_objs
         else:
-            for obj in self.objects:
-                centered = pygame.Rect(x - (w / 2), y - (h / 2), w, h)
-                if obj.rect.colliderect(centered):
-                    col_objects.append(obj)
-        return col_objects
+            return None

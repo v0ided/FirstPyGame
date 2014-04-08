@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38379229-7bb7-4fd6-b654-bc831fa4c776" name="Default" comment="Added GuiWindow and GuiText as GuiObject Subclasses. See LevelEdit project for implementation. This commit marks the merging of LevelEdit and FirstPyGame projects into one repo. I will be deleting the LevelEdit repo and will be committing changes to both projects through FirstPyGame. They work on the same code base and this makes more sense organizationally.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GuiButton.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GuiObjectFactory.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Binding.py" afterPath="$PROJECT_DIR$/Binding.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Camera.py" afterPath="$PROJECT_DIR$/Camera.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Constants.py" afterPath="$PROJECT_DIR$/Constants.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuiListbox.py" afterPath="$PROJECT_DIR$/GuiListbox.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuiObject.py" afterPath="$PROJECT_DIR$/GuiObject.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LevelEdit/EditCamera.py" afterPath="$PROJECT_DIR$/LevelEdit/EditCamera.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuiManager.py" afterPath="$PROJECT_DIR$/GuiManager.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuiState.py" afterPath="$PROJECT_DIR$/GuiState.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuiText.py" afterPath="$PROJECT_DIR$/GuiText.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuiTextbox.py" afterPath="$PROJECT_DIR$/GuiTextbox.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GuiWindow.py" afterPath="$PROJECT_DIR$/GuiWindow.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Keybindings.py" afterPath="$PROJECT_DIR$/Keybindings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LevelEdit/LevelEdit.py" afterPath="$PROJECT_DIR$/LevelEdit/LevelEdit.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LevelEdit/Main.py" afterPath="$PROJECT_DIR$/LevelEdit/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Timer.py" afterPath="$PROJECT_DIR$/Timer.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LevelEdit/.idea/workspace.xml" afterPath="$PROJECT_DIR$/LevelEdit/.idea/workspace.xml" />
     </list>
@@ -42,10 +44,8 @@
       <file leaf-file-name="Main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LevelEdit/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1445">
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
+            <state line="8" column="0" selection-start="167" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="2312">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,10 +53,8 @@
       <file leaf-file-name="LevelEdit.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LevelEdit/LevelEdit.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1751">
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
+            <state line="26" column="0" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="2125">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -64,7 +62,7 @@
       <file leaf-file-name="Constants.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Constants.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="17" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1258">
+            <state line="45" column="8" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1496">
               <folding />
             </state>
           </provider>
@@ -73,7 +71,7 @@
       <file leaf-file-name="GuiManager.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GuiManager.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="714">
+            <state line="16" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="765">
               <folding />
             </state>
           </provider>
@@ -82,7 +80,7 @@
       <file leaf-file-name="GuiObject.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GuiObject.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="21" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="850">
+            <state line="27" column="21" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="816">
               <folding />
             </state>
           </provider>
@@ -91,7 +89,7 @@
       <file leaf-file-name="main.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="10" selection-start="380" selection-end="380" vertical-scroll-proportion="0.32122093" vertical-offset="0" max-vertical-offset="833">
+            <state line="10" column="31" selection-start="229" selection-end="229" vertical-scroll-proportion="0.17626728" vertical-offset="0" max-vertical-offset="868">
               <folding />
             </state>
           </provider>
@@ -100,7 +98,7 @@
       <file leaf-file-name="Timer.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Timer.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1071">
+            <state line="21" column="0" selection-start="534" selection-end="534" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="1088">
               <folding />
             </state>
           </provider>
@@ -109,7 +107,7 @@
       <file leaf-file-name="objects1.ini" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/level_data/objects1.ini">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="160" column="11" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.0" vertical-offset="2501" max-vertical-offset="3621">
+            <state line="160" column="11" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="3417">
               <folding />
             </state>
           </provider>
@@ -118,7 +116,7 @@
       <file leaf-file-name="Level.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Level.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="23" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
+            <state line="15" column="41" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="1785">
               <folding />
             </state>
           </provider>
@@ -268,6 +266,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="FirstPyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FirstPyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FirstPyGame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="LevelEdit" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -479,26 +491,26 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.125" sideWeight="0.797235" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.125" sideWeight="0.797235" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22810061" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20134228" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20134228" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20134228" sideWeight="0.1125" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20134228" sideWeight="0.8875" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23423423" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23423423" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -563,9 +575,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1972">
-          <folding />
-        </state>
+        <state line="27" column="0" selection-start="887" selection-end="887" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="1972" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Behavior.py">
@@ -612,9 +622,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="40" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1819">
-          <folding />
-        </state>
+        <state line="39" column="40" selection-start="1433" selection-end="1433" vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="1819" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Behavior.py">
@@ -661,9 +669,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="27" selection-start="2872" selection-end="2872" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="1819">
-          <folding />
-        </state>
+        <state line="95" column="27" selection-start="2872" selection-end="2872" vertical-scroll-proportion="0.0" vertical-offset="1615" max-vertical-offset="1819" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Behavior.py">
@@ -710,7 +716,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/level_data/objects1.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="160" column="11" selection-start="1788" selection-end="1788" vertical-scroll-proportion="0.0" vertical-offset="2501" max-vertical-offset="3621">
+        <state line="160" column="11" selection-start="1781" selection-end="1781" vertical-scroll-proportion="0.0" vertical-offset="2720" max-vertical-offset="3417">
           <folding />
         </state>
       </provider>
@@ -751,95 +757,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Constants.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="17" selection-start="539" selection-end="539" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1020">
+        <state line="45" column="8" selection-start="616" selection-end="616" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1496">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GuiManager.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="714">
+        <state line="16" column="0" selection-start="455" selection-end="455" vertical-scroll-proportion="0.0" vertical-offset="272" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LevelObjFactory.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="53" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
-          <folding />
-        </state>
+        <state line="13" column="53" selection-start="442" selection-end="442" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LevelEdit/EditCamera.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="573">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="573" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GuiObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="21" selection-start="657" selection-end="657" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="850">
+        <state line="27" column="21" selection-start="665" selection-end="665" vertical-scroll-proportion="0.0" vertical-offset="459" max-vertical-offset="816">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GuiState.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1989" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BaseObject.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3196">
+        <state line="4" column="0" selection-start="79" selection-end="79" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3196" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Player.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="0" selection-start="7318" selection-end="7318" vertical-scroll-proportion="3.7427325" vertical-offset="485" max-vertical-offset="3604" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LevelEdit/LevelEdit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="0" selection-start="1036" selection-end="1036" vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="2125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyganim.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="85" column="0" selection-start="3924" selection-end="3924" vertical-scroll-proportion="0.33284885" vertical-offset="1199" max-vertical-offset="14620" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Level.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="41" selection-start="417" selection-end="417" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LevelEdit/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="516" selection-end="516" vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="1394">
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Player.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="182" column="0" selection-start="7318" selection-end="7318" vertical-scroll-proportion="3.7427325" vertical-offset="485" max-vertical-offset="3604">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LevelEdit/LevelEdit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="1084" selection-end="1084" vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1768">
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyganim.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="3924" selection-end="3924" vertical-scroll-proportion="0.33284885" vertical-offset="1199" max-vertical-offset="14620">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Level.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="23" selection-start="477" selection-end="477" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1683">
+        <state line="8" column="0" selection-start="167" selection-end="205" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="10" selection-start="380" selection-end="380" vertical-scroll-proportion="0.32122093" vertical-offset="0" max-vertical-offset="833">
+        <state line="10" column="31" selection-start="229" selection-end="229" vertical-scroll-proportion="0.17626728" vertical-offset="0" max-vertical-offset="868">
           <folding />
         </state>
       </provider>

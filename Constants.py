@@ -1,3 +1,5 @@
+#todo: Instead of one big Constants file, see about splitting them up into relevant namespaces
+
 #SCREEN VARIABLES
 SCREEN_W = 800
 SCREEN_H = 600
@@ -68,8 +70,14 @@ LEVEL_OPTIONS = 1
 LOAD_LEVEL = 2
 SAVE_AS_LEVEL = 3
 CLEAR_LEVEL = 4
-OBJECT_SEARCH = 5
-SELECT_OBJECT = 6
+QUIT_GAME = 5
+OBJECT_SEARCH = 6
+PRE_PLACE = 7
+SEL_OBJ = 8
+PLC_SEL = 9
 
+import pygame
+#User pygame Events
+QUIT_EVENT = pygame.USEREVENT + 1
 
 

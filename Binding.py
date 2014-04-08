@@ -50,6 +50,7 @@ class LevelSaveAsBind(Binding):
             if save_lvl_gui.is_active():
                 save_lvl_gui.has_focus = save_lvl_gui.get_obj('saveas_txtbox')
 
+
 class LevelClearBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)
@@ -58,6 +59,19 @@ class LevelClearBind(Binding):
         if self.args:
             clear_lvl_gui = self.args[0]
             clear_lvl_gui.toggle_active()
+
+
+class LevelQuitBind(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        if self.args:
+            quit_lvl_gui = self.args[0]
+            quit_lvl_gui.toggle_active()
+            #If after toggling the state isn't active - the user pressed Esc twice, exit game
+            if not quit_lvl_gui.is_active():
+                pygame.event.post(pygame.event.Event(QUIT_EVENT))
 
 
 class PrePlaceObjectBind(Binding):
@@ -69,17 +83,19 @@ class PrePlaceObjectBind(Binding):
             obj_name, obj_search_gui, level, sel_obj_gui = self.args
             level.pre_place_object(obj_search_gui.get_obj(obj_name).get_text())
             obj_search_gui.toggle_active(False)
-            sel_obj_gui.keybindings.toggle(PlaceObjectBind, True)
+            sel_obj_gui.keybindings.toggle(PlaceSearchObjectBind, True)
 
 
-class PlaceObjectBind(Binding):
+class PlaceSearchObjectBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)
 
     def function(self):
         if self.args:
             level, obj_search_gui = self.args
-            level.place_object()
+            saveas_txtbox = obj_search_gui.get_obj("saveas_txtbox")
+            if saveas_txtbox:
+                level.place_object()
 
 
 class ToggleSearchBind(Binding):
@@ -93,7 +109,7 @@ class ToggleSearchBind(Binding):
                 obj_search_gui.toggle_active(False)
             else:
                 obj_search_gui.toggle_active(True)
-                sel_obj_gui.keybindings.toggle(PlaceObjectBind, False)
+                sel_obj_gui.keybindings.toggle(PlaceSearchObjectBind, False)
 
                 textbox = obj_search_gui.get_obj("c_obj")
                 listbox = obj_search_gui.get_obj("results")
@@ -137,3 +153,13 @@ class ButtonEnter(Binding):
             bttn = self.args[0]
             #simulate a button press
             bttn.input(pygame.MOUSEBUTTONUP)
+
+
+class SelectObjectBind(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        if len(self.args) > 1:
+            level = self.args
+            level.input(pygame.MOUSEBUTTONUP)

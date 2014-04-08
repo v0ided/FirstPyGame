@@ -14,7 +14,7 @@ class BaseObject(pygame.sprite.Sprite):
         self._can_use = True
         self.type = BASE_OBJECT
         self.visible = False
-        self.name = var_dict.get('name', None)
+        self.name = var_dict.get('name', "")
         self.obey_gravity = False
         self.collidable = False
         self.xvel = 0

@@ -23,14 +23,17 @@ def main():
     load_lvl_gui = GuiState(False)
     save_lvl_as_gui = GuiState(False)
     clear_lvl_gui = GuiState(False)
-    sel_obj_gui = GuiState()
+    quit_lvl_gui = GuiState(False)
+    pre_place_gui = GuiState()
     obj_search_gui = GuiState(False)
     toggle_search_gui = GuiState()
+    select_obj_gui = GuiState()
 
     level_options.keybindings.add(LevelSaveBind(pygame.K_F1, level))
     level_options.keybindings.add(LevelLoadBind(pygame.K_F2, load_lvl_gui))
     level_options.keybindings.add(LevelClearBind(pygame.K_F3, clear_lvl_gui))
     level_options.keybindings.add(LevelSaveAsBind(pygame.K_F4, save_lvl_as_gui))
+    level_options.keybindings.add(LevelQuitBind(pygame.K_ESCAPE, quit_lvl_gui))
     level_options.add(WINDOW, {'name': "leveloptions", 'cords': (0, 560), 'w': 800, 'h': 40, 'bg_color': (0, 0, 0),
                                'font_color': (234, 234, 234)})
     level_options.add(TEXT, {'name': "keymap", 'cords': (5, 565), 'font_color': (234, 234, 234), 'font_size': 20,
@@ -38,9 +41,9 @@ def main():
                              'watch': level.get_filename})
 
     load_lvl_gui.add(WINDOW, {'name': 'loadlevel', 'cords': (300, 350), 'w': 300, 'h': 140, 'bg_color': (0, 0, 0),
-                                'font_color': (234, 234, 234)})
+                              'font_color': (234, 234, 234)})
     load_lvl_gui.add(TEXT, {'name': 'loaddialog', 'cords': (320, 370), 'font_color': (234, 234, 234), 'font_size': 20,
-                              'text': 'Filename:', 'watch': ""})
+                            'text': 'Filename:'})
     load_txtbox = load_lvl_gui.add(TXT_BOX, {'name': 'file_txtbox', 'cords': (320, 400), 'bg_color': (255, 255, 255)})
     load_bttn = load_lvl_gui.add(BUTTON, {'name': 'load_bttn', 'cords': (320, 450), 'bg_color': (255, 255, 255),
                                             'font_color': (0, 0, 0), 'font_size': 14,
@@ -69,11 +72,14 @@ def main():
 
     clear_lvl_gui.keybindings.add(ButtonEnter(pygame.K_RETURN, confirm_bttn))
 
-    sel_obj_gui.keybindings.add(PlaceObjectBind(pygame.MOUSEBUTTONUP, level, obj_search_gui))
-    sel_obj_gui.keybindings.add(PlaceObjectBind(pygame.K_RETURN, level, obj_search_gui))
+    quit_lvl_gui.add(TEXT, {'name': 'esctext', 'cords': (240, 280), 'font_color': (0, 0, 0), 'font_size': 30,
+                            'text': 'Press Esc again to Quit Game.'})
 
-    obj_search_gui.keybindings.add(PrePlaceObjectBind(pygame.MOUSEBUTTONUP, "results", obj_search_gui, level, sel_obj_gui))
-    obj_search_gui.keybindings.add(PrePlaceObjectBind(pygame.K_RETURN, "results", obj_search_gui, level, sel_obj_gui))
+    pre_place_gui.keybindings.add(PlaceSearchObjectBind(pygame.MOUSEBUTTONUP, level, obj_search_gui))
+    pre_place_gui.keybindings.add(PlaceSearchObjectBind(pygame.K_RETURN, level, obj_search_gui))
+
+    obj_search_gui.keybindings.add(PrePlaceObjectBind(pygame.MOUSEBUTTONUP, "results", obj_search_gui, level, pre_place_gui))
+    obj_search_gui.keybindings.add(PrePlaceObjectBind(pygame.K_RETURN, "results", obj_search_gui, level, pre_place_gui))
     obj_search_gui.keybindings.add(ListboxUpBind(pygame.K_UP, "results", obj_search_gui))
     obj_search_gui.keybindings.add(ListboxDownBind(pygame.K_DOWN, "results", obj_search_gui))
 
@@ -83,7 +89,9 @@ def main():
     results = obj_search_gui.add(LIST_BOX, {'name': "results", 'cords': results_pos, 'bg_color': (255, 255, 255)})
     txt_box.attach(results)
 
-    toggle_search_gui.keybindings.add(ToggleSearchBind(pygame.K_SPACE, obj_search_gui, sel_obj_gui))
+    toggle_search_gui.keybindings.add(ToggleSearchBind(pygame.K_SPACE, obj_search_gui, pre_place_gui))
+
+    select_obj_gui.keybindings.add(SelectObjectBind(pygame.MOUSEBUTTONUP, level))
 
     gui_manager = GuiManager()
     gui_manager.add(MOVE, toggle_search_gui)
@@ -91,31 +99,34 @@ def main():
     gui_manager.add(LOAD_LEVEL, load_lvl_gui)
     gui_manager.add(CLEAR_LEVEL, clear_lvl_gui)
     gui_manager.add(SAVE_AS_LEVEL, save_lvl_as_gui)
+    gui_manager.add(QUIT_GAME, quit_lvl_gui)
     gui_manager.add(OBJECT_SEARCH, obj_search_gui)
-    gui_manager.add(SELECT_OBJECT, sel_obj_gui)
+    gui_manager.add(PRE_PLACE, pre_place_gui)
+    gui_manager.add(SEL_OBJ, select_obj_gui)
 
     while 1:
         clock.tick(60)
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    return
+            if event.type == QUIT_EVENT:
+                return
             if event.type == pygame.KEYUP:
                 gui_manager.input(event.key)
             if event.type == pygame.MOUSEBUTTONUP:
                 gui_manager.input(event.type)
+                level.input(event.type)
             if event.type > pygame.USEREVENT:
                 Timer.handle_event(event.type)
 
         gui_manager.update()
-        mousepos = pygame.mouse.get_pos()
-        level.update_pre_place_pos(mousepos[X], mousepos[Y])
         level.update()
         level.draw(screen)
         gui_manager.draw(screen)
 
         pygame.display.flip()
+
+    pygame.display.quit()
+    pygame.quit()
 
 if __name__ == '__main__': main()

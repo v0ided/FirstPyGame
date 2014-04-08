@@ -4,10 +4,13 @@ class GuiManager():
     def __init__(self):
         self.states = {}
 
+    #Returns true if a gui object was clicked, False if not
     def input(self, user_input):
+        clicked_obj = False
         for state_type, state_obj in self.states.items():
             if state_obj.is_active():
-                state_obj.input(user_input)
+                clicked_obj = state_obj.input(user_input)
+        return clicked_obj
 
     def update(self):
         for state_type, state_obj in self.states.items():
