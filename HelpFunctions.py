@@ -22,7 +22,8 @@ def load_image(name, colorkey=None):
 def search_file(path, term):
     results = []
     for file in glob.glob(os.path.join(path, "*" + term + "*")):
-        results.append(os.path.basename(file))
+        if os.path.isfile(os.path.basename(file)):
+            results.append(os.path.basename(file))
     return results
 
 

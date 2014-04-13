@@ -18,6 +18,7 @@ class GuiObject():
         self.type = GUI_OBJ
         self.attached = []
         self.visible = True
+        self.is_focus = False
 
     def draw(self, screen):
         pass

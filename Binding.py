@@ -37,7 +37,8 @@ class LevelLoadBind(Binding):
             load_lvl_dialog = self.args[0]
             load_lvl_dialog.toggle_active()
             if load_lvl_dialog.is_active():
-                load_lvl_dialog.has_focus = load_lvl_dialog.get_obj('file_txtbox')
+                load_lvl_dialog.focus(load_lvl_dialog.get_obj('file_txtbox'))
+
 
 class LevelSaveAsBind(Binding):
     def __init__(self, key, *args):
@@ -48,7 +49,7 @@ class LevelSaveAsBind(Binding):
             save_lvl_gui = self.args[0]
             save_lvl_gui.toggle_active()
             if save_lvl_gui.is_active():
-                save_lvl_gui.has_focus = save_lvl_gui.get_obj('saveas_txtbox')
+                save_lvl_gui.focus(save_lvl_gui.get_obj('saveas_txtbox'))
 
 
 class LevelClearBind(Binding):
@@ -105,7 +106,7 @@ class ToggleSearchBind(Binding):
     def function(self):
         if self.args:
             obj_search_gui, sel_obj_gui = self.args
-            if obj_search_gui.has_focus:
+            if obj_search_gui.get_focus():
                 obj_search_gui.toggle_active(False)
             else:
                 obj_search_gui.toggle_active(True)
@@ -118,10 +119,35 @@ class ToggleSearchBind(Binding):
 
                 mouse_pos = pygame.mouse.get_pos()
 
-                obj_search_gui.has_focus = textbox
+                obj_search_gui.focus(textbox)
                 textbox.rect.x, textbox.rect.y = mouse_pos
                 listbox.rect.x = textbox.rect.x
                 listbox.rect.y = textbox.rect.y + textbox.rect.h + 25
+
+
+class GuiEditObjBind(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        if self.args:
+            gui_state, level, select_gui = self.args
+            obj = level.selected_obj
+            if obj:
+                if gui_state.is_active():
+                    pass
+                else:
+                    gui_state.get_obj('nametxtbox').text = obj.name
+                    gui_state.get_obj('xtxtbox').text = str(obj.rect.x)
+                    gui_state.get_obj('ytxtbox').text = str(obj.rect.y)
+                    gui_state.get_obj('wtxtbox').text = str(obj.rect.w)
+                    gui_state.get_obj('htxtbox').text = str(obj.rect.h)
+                    gui_state.get_obj('gravitytxtbox').text = str(obj.obey_gravity)
+                    gui_state.get_obj('collidetxtbox').text = str(obj.collidable)
+                    gui_state.get_obj('layertxtbox').text = str(obj._layer)
+
+                    level.focus_menu(True)
+                    select_gui.toggle_active()
 
 
 class ListboxUpBind(Binding):
@@ -160,6 +186,27 @@ class SelectObjectBind(Binding):
         Binding.__init__(self, key, *args)
 
     def function(self):
-        if len(self.args) > 1:
-            level = self.args
+        if self.args:
+            level = self.args[0]
             level.input(pygame.MOUSEBUTTONUP)
+
+
+class DeleteObjectBind(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        if self.args:
+            level = self.args[0]
+            level.remove_object(level.selected_obj)
+            level.selected_obj = None
+
+
+class SelectNextTxtboxBind(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        if self.args:
+            gui_state = self.args[0]
+            gui_state.select_next_control(TXT_BOX)

@@ -28,6 +28,7 @@ def main():
     obj_search_gui = GuiState(False)
     toggle_search_gui = GuiState()
     select_obj_gui = GuiState()
+    edit_obj_gui = GuiState(False)
 
     level_options.keybindings.add(LevelSaveBind(pygame.K_F1, level))
     level_options.keybindings.add(LevelLoadBind(pygame.K_F2, load_lvl_gui))
@@ -46,15 +47,15 @@ def main():
                             'text': 'Filename:'})
     load_txtbox = load_lvl_gui.add(TXT_BOX, {'name': 'file_txtbox', 'cords': (320, 400), 'bg_color': (255, 255, 255)})
     load_bttn = load_lvl_gui.add(BUTTON, {'name': 'load_bttn', 'cords': (320, 450), 'bg_color': (255, 255, 255),
-                                            'font_color': (0, 0, 0), 'font_size': 14,
-                                            'text': 'Load Level', 'action': level.load_level})
+                                          'font_color': (0, 0, 0), 'font_size': 14,
+                                          'text': 'Load Level', 'action': level.load_level})
     load_lvl_gui.keybindings.add(ButtonEnter(pygame.K_RETURN, load_bttn))
     load_bttn.attach(load_txtbox)
 
     save_lvl_as_gui.add(WINDOW, {'name': 'savelevelas', 'cords': (300, 350), 'w': 300, 'h': 140, 'bg_color': (0, 0, 0),
                                  'font_color': (234, 234, 234)})
     save_lvl_as_gui.add(TEXT, {'name': 'saveasdialog', 'cords': (320, 370), 'font_color': (234, 234, 234), 'font_size': 20,
-                               'text': 'Filename:', 'watch': ""})
+                               'text': 'Filename:'})
     save_txtbox = save_lvl_as_gui.add(TXT_BOX, {'name': 'saveas_txtbox', 'cords': (320, 400), 'bg_color': (255, 255, 255)})
     save_bttn = save_lvl_as_gui.add(BUTTON, {'name': 'saveas_bttn', 'cords': (320, 450), 'bg_color': (255, 255, 255),
                                              'font_color': (0, 0, 0), 'font_size': 14,
@@ -92,6 +93,20 @@ def main():
     toggle_search_gui.keybindings.add(ToggleSearchBind(pygame.K_SPACE, obj_search_gui, pre_place_gui))
 
     select_obj_gui.keybindings.add(SelectObjectBind(pygame.MOUSEBUTTONUP, level))
+    select_obj_gui.keybindings.add(DeleteObjectBind(pygame.K_F6, level))
+
+    edit_obj_gui.toggle_bind = GuiEditObjBind(pygame.K_F5, edit_obj_gui, level, select_obj_gui)
+    edit_obj_gui.keybindings.add(SelectNextTxtboxBind(pygame.K_TAB, edit_obj_gui))
+    edit_obj_gui.add(WINDOW, {'name': 'editprops', 'cords': (300, 250), 'w': 200, 'h': 260,
+                              'bg_color': (0, 0, 0), 'font_color': (234, 234, 234)})
+    edit_confirm = edit_obj_gui.add(BUTTON, {'name': 'confirm_bttn', 'cords': (340, 470), 'bg_color': (255, 255, 255),
+                                             'font_color': (0, 0, 0), 'font_size': 14, 'text': 'Confirm', 'action': level.edit_object})
+    props = ['name', 'x', 'y', 'w', 'h', 'gravity', 'collide', 'layer']
+    for i, prop in enumerate(props):
+        edit_obj_gui.add(TEXT, {'name': prop + 'label', 'cords': (310, 260 + (i * 24)), 'font_color': (234, 234, 234),
+                                'font_size': 18, 'text': prop + ":"})
+        txtbox = edit_obj_gui.add(TXT_BOX, {'name': prop + 'txtbox', 'cords': (400, 260 + (i * 24)), 'bg_color': (255, 255, 255)})
+        edit_confirm.attach(txtbox)
 
     gui_manager = GuiManager()
     gui_manager.add(MOVE, toggle_search_gui)
@@ -103,6 +118,7 @@ def main():
     gui_manager.add(OBJECT_SEARCH, obj_search_gui)
     gui_manager.add(PRE_PLACE, pre_place_gui)
     gui_manager.add(SEL_OBJ, select_obj_gui)
+    gui_manager.add(EDIT_OBJ, edit_obj_gui)
 
     while 1:
         clock.tick(60)
@@ -114,8 +130,10 @@ def main():
             if event.type == pygame.KEYUP:
                 gui_manager.input(event.key)
             if event.type == pygame.MOUSEBUTTONUP:
-                gui_manager.input(event.type)
-                level.input(event.type)
+                #temp fix, ignores all other mouse buttons from recv input
+                if event.button == 1:
+                    if not gui_manager.input(event.type):
+                        level.input(event.type)
             if event.type > pygame.USEREVENT:
                 Timer.handle_event(event.type)
 

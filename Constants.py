@@ -75,6 +75,7 @@ OBJECT_SEARCH = 6
 PRE_PLACE = 7
 SEL_OBJ = 8
 PLC_SEL = 9
+EDIT_OBJ = 10
 
 import pygame
 #User pygame Events

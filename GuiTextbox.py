@@ -13,6 +13,7 @@ class Textbox(GuiObject):
         self.img = None
         self.type = TXT_BOX
         self.changed = True
+        self.font = pygame.font.SysFont("Calibri", 18)
 
         try:
             self.bg_color = var_dict['bg_color']
@@ -33,7 +34,7 @@ class Textbox(GuiObject):
         if self.changed:
             size = self.font.size(self.text)
             self.rect.w = size[0] + (self.margin * 2)
-            self.rect.h = size[1] + (self.margin * 2)
+            self.rect.h = size[1]
             self.img = self.font.render(self.text, True, self.font_color)
             self.changed = False
 
@@ -43,7 +44,10 @@ class Textbox(GuiObject):
             self.changed = True
 
     def draw(self, screen):
-        pygame.draw.rect(screen, self.bg_color, self.rect, 0)
+        if self.is_focus:
+            pygame.draw.rect(screen, (180, 180, 180), self.rect, 0)
+        else:
+            pygame.draw.rect(screen, self.bg_color, self.rect, 0)
         if self.img is not None:
             screen.blit(self.img, self.rect)
 

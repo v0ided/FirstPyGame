@@ -47,7 +47,6 @@ class Level():
 
     def _load_objects(self):
         obj_filename = os.path.join('level_data', self._filename)
-        print(obj_filename)
         parser = configparser.ConfigParser()
         parser.read(obj_filename)
         object_list = parser.sections()

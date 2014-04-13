@@ -39,6 +39,10 @@ class GuiButton(GuiObject):
         if user_input == pygame.MOUSEBUTTONUP:
             print('executing action')
             if self.attached:
-                self.action(self.attached[0].get_text())
+                if len(self.attached) > 1:
+                    text_list = [txtbox.get_text() for txtbox in self.attached]
+                    self.action(text_list)
+                else:
+                    self.action(self.attached[0].get_text())
             else:
                 self.action()

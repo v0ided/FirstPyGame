@@ -12,10 +12,14 @@ class GuiState():
         self.objects = []
         #keyboard character/function to execute
         self.keybindings = Keybindings()
+        #toggle state._active keybind, if one is desired
+        self.toggle_bind = None
         #mouse button/function to execute
         self.mouse_bindings = {}
         #Object in self.objects that has the current focus for input
-        self.has_focus = None
+        self._has_focus = None
+        #Index of focus object in objects
+        self._focus_index = 0
         #Toggle display of objects and action of keybindings for state
         self._active = active
         #Toggle visibility of gui objects, keybindings will still be active if False
@@ -46,26 +50,45 @@ class GuiState():
         return None
 
     def input(self, user_input):
-        #If a key binding exists, do action
-        if self.keybindings.check(user_input):
-            return True
         #if focus object
-        if self.has_focus:
-            self.has_focus.input(user_input)
-        if user_input == pygame.MOUSEBUTTONUP:
-            m_x, m_y = pygame.mouse.get_pos()
-            if self.click_gui_objects_at(m_x, m_y):
+        if self._has_focus:
+            self._has_focus.input(user_input)
+
+        if self.toggle_bind:
+            if self.toggle_bind.key() == user_input:
+                #do initializing, if any
+                self.toggle_bind.function()
+                self.toggle_active()
                 return True
+
+        if self._active:
+            #If a key binding exists, do action
+            if self.keybindings.check(user_input):
+                return True
+            if user_input == pygame.MOUSEBUTTONUP:
+                m_x, m_y = pygame.mouse.get_pos()
+                if self.click_gui_objects_at(m_x, m_y):
+                    print('mouse click')
+                    return True
+                else:
+                    self.focus(None)
         return False
 
-    def check_mouse_binding(self, event_type):
-        if event_type in self.mouse_bindings.keys():
-            self.mouse_bindings.get(event_type)()
-            return True
-        return False
+    def focus(self, obj):
+        #If there is a currently focused object, let it know it is no longer selected
+        if self._has_focus:
+            self._has_focus.is_focus = False
+
+        self._has_focus = obj
+
+        if self._has_focus is None:
+            self._focus_index = -1
+        else:
+            self._focus_index = self.objects.index(obj)
+            self._has_focus.is_focus = True
 
     def get_focus(self):
-        return self.has_focus
+        return self._has_focus
 
     def object_text(self, name):
         obj = self.get_obj(name)
@@ -79,22 +102,35 @@ class GuiState():
 
     def toggle_active(self, state=None):
         #If state is an argument, set self._active to the opposite of argument and let the toggle code do the work
-        if state is not None:
+        if state:
             self._active = not state
 
         if self._active:
             self._active = False
-            self.has_focus = None
+            self._has_focus = None
             self.visible = False
         else:
             self._active = True
             self.visible = True
-            self.has_focus = None
+            self._has_focus = None
 
     #check if a gui object is at a SCREEN coordinate, call input if object is at x,y
     def click_gui_objects_at(self, x, y):
+        clicked = False
         for gobj in self.objects:
             if gobj.rect.collidepoint(x, y):
                 gobj.input(pygame.MOUSEBUTTONUP)
-                return True
-        return False
+                clicked = True
+        return clicked
+
+    def select_next_control(self, filter_type):
+        if self._focus_index < len(self.objects) - 1:
+            self._focus_index += 1
+        else:
+            self._focus_index = 0
+
+        if self.objects[self._focus_index].type != filter_type:
+            self.select_next_control(filter_type)
+
+        self.focus(self.objects[self._focus_index])
+        print(str(self._focus_index))
