@@ -1,12 +1,11 @@
 __author__ = 'thvoidedline'
 
-import pygame
-from GuiObjectFactory import GuiObjFactory
+from Gui.GuiObjectFactory import GuiObjFactory
 from Keybindings import Keybindings
 from Constants import *
 
 
-class GuiState():
+class GuiStateOLD():
     def __init__(self, active=True):
         #List of all gui objects the manager controls
         self.objects = []
@@ -109,6 +108,7 @@ class GuiState():
             self._active = False
             self._has_focus = None
             self.visible = False
+            self.focus(None)
         else:
             self._active = True
             self.visible = True

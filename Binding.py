@@ -25,7 +25,7 @@ class LevelSaveBind(Binding):
     def function(self):
         if self.args:
             level = self.args[0]
-            level.save_level()
+            level.save()
 
 
 class LevelLoadBind(Binding):
@@ -80,13 +80,14 @@ class PrePlaceObjectBind(Binding):
         Binding.__init__(self, key, *args)
 
     def function(self):
-        if self.args:
-            obj_name, obj_search_gui, level, sel_obj_gui = self.args
-            level.pre_place_object(obj_search_gui.get_obj(obj_name).get_text())
-            obj_search_gui.toggle_active(False)
-            sel_obj_gui.keybindings.toggle(PlaceSearchObjectBind, True)
+        try:
+            obj_search, level = self.args
+            obj_search.pre_place_obj(level)
+        except IndexError:
+            print('Error - Invalid arguments passed to PrePlaceObjectBind')
 
 
+#todo: Needed? What is the difference between this and selectObjectBind
 class PlaceSearchObjectBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)
@@ -99,30 +100,15 @@ class PlaceSearchObjectBind(Binding):
                 level.place_object()
 
 
-class ToggleSearchBind(Binding):
+class ToggleStateBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)
 
     def function(self):
-        if self.args:
-            obj_search_gui, sel_obj_gui = self.args
-            if obj_search_gui.get_focus():
-                obj_search_gui.toggle_active(False)
-            else:
-                obj_search_gui.toggle_active(True)
-                sel_obj_gui.keybindings.toggle(PlaceSearchObjectBind, False)
-
-                textbox = obj_search_gui.get_obj("c_obj")
-                listbox = obj_search_gui.get_obj("results")
-                assert listbox, "results does not exist"
-                assert textbox, "c_obj does not exist"
-
-                mouse_pos = pygame.mouse.get_pos()
-
-                obj_search_gui.focus(textbox)
-                textbox.rect.x, textbox.rect.y = mouse_pos
-                listbox.rect.x = textbox.rect.x
-                listbox.rect.y = textbox.rect.y + textbox.rect.h + 25
+        try:
+            self.args[0].toggle()
+        except IndexError:
+            print('Error - Did you forget to pass GuiState to ToggleStateBind?')
 
 
 class GuiEditObjBind(Binding):
@@ -131,23 +117,28 @@ class GuiEditObjBind(Binding):
 
     def function(self):
         if self.args:
-            gui_state, level, select_gui = self.args
-            obj = level.selected_obj
-            if obj:
+            gui_state, level = self.args
+            if level.selected_obj is None:
+                print('Tried to edit NoneType Object')
+            else:
                 if gui_state.is_active():
-                    pass
+                    print("Gui State is active, toggling?")
+                    #deselect any controls selected from last time
+                    gui_state.focus(None)
+                    #give movement control of selected object back to user
+                    level.focus_menu(False)
                 else:
-                    gui_state.get_obj('nametxtbox').text = obj.name
-                    gui_state.get_obj('xtxtbox').text = str(obj.rect.x)
-                    gui_state.get_obj('ytxtbox').text = str(obj.rect.y)
-                    gui_state.get_obj('wtxtbox').text = str(obj.rect.w)
-                    gui_state.get_obj('htxtbox').text = str(obj.rect.h)
-                    gui_state.get_obj('gravitytxtbox').text = str(obj.obey_gravity)
-                    gui_state.get_obj('collidetxtbox').text = str(obj.collidable)
-                    gui_state.get_obj('layertxtbox').text = str(obj._layer)
-
+                    #fill textboxes with object data
+                    gui_state.get_obj('nametxtbox').str_input(level.selected_obj.name, True)
+                    gui_state.get_obj('xtxtbox').str_input(str(level.selected_obj.rect.x), True)
+                    gui_state.get_obj('ytxtbox').str_input(str(level.selected_obj.rect.y), True)
+                    gui_state.get_obj('wtxtbox').str_input(str(level.selected_obj.rect.w), True)
+                    gui_state.get_obj('htxtbox').str_input(str(level.selected_obj.rect.h), True)
+                    gui_state.get_obj('gravitytxtbox').str_input(str(level.selected_obj.obey_gravity), True)
+                    gui_state.get_obj('collidetxtbox').str_input(str(level.selected_obj.collidable), True)
+                    gui_state.get_obj('layertxtbox').str_input(str(level.selected_obj._layer), True)
+                    #tell the level to not move selected object until focus_menu is False
                     level.focus_menu(True)
-                    select_gui.toggle_active()
 
 
 class ListboxUpBind(Binding):
@@ -209,4 +200,4 @@ class SelectNextTxtboxBind(Binding):
     def function(self):
         if self.args:
             gui_state = self.args[0]
-            gui_state.select_next_control(TXT_BOX)
+            gui_state.focus_next_control(TXT_BOX)

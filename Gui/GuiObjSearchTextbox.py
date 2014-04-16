@@ -1,6 +1,6 @@
 __author__ = 'thvoidedline'
 
-from GuiTextbox import Textbox
+from Gui.GuiTextbox import Textbox
 from HelpFunctions import search_file
 
 

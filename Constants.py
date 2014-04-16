@@ -77,6 +77,10 @@ SEL_OBJ = 8
 PLC_SEL = 9
 EDIT_OBJ = 10
 
+#GUI STATES
+NON_BLOCKING = 0
+BLOCKING = 1
+
 import pygame
 #User pygame Events
 QUIT_EVENT = pygame.USEREVENT + 1

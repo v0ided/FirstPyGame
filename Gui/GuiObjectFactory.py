@@ -1,12 +1,12 @@
 __author__ = 'thvoidedline'
 
+from Gui.GuiListbox import GuiListbox
+from Gui.GuiText import GuiText
+from Gui.GuiWindow import GuiWindow
+from Gui.GuiButton import GuiButton
+from Gui.GuiTextbox import Textbox
+from Gui.GuiObjSearchTextbox import ObjSearchTextbox
 from Constants import *
-from GuiTextbox import Textbox
-from GuiListbox import GuiListbox
-from GuiWindow import GuiWindow
-from GuiText import GuiText
-from GuiButton import GuiButton
-from GuiObjSearchTextbox import ObjSearchTextbox
 
 
 def GuiObjFactory(obj_type, var_dict):

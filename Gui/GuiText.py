@@ -1,7 +1,7 @@
+from Gui.GuiObject import GuiObject
+
 __author__ = 'thvoidedline'
 
-import pygame
-from GuiObject import GuiObject
 from Constants import *
 
 

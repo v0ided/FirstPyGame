@@ -1,8 +1,7 @@
+from Gui.GuiObject import GuiObject
+
 __author__ = 'thvoidedline'
 
-import pygame
-from HelpFunctions import search_file
-from GuiObject import GuiObject
 from Constants import *
 
 
@@ -21,13 +20,20 @@ class Textbox(GuiObject):
             print("Not all required arguments given to Textbox")
             raise
 
-    def input(self, key):
-        if key == pygame.K_BACKSPACE:
+    def str_input(self, str_input, replace=False):
+        if replace:
+            self.text = str_input
+        else:
+            self.text += str_input
+        self.changed = True
+
+    def input(self, chr_input):
+        if chr_input == pygame.K_BACKSPACE:
             self.backspace()
-        elif key == pygame.K_SPACE:
+        elif chr_input == pygame.K_SPACE:
             return
-        elif pygame.K_ESCAPE < key < pygame.K_DELETE:
-            self.text += chr(key)
+        elif pygame.K_ESCAPE < chr_input < pygame.K_DELETE:
+            self.text += chr(chr_input)
         self.changed = True
 
     def update(self):
