@@ -16,7 +16,6 @@ class Level():
     def __init__(self, w, h, filename, data_dir):
         self.width = w
         self.height = h
-
         self._data_dir = data_dir
         os.chdir(self._data_dir)
 
@@ -48,7 +47,9 @@ class Level():
     def _load_objects(self):
         obj_filename = os.path.join('level_data', self._filename)
         parser = configparser.ConfigParser()
-        parser.read(obj_filename)
+        if obj_filename not in parser.read(obj_filename):
+            print(obj_filename + 'not found/cant be read')
+
         object_list = parser.sections()
         for objname in object_list:
             obj_type = parser[objname]['type']
@@ -57,6 +58,19 @@ class Level():
                 value = parser[objname][option]
                 var_dict[option] = to_num(value)
             self.objects.add(ObjFactory(obj_type, var_dict))
+
+    def clear(self):
+        while self.objects:
+            cur_layer = self.objects.get_top_layer()
+            self.objects.remove_sprites_of_layer(cur_layer)
+        self.background.fill((153, 217, 234))
+
+    def load(self, new_file=None):
+        if new_file:
+            self._filename = new_file
+        self.clear()
+        self._load_objects()
+        self.player = self._get_player_from_objects()
 
     def update(self):
         #update object positions

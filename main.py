@@ -1,5 +1,6 @@
 from Level import *
 from Constants import *
+from EditLevel.EditMain import *
 
 DATA_PATH = os.path.join('data')
 
@@ -17,7 +18,6 @@ def main():
 #Main Loop
     while 1:
         clock.tick(60)
-
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
@@ -26,7 +26,9 @@ def main():
                     return
             if event.type > pygame.USEREVENT:
                 Timer.handle_event(event.type)
-
+        if pygame.key.get_pressed()[pygame.K_RETURN]:
+            edit_main(screen)
+            level.load()
         if pygame.key.get_pressed()[pygame.K_RIGHT]:
             level.player.move_direction(DIR_RIGHT)
         elif pygame.key.get_pressed()[pygame.K_LEFT]:

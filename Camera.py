@@ -36,12 +36,14 @@ class Camera(pygame.sprite.Sprite):
     def translate_from(self, rect):
         return rect.move((self.rect.x, self.rect.y))
 
-    def translate_cords_to(self, x, y):
+    def translate_cords_to(self, cords):
+        x, y = cords
         t_x = x + self.rect.x
         t_y = y + self.rect.y
         return t_x, t_y
 
-    def translate_cords_from(self, x, y):
+    def translate_cords_from(self, cords):
+        x, y = cords
         s_x = x - self.rect.x
         s_y = y - self.rect.y
         return s_x, s_y

@@ -70,3 +70,12 @@ class LevelObject(BaseObject):
         for fobj in self.files:
             config.set(self.name, 'file' + str(i), fobj)
             i += 1
+
+    def get_prop_enum(self):
+        prop_dict = {}
+        prop_dict['type'] = obj_type_str(self.type)
+        prop_dict['layer'] = self._layer
+        prop_dict['trans'] = "True"
+        prop_dict['file1'] = self.files[0]
+        for prop in prop_dict:
+            yield prop, prop_dict[prop]

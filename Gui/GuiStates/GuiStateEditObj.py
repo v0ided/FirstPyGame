@@ -1,22 +1,28 @@
+from Gui.GuiStates.GuiState import GuiState
+
 __author__ = 'thvoidedline'
 
-from Gui.GuiStateNEW import GuiState
 from Binding import SelectNextTxtboxBind
+from Binding import Binding
 from Constants import *
 
 
 class GuiEditObj(GuiState):
     def __init__(self, state, *args):
         GuiState.__init__(self, state, *args)
-
-        #Setup controls
-        self.create(*args)
+        try:
+            self.keybindings.add(GuiEditObjBind(pygame.K_F1, self, args[0], args[0].selected_obj))
+        except IndexError:
+            print("Not enough arguments given to GuiEditObj")
 
     def create(self, *args):
         GuiState.create(self, *args)
         try:
             level = args[0]
             obj = args[1]
+            if obj is None:
+                print('none obj')
+                return
 
             self.keybindings.add(SelectNextTxtboxBind(pygame.K_TAB, self))
 
@@ -24,7 +30,7 @@ class GuiEditObj(GuiState):
                               'bg_color': (0, 0, 0), 'font_color': (234, 234, 234)})
             confirm_bttn = self.add(BUTTON, {'name': 'confirm_bttn', 'cords': (320, 480),
                                              'bg_color': (255, 255, 255), 'font_color': (0, 0, 0),
-                                                  'font_size': 14, 'text': 'Confirm', 'action': level.edit_object})
+                                             'font_size': 14, 'text': 'Confirm', 'action': level.edit_object})
 
             self.add(TEXT, {'name': 'namelabel', 'cords': (310, 280), 'font_color': (234, 234, 234),
                             'font_size': 18, 'text': "Name:"})
@@ -45,7 +51,7 @@ class GuiEditObj(GuiState):
             confirm_bttn.attach(yfield)
 
             self.add(TEXT, {'name': 'wlabel', 'cords': (310, 355), 'font_color': (234, 234, 234),
-                                   'font_size': 18, 'text': "Width:"})
+                            'font_size': 18, 'text': "Width:"})
             wfield = self.add(TXT_BOX, {'name': 'wtxtbox', 'cords': (400, 355), 'bg_color': (255, 255, 255)})
             wfield.text = str(obj.rect.w)
             confirm_bttn.attach(wfield)
@@ -76,7 +82,17 @@ class GuiEditObj(GuiState):
 
         except (ValueError, IndexError, LookupError, TypeError):
             print('Error during creation of GuiEditObject')
+            raise
 
     def destroy(self):
         self.keybindings.remove(pygame.K_TAB)
-        del self.controls[:]
+        self.controls[:] = []
+
+
+class GuiEditObjBind(Binding):
+    def function(self):
+        try:
+            self.args[0].toggle(self.args[1], self.args[2])
+        except IndexError:
+            print("Not enough arguments sent to GuiEditObjBind")
+            raise

@@ -4,19 +4,18 @@ class GuiManager():
     def __init__(self):
         self.states = {}
 
-    #Returns true if a gui object was clicked, False if not
-    #Handles key input by passing it to state obj to check if has_focus gui object exists to give input to
+    #Returns true if a gui state was clicked, False if not
+    #Passes user input to all Gui States
     def input(self, user_input):
-        clicked_obj = False
+        avail_input = False
         for state_type, state_obj in self.states.items():
             #state input function is responsible for checking if it is ok to process input
-            clicked_obj = state_obj.input(user_input)
-        return clicked_obj
+            avail_input = state_obj.input(user_input)
+        return avail_input
 
     def update(self):
         for state_type, state_obj in self.states.items():
-            if state_obj.is_active():
-                state_obj.update()
+            state_obj.update()
 
     def add(self, state, state_obj):
         if state in self.states.keys():
@@ -37,5 +36,4 @@ class GuiManager():
 
     def draw(self, screen):
         for state_type, state_obj in self.states.items():
-            if state_obj.is_active():
-                state_obj.draw(screen)
+            state_obj.draw(screen)

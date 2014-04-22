@@ -1,14 +1,13 @@
 __author__ = 'thvoidedline'
 
 import configparser
-from EditCamera import EditCamera
+from EditLevel.EditCamera import EditCamera
 from Level import Level
 from LevelObjFactory import ObjFactory
 from HelpFunctions import *
 
 
-#New levels created/saved levels loaded by creating a new LevelEdit instance
-class LevelEdit(Level):
+class EditLevel(Level):
     def __init__(self, w, h, filename, data_path):
         #If a blank filename is passed, create a new level file 'new_level_1.ini, if the file exists in level_data,
         #increment i until a filename that does not exist in working dir is found
@@ -47,13 +46,6 @@ class LevelEdit(Level):
         m_x, m_y = pygame.mouse.get_pos()
         self.update_pre_place_pos(m_x, m_y)
 
-    def clear(self):
-        while self.objects:
-            cur_layer = self.objects.get_top_layer()
-            self.objects.remove_sprites_of_layer(cur_layer)
-        self.selected_obj = None
-        self.background.fill((153, 217, 234))
-
     def save(self, filename=""):
         #If no filename is given, default to current filename (save)
         #If a filename is given, set the current filename to the new filename (save as)
@@ -66,15 +58,15 @@ class LevelEdit(Level):
         for obj in self.objects:
             #If object with this name has already been added, skip it
             if obj.name in config.sections():
+                print(obj.name + " already exists")
                 continue
             obj.seralize(config)
         config.write(sfile)
         print("Saved Level.")
 
-    def load(self, new_file):
-        self.clear()
-        self._filename = new_file
-        self._load_objects()
+    def clear(self):
+        Level.clear(self)
+        self.selected_obj = None
 
     def remove_object(self, obj):
         if obj in self.objects:
@@ -97,12 +89,13 @@ class LevelEdit(Level):
     def update_pre_place_pos(self, x, y):
         if self.selected_obj:
             if not self._menu_focus:
-                self.selected_obj.rect.x, self.selected_obj.rect.y = self.camera.translate_cords_to(x + self._sel_m_x, y + self._sel_m_y)
+                cords = (x + self._sel_m_x,  y + self._sel_m_y)
+                self.selected_obj.rect.x, self.selected_obj.rect.y = self.camera.translate_cords_to(cords)
 
     def place_object(self):
         if self.selected_obj:
             if self.selected_obj.name is None or self.selected_obj.name == 'pre_place':
-                self.selected_obj.name = "LevelObject" + str(len(self.objects))
+                self.selected_obj.name = "LevelObject" + str(len(self.objects) + 1)
             self.selected_obj = None
             print(str(self.selected_obj))
         else:
@@ -119,31 +112,26 @@ class LevelEdit(Level):
             elif direction == DIR_LEFT:
                 self.selected_obj.rect.x -= 15
 
-    #todo: replace with select_obj below (GuiSelectedObj to handle placing of selected object)
-    def input(self, event_type):
-        if event_type == pygame.MOUSEBUTTONUP:
-            if self.selected_obj is None:
-                m_x, m_y = pygame.mouse.get_pos()
-                t_x, t_y = self.camera.translate_cords_to(m_x, m_y)
-                objs = self.objects_at(t_x, t_y)
-
-                #If > 0 objects were clicked on and there is no selected object already, select first object
-                if objs:
-                    self.select_object(objs[0])
-                    print(self.selected_obj.name)
-            else:
-                print('Placing object..')
-                self.place_object()
+    def select_object_at(self, screen_cords):
+        t_x, t_y = self.camera.translate_cords_to(screen_cords)
+        objs = self.objects_at(t_x, t_y)
+        if objs:
+            #Find the mouse offset from the top left of object for offset when moving with mouse
+            self._sel_m_x = objs[0].rect.x - t_x
+            self._sel_m_y = objs[0].rect.y - t_y
+            self.select_object(objs[0])
 
     def select_object(self, obj):
         if obj:
             self.selected_obj = obj
-            m_x, m_y = pygame.mouse.get_pos()
-            t_x, t_y = self.camera.translate_cords_to(m_x, m_y)
-            self._sel_m_x = obj.rect.x - t_x
-            self._sel_m_y = obj.rect.y - t_y
         else:
             print('NoneType sent to select_object')
+
+    def mouse_click(self):
+        if self.selected_obj:
+            self.place_object()
+        else:
+            self.select_object_at(pygame.mouse.get_pos())
 
     #bounds checking? Error checking?
     def edit_object(self, var_list):

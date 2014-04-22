@@ -48,8 +48,9 @@ class Keybindings():
 
     def remove(self, key):
         for bind in self._bindings:
-            if bind.key == key:
+            if bind.key() == key:
                 self._bindings.remove(bind)
+
 
     #Controls if binding will execute function on keypress
     #binding_type = the subclass type for the bind you want to toggle state of

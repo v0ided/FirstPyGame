@@ -21,8 +21,6 @@ class GuiState():
         self._active = False
         #Toggle visibility of gui objects, keybindings will still be active if False
         self.visible = True
-        #args is any needed outside data
-        self.create(*args)
 
     #Set any data that needs to be reset or is only wanted when the state is active (such as keybindings)
     def create(self, *args):
@@ -34,8 +32,10 @@ class GuiState():
 
     def toggle(self, *args):
         if self._active:
+            print('destroying')
             self.destroy()
         else:
+            print('creating')
             self.create(*args)
 
     def add(self, obj_type, var_dict):
@@ -67,24 +67,16 @@ class GuiState():
         if self._has_focus:
             self._has_focus.input(user_input)
 
-        if self.toggle_bind:
-            if self.toggle_bind.key() == user_input:
-                #do initializing, if any
-                self.toggle_bind.function()
-                #self.toggle_active()
+        #If a key binding exists, do action
+        if self.keybindings.check(user_input):
+            return True
+        if user_input == pygame.MOUSEBUTTONUP:
+            m_x, m_y = pygame.mouse.get_pos()
+            if self.click_gui_objects_at(m_x, m_y):
+                print('mouse click')
                 return True
-
-        if self._active:
-            #If a key binding exists, do action
-            if self.keybindings.check(user_input):
-                return True
-            if user_input == pygame.MOUSEBUTTONUP:
-                m_x, m_y = pygame.mouse.get_pos()
-                if self.click_gui_objects_at(m_x, m_y):
-                    print('mouse click')
-                    return True
-                else:
-                    self.focus(None)
+            else:
+                self.focus(None)
         return False
 
     def focus(self, obj):
