@@ -3,17 +3,12 @@ from Gui.GuiStates.GuiState import GuiState
 __author__ = 'thvoidedline'
 
 from Binding import SelectNextTxtboxBind
-from Binding import Binding
 from Constants import *
 
 
 class GuiEditObj(GuiState):
     def __init__(self, state, *args):
         GuiState.__init__(self, state, *args)
-        try:
-            self.keybindings.add(GuiEditObjBind(pygame.K_F1, self, args[0], args[0].selected_obj))
-        except IndexError:
-            print("Not enough arguments given to GuiEditObj")
 
     def create(self, *args):
         GuiState.create(self, *args)
@@ -26,11 +21,12 @@ class GuiEditObj(GuiState):
 
             self.keybindings.add(SelectNextTxtboxBind(pygame.K_TAB, self))
 
-            self.add(WINDOW, {'name': 'editprops', 'cords': (300, 250), 'w': 200, 'h': 260,
+            self.add(WINDOW, {'name': 'editprops', 'cords': (300, 250), 'w': 250, 'h': 260,
                               'bg_color': (0, 0, 0), 'font_color': (234, 234, 234)})
             confirm_bttn = self.add(BUTTON, {'name': 'confirm_bttn', 'cords': (320, 480),
                                              'bg_color': (255, 255, 255), 'font_color': (0, 0, 0),
-                                             'font_size': 14, 'text': 'Confirm', 'action': level.edit_object})
+                                             'font_size': 14, 'text': 'Confirm',
+                                             'action': level.edit_object, 'close_state': True})
 
             self.add(TEXT, {'name': 'namelabel', 'cords': (310, 280), 'font_color': (234, 234, 234),
                             'font_size': 18, 'text': "Name:"})
@@ -85,14 +81,7 @@ class GuiEditObj(GuiState):
             raise
 
     def destroy(self):
+        print('GuiEditObj destroy called')
+        GuiState.destroy(self)
         self.keybindings.remove(pygame.K_TAB)
         self.controls[:] = []
-
-
-class GuiEditObjBind(Binding):
-    def function(self):
-        try:
-            self.args[0].toggle(self.args[1], self.args[2])
-        except IndexError:
-            print("Not enough arguments sent to GuiEditObjBind")
-            raise

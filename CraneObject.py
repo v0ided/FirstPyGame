@@ -167,10 +167,10 @@ class CraneObject(BaseObject):
         else:
             self._power = True
 
-    def seralize(self, config):
+    def serialize(self, config):
         #Seralize referenced arm object first
-        self.arm.seralize(config)
-        BaseObject.seralize(self, config)
+        self.arm.serialize(config)
+        BaseObject.serialize(self, config)
         config.set(self.name, 'xmin', str(self.xmin))
         config.set(self.name, 'ymin', str(self.ymin))
         config.set(self.name, 'xmax', str(self.xmax))

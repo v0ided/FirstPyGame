@@ -62,10 +62,11 @@ class LevelObject(BaseObject):
                     #save the object the object is on
                     self.on_object = obj.rect
 
-    def seralize(self, config):
-        BaseObject.seralize(self, config)
+    def serialize(self, config):
+        BaseObject.serialize(self, config)
         config.set(self.name, 'layer', str(self._layer))
         config.set(self.name, 'trans', "True")
+
         i = 1
         for fobj in self.files:
             config.set(self.name, 'file' + str(i), fobj)

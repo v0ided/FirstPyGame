@@ -1,8 +1,11 @@
 import configparser
-from HelpFunctions import *
-from LevelObject import *
+import pygame
+import os
+from HelpFunctions import load_image, to_num
+from Constants import PLAYER
 from Camera import Camera
-from LevelObjFactory import *
+from LevelObjFactory import ObjFactory
+from Gui.GuiManager import GuiManager
 
 
 class Background(pygame.sprite.Sprite):
@@ -28,6 +31,8 @@ class Level():
         self._filename = filename
         self._load_objects()
         self.player = self._get_player_from_objects()
+        self.input_binds = []
+        self.gui_manager = GuiManager()
 
     def get_filename(self):
         return self._filename

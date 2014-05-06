@@ -6,7 +6,7 @@ from Constants import *
 
 
 class GuiState():
-    def __init__(self, state, *args):
+    def __init__(self, is_blocking):
         #List of all gui objects the state controls
         self.controls = []
         #keyboard character/function to execute
@@ -16,7 +16,7 @@ class GuiState():
         #Index of focus object in objects
         self._focus_index = 0
         #Toggle display of objects and action of keybindings for state
-        self.state = state
+        self.blocking = is_blocking
         #Is state active?
         self._active = False
         #Toggle visibility of gui objects, keybindings will still be active if False
@@ -24,18 +24,19 @@ class GuiState():
 
     #Set any data that needs to be reset or is only wanted when the state is active (such as keybindings)
     def create(self, *args):
+        print('GuiState parent create called')
         self._active = True
 
     #Delete any data that needs to be reset or is only wanted when the state is active (such as keybindings)
     def destroy(self):
+        print('GuiState parent destroy called')
+        self.focus(None)
         self._active = False
 
     def toggle(self, *args):
         if self._active:
-            print('destroying')
             self.destroy()
         else:
-            print('creating')
             self.create(*args)
 
     def add(self, obj_type, var_dict):
@@ -62,21 +63,37 @@ class GuiState():
                 return obj
         return None
 
+    def _mouse_input(self, m_input):
+        if m_input == pygame.MOUSEBUTTONUP:
+            m_x, m_y = pygame.mouse.get_pos()
+            clicked_obj = self.click_gui_objects_at(m_x, m_y)
+            if clicked_obj is None:
+                print('clicked nothing at ' + str(len(self.controls)))
+                self.focus(None)
+                return False
+            else:
+                print('clicked gui object' + str(clicked_obj.type))
+                if clicked_obj.type == BUTTON:
+                    if clicked_obj.close_state:
+                        self.destroy()
+                return True
+
     def input(self, user_input):
-        #if focus object
-        if self._has_focus:
-            self._has_focus.input(user_input)
+        if user_input == pygame.MOUSEBUTTONUP:
+            return self._mouse_input(user_input)
 
         #If a key binding exists, do action
         if self.keybindings.check(user_input):
             return True
-        if user_input == pygame.MOUSEBUTTONUP:
-            m_x, m_y = pygame.mouse.get_pos()
-            if self.click_gui_objects_at(m_x, m_y):
-                print('mouse click')
+
+        #if a state object has focus, give input to object
+        if self._has_focus:
+            #Only send alphanumeric characters and backspace to state for input
+            if pygame.K_ESCAPE < user_input < pygame.K_DELETE or user_input == pygame.K_BACKSPACE:
+                print('input sent to focused gui object')
+                self._has_focus.input(user_input)
                 return True
-            else:
-                self.focus(None)
+
         return False
 
     def focus(self, obj):
@@ -92,7 +109,7 @@ class GuiState():
             self._focus_index = self.controls.index(obj)
             self._has_focus.is_focus = True
 
-    def get_focus(self):
+    def get_focus_obj(self):
         return self._has_focus
 
     def object_text(self, name):
@@ -102,16 +119,14 @@ class GuiState():
         print('Object not found.')
         return ""
 
-    def change_state(self, state):
-        self.state = state
-
     #check if a gui object is at a SCREEN coordinate, call input if object is at x,y
+    #returns type of gui object clicked
     def click_gui_objects_at(self, x, y):
-        clicked = False
+        clicked = None
         for gobj in self.controls:
             if gobj.rect.collidepoint(x, y):
                 gobj.input(pygame.MOUSEBUTTONUP)
-                clicked = True
+                clicked = gobj
         return clicked
 
     def focus_next_control(self, filter_type):

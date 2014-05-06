@@ -9,13 +9,15 @@ from Constants import *
 class GuiButton(GuiObject):
     def __init__(self, var_dict):
         GuiObject.__init__(self, var_dict)
-
+        self.type = BUTTON
         try:
             self.font_size = var_dict['font_size']
             self.font_color = var_dict['font_color']
             self.text = var_dict['text']
             self.action = var_dict['action']
             self.bg_color = var_dict['bg_color']
+            #boolean value that determines if the controlling gui state should be closed on button press
+            self.close_state = var_dict['close_state']
         except KeyError:
             print('Not all required arguments passed to GuiButton')
             raise

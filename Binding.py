@@ -18,58 +18,6 @@ class Binding():
         pass
 
 
-class LevelSaveBind(Binding):
-    def __init__(self, key, *args):
-        Binding.__init__(self, key, *args)
-
-    def function(self):
-        if self.args:
-            level = self.args[0]
-            level.new_save()
-
-
-class LevelLoadBind(Binding):
-    def __init__(self, key, *args):
-        Binding.__init__(self, key, *args)
-
-    def function(self):
-        if self.args:
-            load_lvl_dialog = self.args[0]
-            load_lvl_dialog.toggle_active()
-            if load_lvl_dialog.is_active():
-                load_lvl_dialog.focus(load_lvl_dialog.get_obj('file_txtbox'))
-
-
-class LevelSaveAsBind(Binding):
-    def __init__(self, key, *args):
-        Binding.__init__(self, key, *args)
-
-    def function(self):
-        if self.args:
-            save_lvl_gui = self.args[0]
-            save_lvl_gui.toggle_active()
-            if save_lvl_gui.is_active():
-                save_lvl_gui.focus(save_lvl_gui.get_obj('saveas_txtbox'))
-
-
-class LevelClearBind(Binding):
-    def __init__(self, key, *args):
-        Binding.__init__(self, key, *args)
-
-    def function(self):
-        if self.args:
-            clear_lvl_gui = self.args[0]
-            clear_lvl_gui.toggle_active()
-
-
-class ToggleStateBind(Binding):
-    def __init__(self, key, *args):
-        Binding.__init__(self, key, *args)
-
-    def function(self):
-        self.args[0].toggle()
-
-
 class ListboxUpBind(Binding):
     def __init__(self, key, *args):
         Binding.__init__(self, key, *args)
@@ -98,18 +46,7 @@ class ButtonEnter(Binding):
         if self.args:
             bttn = self.args[0]
             #simulate a button press
-            bttn.input(pygame.MOUSEBUTTONUP)
-
-
-class DeleteObjectBind(Binding):
-    def __init__(self, key, *args):
-        Binding.__init__(self, key, *args)
-
-    def function(self):
-        if self.args:
-            level = self.args[0]
-            level.remove_object(level.selected_obj)
-            level.selected_obj = None
+            bttn.key_input(pygame.MOUSEBUTTONUP)
 
 
 class SelectNextTxtboxBind(Binding):

@@ -1,5 +1,5 @@
 from Gui.GuiObject import GuiObject
-
+import pygame
 __author__ = 'thvoidedline'
 
 from Constants import *
@@ -9,7 +9,7 @@ class GuiListbox(GuiObject):
     def __init__(self, var_dict):
         GuiObject.__init__(self, var_dict)
         self.items_dict = {}
-
+        self.type = LIST_BOX
         try:
             self.bg_color = var_dict['bg_color']
             if 'items_list' in var_dict:
@@ -18,7 +18,6 @@ class GuiListbox(GuiObject):
             print("Not all required argumennts given to GuiListbox")
             raise
 
-        self.type = LIST_BOX
         self.selected = 0
         self.rows = 10
         #index of middle item in entire items_dict

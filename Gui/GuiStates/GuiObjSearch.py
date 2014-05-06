@@ -5,25 +5,22 @@ __author__ = 'thvoidedline'
 from Binding import Binding
 from Binding import ListboxUpBind
 from Binding import ListboxDownBind
-from Binding import ToggleStateBind
 from Constants import *
 from HelpFunctions import search_file
 
 
 class GuiObjSearch(GuiState):
-    def __init__(self, state, *args):
-        GuiState.__init__(self, state, *args)
+    def __init__(self, state):
+        GuiState.__init__(self, state)
         self.listbox = None
         self.textbox = None
-        #Toggle state existence, do not remove on destroy (calls GuiObjSearch.toggle())
-        self.level = args[0]
-        self.data_path = args[1]
-        self.keybindings.add(ToggleStateBind(pygame.K_SPACE, self))
+        self.level = None
 
     def create(self, *args):
+        print('Create GuiObjSearch called')
         GuiState.create(self, *args)
         try:
-            #Select object from listbox
+            self.level = args[0]
             self.keybindings.add(PrePlaceObjectBind(pygame.MOUSEBUTTONUP, self, self.level))
             self.keybindings.add(PrePlaceObjectBind(pygame.K_RETURN, self, self.level))
             self.keybindings.add(ListboxUpBind(pygame.K_UP, "results", self))
@@ -36,21 +33,23 @@ class GuiObjSearch(GuiState):
 
             self.listbox.update_list(self.get_path_results(), True)
             self.focus(self.textbox)
-        except (IndexError, TypeError, LookupError, ValueError) as e:
-            print('Failed to create GuiObjSearch' + e.error)
+        except (IndexError, TypeError, LookupError, ValueError):
+            print('Failed to create GuiObjSearch')
 
     def get_path_results(self):
-        return search_file(self.data_path, self.textbox.text)
+        return search_file(self.level._data_dir, self.textbox.text)
 
     def destroy(self):
         GuiState.destroy(self)
+        print('destroying GuiObjSearch')
         self.keybindings.remove(pygame.MOUSEBUTTONUP)
         self.keybindings.remove(pygame.K_RETURN)
         self.keybindings.remove(pygame.K_UP)
         self.keybindings.remove(pygame.K_DOWN)
         self.controls[:] = []
         self.listbox = None
-        print(self.keybindings._bindings)
+        self.textbox = None
+        self.level = None
 
     def pre_place_object(self):
         self.level.pre_place_object(self.listbox.get_text())

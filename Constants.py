@@ -46,13 +46,13 @@ JUMP_DELAY = 1
 JUMP = 2
 
 #GUI OBJECT TYPES
+NO_GUI_OBJ = -1
 GUI_OBJ = 0
 TXT_BOX = 1
 LIST_BOX = 2
 WINDOW = 3
 TEXT = 4
 BUTTON = 5
-OBJ_S_TXT_BOX = 6  #ObjectSearchTxtbox
 
 #Names for indices inside tuple stored in dest list
 X = 0
@@ -76,10 +76,6 @@ PRE_PLACE = 7
 SEL_OBJ = 8
 PLC_SEL = 9
 EDIT_OBJ = 10
-
-#GUI STATES
-NON_BLOCKING = 0
-BLOCKING = 1
 
 #GUI_ACTIONS
 ACTION_EDIT_OBJ = 0

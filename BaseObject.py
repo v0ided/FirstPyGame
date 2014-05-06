@@ -119,7 +119,7 @@ class BaseObject(pygame.sprite.Sprite):
         self.rect.y += self.yvel
 
     #Argument is configparser object
-    def seralize(self, config):
+    def serialize(self, config):
         config.add_section(self.name)
         config.set(self.name, 'type', obj_type_str(self.type))
         config.set(self.name, 'x', str(self.rect.x))
