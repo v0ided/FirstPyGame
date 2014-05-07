@@ -36,7 +36,6 @@ class LevelObject(BaseObject):
         self._layer = var_dict['layer']
         self.collidable = to_bool(var_dict['collide'])
         self.idle_anim.play()
-        self.use_timer_len = 800
         self.obey_gravity = to_bool(var_dict['gravity'])
         self.visible = True
 

@@ -1,6 +1,8 @@
-import pyganim
 import os
-from BaseObject import *
+import pyganim
+from Timer import Timer
+from BaseObject import BaseObject
+from Constants import *
 
 
 class PlayerSprite(BaseObject):
@@ -25,7 +27,6 @@ class PlayerSprite(BaseObject):
         #array of objects currently colliding with
         #used to track objects that are possible to interact with
         self.pos_interact = []
-        self.has_item = False
         self.held_item = None
         self.drop_item = None
         self.collidable = True
@@ -147,14 +148,6 @@ class PlayerSprite(BaseObject):
             if obj in self.pos_interact:
                     self.pos_interact.remove(obj)
 
-    def interact(self, null, level):
-        #interact with collide objects
-        for obj in self.pos_interact:
-            obj.interact(self, level)
-        #interact with held item
-        if self.held_item is not None:
-            self.held_item.interact(self, level)
-
     def _flip_image(self):
         self.walking_anim.flip(True, False)
         self.jumping_anim.flip(True, False)
@@ -184,26 +177,72 @@ class PlayerSprite(BaseObject):
     def do_gravity(self, gravity):
         self._change_vel(DIR_DOWN, gravity)
 
-    def drop(self, level):
-        self.drop_item = self.held_item
-        self.drop_item.obey_gravity = True
-        self.held_item = None
-        #level.place_object(self.drop_item)
+    def check_interactions(self):
+        if not self._use_timer:
+            self._use_timer = Timer(self.use_timer_len, self._set_can_use)
+        if self._can_use:
+            #interact with held item
+            if self.held_item:
+                if self.interact(self.held_item):
+                    self._can_use = False
+                    self._use_timer.start_timer()
+                    return
 
-    def pickup(self, obj, level):
-        self.held_item = obj
-        self.held_item.obey_gravity = False
-        level.objects.change_layer(self.held_item, self._layer)
-        self.held_item.rect.y = self.rect.centery + (self.rect.w / 6)
-        self.held_item.rect.x = self.rect.centerx
+            for obj in self.pos_interact:
+                if self.interact(obj):
+                    return
 
-        #save offsets from the top left of player sprite
-        self.held_ofs_x = self.held_item.rect.x - self.rect.x
-        self.held_ofs_y = self.held_item.rect.y - self.rect.y
+    def interact(self, obj):
+        print('interacting with ' + obj.name)
+        for behavior in self.behaviors:
+            if self.delegate_behavior(obj, behavior):
+                return True
+        return False
+
+    def delegate_behavior(self, obj, behavior):
+        if behavior == PICKUP:
+            return self.pickup(obj)
+        if behavior == PLACE:
+            return self.drop()
+        if behavior == TOGGLE_POWER:
+            return self.toggle_power(obj)
+        print('Failed to delegate behavior')
+        return False
+
+    def drop(self):
+        if self.held_item:
+            self.drop_item = self.held_item
+            self.drop_item.visible = True
+            self.drop_item.obey_gravity = True
+            self.held_item = None
+            print('dropped item')
+            return True
+        return False
+
+    def pickup(self, obj):
+        if PICKUP in obj.behaviors and not self.held_item:
+            obj.visible = False
+            obj.obey_gravity = False
+            self.held_item = obj
+            #level.objects.change_layer(self.held_item, self._layer) #Check/update this in level.draw function
+            self.held_item.rect.y = self.rect.centery + (self.rect.w / 6)
+            self.held_item.rect.x = self.rect.centerx
+            #save offsets from the top left of player sprite
+            self.held_ofs_x = self.held_item.rect.x - self.rect.x
+            self.held_ofs_y = self.held_item.rect.y - self.rect.y
+            print('picked up item')
+            return True
+        return False
+
+    def toggle_power(self, obj):
+        if obj.type == CRANE_OBJECT:
+            obj.toggle_power()
+            return True
+        return False
 
     def update_pos(self):
         self.rect.x += self.xvel
         self.rect.y += self.yvel
-        if self.held_item is not None:
-            self.held_item.rect.x = self.rect.x + self.held_ofs_x
-            self.held_item.rect.y = self.rect.y + self.held_ofs_y
+        if self.held_item:
+            self.held_item.rect.x = self.held_ofs_x + self.rect.x
+            self.held_item.rect.y = self.held_ofs_y + self.rect.y

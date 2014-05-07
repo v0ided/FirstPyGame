@@ -26,6 +26,10 @@ def main():
                     return
             if event.type > pygame.USEREVENT:
                 Timer.handle_event(event.type)
+            if event.type == pygame.KEYUP:
+                if event.key == pygame.K_a:
+                    level.player.check_interactions()
+
         if pygame.key.get_pressed()[pygame.K_RETURN]:
             edit_main(screen)
             level.load()
@@ -38,8 +42,6 @@ def main():
         if pygame.key.get_pressed()[pygame.K_SPACE]:
             if level.player.jump_state == NOT_JUMPING and level.player.airborne is not True:
                 level.player.start_jump()
-        if pygame.key.get_pressed()[pygame.K_a]:
-            level.player.interact(None, level)
 
         level.update()
         level.draw(screen)

@@ -59,6 +59,31 @@ def to_bool(bool_str):
         return None
 
 
+def to_behavior(str_behavior):
+    behavior = str_behavior.lower()
+    if behavior == 'pickup':
+        return PICKUP
+    elif behavior == 'place':
+        return PLACE
+    elif behavior == 'toggle_power':
+        return TOGGLE_POWER
+    else:
+        print(str_behavior + " was not recognized by to_behavior()")
+        return NOTHING
+
+
+def behavior_str(behavior):
+    if behavior == PICKUP:
+        return 'pickup'
+    elif behavior == PLACE:
+        return 'place'
+    elif behavior == TOGGLE_POWER:
+        return 'toggle_power'
+    else:
+        print("Unable to convert behavior to string")
+        return "invalid"
+
+
 def obj_type_str(obj_type):
     if obj_type == BASE_OBJECT:
         return "BaseObject"

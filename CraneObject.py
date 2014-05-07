@@ -5,9 +5,9 @@ import pygame
 from Timer import Timer
 
 
-class CraneObject(BaseObject):
+class CraneObject(LevelObject):
     def __init__(self, var_dict):
-        BaseObject.__init__(self, var_dict)
+        LevelObject.__init__(self, var_dict)
 
         self.type = CRANE_OBJECT
 
