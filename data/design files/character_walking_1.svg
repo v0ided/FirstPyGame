@@ -1,0 +1,1540 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="character_walking_1.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="409.3109"
+     inkscape:cy="832.1338"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer5"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="962"
+     inkscape:window-x="-8"
+     inkscape:window-y="168"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="false">
+    <sodipodi:guide
+       orientation="0,1"
+       position="540.5,613.5"
+       id="guide5249" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="479.24162,891.48488"
+       id="guide5278" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="289,737"
+       id="guide5280" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="opacity:0.4375"
+     sodipodi:insensitive="true">
+    <path
+       style="fill:#f9f9f9;fill-opacity:1;stroke:#000000;stroke-width:0.57080895"
+       d="m 1359.4961,351.94697 c 0,4.80356 -7.3586,11.3796 -14.3412,11.3796 -6.9826,0 -12.6431,-3.89408 -12.6431,-8.69765 0,-4.80357 6.2625,-5.38425 13.2451,-5.38425 6.9826,0 13.7392,-2.10128 13.7392,2.7023 z"
+       id="path3821"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssss" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.99166191"
+       d="m -224.96875,425.875 c -1.18032,0.0295 -2.37168,0.151 -3.625,0.3125 -8.82454,1.13711 -17.09067,-1.69239 -17.13296,17.37976 -0.0167,7.51604 0.39914,22.19782 1.00796,26.80774 1.23501,9.35128 2.6577,15.27386 4.82,20.73906 0.90175,4.04648 2.12274,7.18529 4.76502,10.58124 2.82885,4.12441 7.56303,10.33879 10.41498,18.9922 3.85237,11.68891 7.15547,18.34852 10.25,22.75 0.15381,1.42597 0.47863,3.31817 1,5.90625 1.14289,3.68223 1.30809,4.70987 2.125,8.1875 0.71543,3.04566 0.11899,9.48544 1.4375,10.53125 1.14622,0.90915 3.0154,0.7049 4.09375,-0.6875 0.65377,0.79945 1.88073,1.18012 2.5,1.15625 0.65619,0.0178 1.29086,-0.0595 2.5625,-1.21875 1.07777,0.55811 1.14651,0.89716 2.34375,0.875 1.1398,-0.0211 1.54408,-0.57726 2.34375,-1.28125 1.28928,0.46594 1.40491,0.43669 2.5625,0.21875 1.66233,-0.0838 -0.15937,-3.73453 0.0433,-4.88067 1.48203,0.84826 1.86746,5.52293 2.51885,5.72125 0.85995,0.26178 2.1443,-0.0514 2.56282,-0.77808 0.48452,-0.8422 -0.0442,-3.4038 -0.22034,-4.32797 -0.32861,-1.72468 -1.40357,-4.01196 -2.92266,-5.95042 -2.80382,-3.14884 -3.98486,-3.52955 -5.357,-5.34661 -1.39745,-1.85057 -1.58216,-5.62019 -2.5625,-7.9375 -0.38311,-1.11417 -0.73687,-2.02652 -1.0625,-2.8125 -0.33015,-7.86249 -0.89188,-13.81323 -3.16513,-23.73039 -2.37535,-10.36403 -3.59517,-18.12539 -5.95987,-22.08211 3.18623,-18.3368 3.09941,-22.37553 0.89985,-39.03033 -2.12375,-10.74306 -4.31475,-30.12827 -16.24357,-30.09467 z"
+       id="path3893-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc" />
+    <g
+       id="g3963-1"
+       transform="matrix(0.9024689,0,0,0.90506284,-437.06944,91.98941)"
+       style="stroke-width:0.66388947;stroke-miterlimit:4;stroke-dasharray:none">
+      <g
+         id="g3969-1"
+         transform="matrix(0.98091599,-0.1938748,0.1949909,0.98091599,-92.731935,58.843503)"
+         style="stroke-width:0.66388947;stroke-miterlimit:4;stroke-dasharray:none">
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#000000;stroke-width:0.66388947;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 251.3165,525.6068 0.0825,-2.97658"
+           id="path3903-2"
+           inkscape:connector-curvature="0" />
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#000000;stroke-width:0.66388947;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 256.82024,526.15134 0.11687,-3.06546"
+           id="path3905-7"
+           inkscape:connector-curvature="0" />
+        <path
+           sodipodi:nodetypes="cc"
+           style="fill:none;stroke:#000000;stroke-width:0.66388947;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+           d="m 262.04914,526.71195 0.10193,-3.18445"
+           id="path3905-5-6"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.03754413px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1256.8009,344.17368 c 7.2735,-1.40414 7.3495,-1.29605 16.525,-1.96246"
+       id="path4206"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#f4ffff;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 1261.4421,371.67468 c 0,2.34976 -3.9476,4.25459 -8.8171,4.25459 -4.8695,0 -8.8171,-1.90483 -8.8171,-4.25459 0,-2.34974 3.9476,-4.25459 8.8171,-4.25459 4.8695,0 8.8171,1.90485 8.8171,4.25459 z"
+       id="path4321"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m -179.78555,607.53724 c -22.1039,2.2416 -23.18528,0.25151 -22.56133,5.06921 1.17767,9.09289 1.34761,14.62071 4.8098,22.03363 4.31565,9.24026 3.32367,20.54042 6.59196,32.94948 0.0684,11.10218 -1.62684,23.02549 -2.16276,31.96507 -0.67551,11.26812 -1.23037,23.32011 -2.19012,31.28899 -3.21861,26.72461 -4.15138,27.89193 -3.75171,34.51844 17.61433,0.90287 23.0011,-0.14787 30.00997,-0.35181 3.58841,-0.10443 7.8642,-66.46128 10.27016,-88.00378 0.73433,-6.57503 1.93975,-9.79626 1.6965,-15.58832 0.775,-8.47553 3.68211,-26.10073 1.21255,-46.24779 -0.64492,-5.26134 -4.23709,-7.16715 -23.92499,-7.63318 z"
+       id="path3854-1-2-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 528.68112,136.22485 c -0.26163,2.45974 -0.28351,3.06979 -0.24171,5.91403 0.0258,1.75768 -0.1636,3.55155 -0.80034,4.14508 -1.15965,1.08099 -1.66911,0.7174 -7.53981,0.7194 -4.13691,9e-4 -7.48639,25.17157 -10.17742,25.17157 -7.68608,0 -15.98974,5.65021 -18.69289,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.21936 21.00369,-22.62754 11.94514,-0.34315 19.88854,-0.8032 25.43975,9.2977 2.16461,3.9387 0.35203,11.57605 0.013,18.73495 -0.79028,9.62224 5.21162,16.20257 1.70568,17.21282 -1.35075,-0.0437 -2.73338,-0.0903 -3.30343,-0.0475 z"
+       id="path2985-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,495.36868,67.632372)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,473.75019,-18.525627)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,463.50724,-7.606008)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,477.84988,16.418622)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 505.98222,129.89699 c 1.95834,2.72948 -2.20001,3.53979 -3.81538,2.52932 -0.86085,-0.53848 -2.22277,-0.26861 -3.82244,-5.4944 -1.04673,-3.41944 0.25091,-6.46267 4.09115,-6.49967 3.86624,0.11566 3.53403,2.66299 2.66145,4.36865 -0.48203,0.94223 0.72743,3.98846 0.88522,5.0961 z"
+       id="path3804-1"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 516.22935,160.93744 c -1.00784,0.0295 -2.0251,0.15108 -3.09527,0.31267 -7.53498,1.1377 -14.59316,-1.69328 -14.62927,17.3889 -0.0143,7.51998 0.34081,22.20948 0.86067,26.82183 1.05453,9.3562 2.26932,15.28189 4.11564,20.74997 0.76997,4.0486 1.81254,7.18906 4.06869,10.5868 2.41546,4.12658 6.45782,10.34423 8.893,19.00219 3.28941,11.69505 6.10982,18.35816 8.75214,22.76196 0.13133,1.42672 0.40868,3.31991 0.85386,5.90935 0.97588,3.68417 1.11694,4.71235 1.81447,8.19181 0.61088,3.04726 0.1016,9.49043 1.22743,10.53679 0.97872,0.90963 2.57475,0.70527 3.49552,-0.68786 0.55823,0.79987 1.60589,1.18074 2.13467,1.15685 0.56029,0.0178 1.10222,-0.0595 2.18803,-1.21939 0.92027,0.55841 0.97897,0.89764 2.00125,0.87546 0.97324,-0.0211 1.31844,-0.57756 2.00125,-1.28192 1.10087,0.46619 1.1996,0.43692 2.18803,0.21887 1.41941,-0.0838 -0.13608,-3.7365 0.037,-4.88324 1.26546,0.8487 1.59457,5.52583 2.15077,5.72426 0.73428,0.26191 1.83094,-0.0514 2.1883,-0.77849 0.41372,-0.84265 -0.0377,-3.40559 -0.18814,-4.33025 -0.28059,-1.72559 -1.19846,-4.01407 -2.49556,-5.95355 -2.39409,-3.15049 -3.40254,-3.5314 -4.57416,-5.34942 -1.19324,-1.85154 -1.35096,-5.62315 -2.18804,-7.94168 -0.32712,-1.11475 -0.62919,-2.02758 -0.90723,-2.81397 -0.2819,-7.86663 -0.76155,-13.8205 -2.7026,-23.74287 -2.02823,-10.36948 -3.06979,-18.13492 -5.08893,-22.09372 2.72061,-18.34645 2.64648,-22.3873 0.76835,-39.05086 -1.8134,-10.74871 -3.68422,-30.14411 -13.86984,-30.11049 z"
+       id="path3893-5-1-9-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 525.07205,411.88066 c -0.0632,-0.98492 -17.21877,-1.14058 -21.12924,-1.25804 -1.4137,-0.0424 0.13292,15.57911 -0.008,18.22704 -0.4909,9.20279 -0.0913,8.73526 22.35167,9.23096 22.91741,0.50616 23.70374,1.44 23.85011,-3.61288 0.0535,-1.84881 -1.86154,-6.38338 -6.55139,-6.76776 -6.78717,-0.55626 -17.73956,-3.75193 -18.51285,-15.81932 z"
+       id="path3896-8-4-77"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 516.31556,411.5726 c -0.0677,-0.9838 -18.44296,-1.13928 -22.63144,-1.2566 -1.51421,-0.0425 0.14237,15.56133 -0.008,18.20623 -0.5258,9.19228 -0.0977,8.72529 23.94078,9.22043 24.54675,0.50559 25.38897,1.43835 25.54576,-3.60876 0.0573,-1.8467 -1.99389,-6.37611 -7.01717,-6.76003 -7.26971,-0.55563 -19.00078,-3.74766 -19.82904,-15.80127 z"
+       id="path3896-8-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 516.30171,262.71394 c -19.58636,2.17485 -20.54457,0.24402 -19.99168,4.91827 1.04353,8.82213 1.19413,14.18539 4.26198,21.37758 3.82411,8.96511 2.94512,19.92881 5.84116,31.96841 0.0606,10.77162 -1.44155,22.33992 -1.91642,31.01332 -0.59859,10.93261 -1.09025,22.62577 -1.94068,30.35738 -2.85203,25.92889 -3.67856,27.06145 -3.32441,33.49067 15.60812,0.87598 20.38135,-0.1435 26.59193,-0.34134 3.17973,-0.10136 6.96852,-64.48241 9.10042,-85.38351 0.6507,-6.37925 1.71884,-9.50457 1.5033,-15.12418 0.68672,-8.22318 3.26272,-25.32358 1.07443,-44.87075 -0.57147,-5.10472 -3.7545,-6.95378 -21.2,-7.40591 z"
+       id="path3854-1-2-8-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 511.53393,261.74074 c -22.1039,2.2416 -23.18528,0.25151 -22.56133,5.06921 1.17767,9.09288 1.34761,14.6207 4.8098,22.03362 4.31565,9.24026 3.32367,20.54042 6.59196,32.94948 0.0684,11.10218 -1.62684,23.02549 -2.16276,31.96507 -0.67551,11.26812 -1.23037,23.32011 -2.19012,31.28899 -3.21861,26.72461 -4.15138,27.89193 -3.75171,34.51844 17.61433,0.90287 23.0011,-0.14787 30.00997,-0.35181 3.58841,-0.10443 7.8642,-66.46128 10.27016,-88.00378 0.73433,-6.57503 1.93975,-9.79626 1.6965,-15.58832 0.775,-8.47553 3.68211,-26.10073 1.21255,-46.24778 -0.64492,-5.26134 -4.23709,-7.16715 -23.92499,-7.63318 z"
+       id="path3854-1-2-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 537.85434,238.21665 c -0.17669,19.83004 0.43379,29.67265 -1.02498,29.66965 l -50.59579,0.8242 c 0.4501,-11.47453 -0.5477,-25.07483 -0.56345,-28.58361 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82459,-21.00575 8.22505,-3.13663 23.27415,0.0322 31.31614,10.46617 3.91968,5.08555 8.55309,18.03673 10.43239,27.73308 2.87623,14.84004 2.48946,36.18767 2.46106,44.27584 z"
+       id="path3819-7-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 507.84712,166.07555 c -1.10867,-0.0115 -2.23176,0.0729 -3.41476,0.19697 -8.3293,0.8733 -15.76521,8.16227 -16.25818,18.12544 -0.389,7.86185 -1.18879,22.68535 -0.82113,27.53066 0.7458,9.82875 1.81906,16.0767 3.60641,21.87262 0.66735,4.26625 1.67429,7.59425 4.00331,11.24228 2.47191,4.41691 6.63909,11.08896 8.9327,20.2455 3.09817,12.36852 5.90307,19.45509 8.61201,24.17144 0.0814,1.49754 0.30253,3.48903 0.67741,6.2157 0.90967,3.8938 1.01929,4.97496 1.63217,8.64299 0.53673,3.2124 -0.30718,9.9291 0.88366,11.07064 1.03524,0.99237 2.7979,0.84569 3.87108,-0.57253 0.57806,0.85993 1.71238,1.30223 2.29444,1.29946 0.61483,0.0422 1.2137,-0.0159 2.45792,-1.18331 0.98651,0.62263 1.03604,0.97985 2.16025,0.9996 1.07029,0.0188 1.47413,-0.54863 2.25545,-1.25655 1.18902,0.53376 1.29879,0.5073 2.39446,0.32079 1.56329,-0.0281 0.0154,-3.91325 0.25614,-5.10521 1.35299,0.9407 1.50821,5.84574 2.11058,6.07661 0.79523,0.30474 2.01402,0.0231 2.43875,-0.72221 0.49177,-0.86385 0.10887,-3.56306 -0.0156,-4.53636 -0.23216,-1.81636 -1.13968,-4.24815 -2.47929,-6.33088 -2.49149,-3.39525 -3.58272,-3.83595 -4.78982,-5.78641 -1.22938,-1.9864 -1.23624,-5.93727 -2.05367,-8.39708 -0.31023,-1.17952 -0.60185,-2.14682 -0.87265,-2.98089 0.0374,-8.23854 -0.22687,-14.48508 -1.92174,-24.94317 -1.77094,-10.92931 -5.57268,-19.09394 -7.61653,-23.31875 1.46621,-19.627 2.74918,-23.75541 2.81751,-41.30607 0.0445,-11.45118 0.0322,-31.17863 -11.16083,-31.57128 z"
+       id="path3893-5-1-99"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 520.13288,199.30985 c -12.57029,-3.68708 -21.78352,-3.76807 -33.69724,-0.74206 1.99644,-30.10313 5.68419,-37.19075 15.35769,-37.41625 11.27992,-0.26295 17.29036,5.46855 18.33955,38.15831 z"
+       id="path3893-4-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 528.31438,139.36181 -7.19713,-0.0317"
+       id="path4363-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 515.98341,107.85064 c 1.80509,2.24748 7.60895,-3.89885 11.6308,-2.247 2.32727,0.95587 4.39627,6.94922 3.42671,9.13626 -1.75521,1.46362 -16.66267,-1.5679 -22.68317,0.24319 -3.8256,7.30022 -6.09217,4.3996 -9.74447,6.89377 -1.87333,3.25474 -0.46597,12.06186 -2.71668,15.2776 -1.65743,2.36809 -5.01589,4.17019 -7.33297,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.5068,-5.14552 57.44441,-15.86907 31.10701,-2.07983 z"
+       id="rect4371-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 529.84145,117.19611 -12.48726,-1.92934 -0.56099,2.89663 12.62859,1.63001 z"
+       id="rect3827-2-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6"
+       transform="matrix(0.94850292,0,0,0.93524129,138.80389,-185.89654)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 206.01416,138.67947 c -0.26163,2.45974 -0.28351,3.06979 -0.24171,5.91403 0.0258,1.75768 -0.1636,3.55155 -0.80034,4.14508 -1.15965,1.08099 -1.66911,0.7174 -7.53981,0.7194 -4.13691,9e-4 -7.48639,25.17157 -10.17742,25.17157 -7.68608,0 -15.98974,5.65021 -18.69289,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.219356 21.00369,-22.627536 11.94514,-0.34315 19.88854,-0.8032 25.43975,9.297696 2.16461,3.9387 0.35203,11.57605 0.013,18.73495 -0.79028,9.62224 5.21162,16.20257 1.70568,17.21282 -1.35075,-0.0437 -2.73338,-0.0903 -3.30343,-0.0475 z"
+       id="path2985-0-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14-1"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,172.70172,70.086994)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6-0"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,151.08323,-16.071006)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0-0"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,140.84028,-5.1513858)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7-8"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,155.18292,18.873244)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 183.31526,132.35161 c 1.95834,2.72948 -2.20001,3.53979 -3.81538,2.52932 -0.86085,-0.53848 -2.22277,-0.26861 -3.82244,-5.4944 -1.04673,-3.41944 0.25091,-6.46267 4.09115,-6.49967 3.86624,0.11566 3.53403,2.66299 2.66145,4.36865 -0.48203,0.94223 0.72743,3.98846 0.88522,5.0961 z"
+       id="path3804-1-3"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 193.56239,163.39206 c -1.00784,0.0295 -2.0251,0.15108 -3.09527,0.31267 -7.53498,1.1377 -14.59316,-1.69328 -14.62927,17.3889 -0.0143,7.51998 0.34081,22.20948 0.86067,26.82183 1.05453,9.3562 2.26932,15.28189 4.11564,20.74997 0.76997,4.0486 1.81254,7.18906 4.06869,10.5868 2.41546,4.12658 6.45782,10.34423 8.893,19.00219 3.28941,11.69505 6.10982,18.35816 8.75214,22.76196 0.13133,1.42672 0.40868,3.31991 0.85386,5.90935 0.97588,3.68417 1.11694,4.71235 1.81447,8.19181 0.61088,3.04726 0.1016,9.49043 1.22743,10.53679 0.97872,0.90963 2.57475,0.70527 3.49552,-0.68786 0.55823,0.79987 1.60589,1.18074 2.13467,1.15685 0.56029,0.0178 1.10222,-0.0595 2.18803,-1.21939 0.92027,0.55841 0.97897,0.89764 2.00125,0.87546 0.97324,-0.0211 1.31844,-0.57756 2.00125,-1.28192 1.10087,0.46619 1.1996,0.43692 2.18803,0.21887 1.41941,-0.0838 -0.13608,-3.7365 0.037,-4.88324 1.26546,0.8487 1.59457,5.52583 2.15077,5.72426 0.73428,0.26191 1.83094,-0.0514 2.1883,-0.77849 0.41372,-0.84265 -0.0377,-3.40559 -0.18814,-4.33025 -0.28059,-1.72559 -1.19846,-4.01407 -2.49556,-5.95355 -2.39409,-3.15049 -3.40254,-3.5314 -4.57416,-5.34942 -1.19324,-1.85154 -1.35096,-5.62315 -2.18804,-7.94168 -0.32712,-1.11475 -0.62919,-2.02758 -0.90723,-2.81397 -0.2819,-7.86663 -0.76155,-13.8205 -2.7026,-23.74287 -2.02823,-10.36948 -3.06979,-18.13492 -5.08893,-22.09372 2.72061,-18.34645 2.64648,-22.3873 0.76835,-39.05086 -1.8134,-10.74871 -3.68422,-30.14411 -13.86984,-30.11049 z"
+       id="path3893-5-1-9-7-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 202.40509,414.33528 c -0.0632,-0.98492 -17.21877,-1.14058 -21.12924,-1.25804 -1.4137,-0.0424 0.13292,15.57911 -0.008,18.22704 -0.4909,9.20279 -0.0913,8.73526 22.35167,9.23096 22.91741,0.50616 23.70374,1.44 23.85011,-3.61288 0.0535,-1.84881 -1.86154,-6.38338 -6.55139,-6.76776 -6.78717,-0.55626 -17.73956,-3.75193 -18.51285,-15.81932 z"
+       id="path3896-8-4-77-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 193.6486,414.02722 c -0.0677,-0.9838 -18.44296,-1.13928 -22.63144,-1.2566 -1.51421,-0.0425 0.14237,15.56133 -0.008,18.20623 -0.5258,9.19228 -0.0977,8.72529 23.94078,9.22043 24.54675,0.50559 25.38897,1.43835 25.54576,-3.60876 0.0573,-1.8467 -1.99389,-6.37611 -7.01717,-6.76003 -7.26971,-0.55563 -19.00078,-3.74766 -19.82904,-15.80127 z"
+       id="path3896-8-7-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 193.63475,265.16856 c -19.58636,2.17485 -20.54457,0.24402 -19.99168,4.91827 1.04353,8.82213 1.19413,14.18539 4.26198,21.37758 3.82411,8.96511 2.94512,19.92881 5.84116,31.96841 0.0606,10.77162 -1.44155,22.33992 -1.91642,31.01332 -0.59859,10.93261 -1.09025,22.62577 -1.94068,30.35738 -2.85203,25.92889 -3.67856,27.06145 -3.32441,33.49067 15.60812,0.87598 20.38135,-0.1435 26.59193,-0.34134 3.17973,-0.10136 6.96852,-64.48241 9.10042,-85.38351 0.6507,-6.37925 1.71884,-9.50457 1.5033,-15.12418 0.68672,-8.22318 3.26272,-25.32358 1.07443,-44.87075 -0.57147,-5.10472 -3.7545,-6.95378 -21.2,-7.40591 z"
+       id="path3854-1-2-8-3-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 188.86697,264.19536 c -22.1039,2.2416 -23.18528,0.25151 -22.56133,5.06921 1.17767,9.09288 1.34761,14.6207 4.8098,22.03362 4.31565,9.24026 3.32367,20.54042 6.59196,32.94948 0.0684,11.10218 -1.62684,23.02549 -2.16276,31.96507 -0.67551,11.26812 -1.23037,23.32011 -2.19012,31.28899 -3.21861,26.72461 -4.15138,27.89193 -3.75171,34.51844 17.61433,0.90287 23.0011,-0.14787 30.00997,-0.35181 3.58841,-0.10443 7.8642,-66.46128 10.27016,-88.00378 0.73433,-6.57503 1.93975,-9.79626 1.6965,-15.58832 0.775,-8.47553 3.68211,-26.10073 1.21255,-46.24778 -0.64492,-5.26134 -4.23709,-7.16715 -23.92499,-7.63318 z"
+       id="path3854-1-2-3-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 215.18738,240.67127 c -0.17669,19.83004 0.43379,29.67265 -1.02498,29.66965 l -50.59579,0.8242 c 0.4501,-11.47453 -0.5477,-25.07483 -0.56345,-28.58361 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82459,-21.00575 8.22505,-3.13663 23.27415,0.0322 31.31614,10.46617 3.91968,5.08555 8.55309,18.03673 10.43239,27.73308 2.87623,14.84004 2.48946,36.18767 2.46106,44.27584 z"
+       id="path3819-7-5-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 185.18016,168.53017 c -1.10867,-0.0115 -2.23176,0.0729 -3.41476,0.19697 -8.3293,0.8733 -15.76521,8.16227 -16.25818,18.12544 -0.389,7.86185 -1.18879,22.68535 -0.82113,27.53066 0.7458,9.82875 1.81906,16.0767 3.60641,21.87262 0.66735,4.26625 1.67429,7.59425 4.00331,11.24228 2.47191,4.41691 6.63909,11.08896 8.9327,20.2455 3.09817,12.36852 5.90307,19.45509 8.61201,24.17144 0.0814,1.49754 0.30253,3.48903 0.67741,6.2157 0.90967,3.8938 1.01929,4.97496 1.63217,8.64299 0.53673,3.2124 -0.30718,9.9291 0.88366,11.07064 1.03524,0.99237 2.7979,0.84569 3.87108,-0.57253 0.57806,0.85993 1.71238,1.30223 2.29444,1.29946 0.61483,0.0422 1.2137,-0.0159 2.45792,-1.18331 0.98651,0.62263 1.03604,0.97985 2.16025,0.9996 1.07029,0.0188 1.47413,-0.54863 2.25545,-1.25655 1.18902,0.53376 1.29879,0.5073 2.39446,0.32079 1.56329,-0.0281 0.0154,-3.91325 0.25614,-5.10521 1.35299,0.9407 1.50821,5.84574 2.11058,6.07661 0.79523,0.30474 2.01402,0.0231 2.43875,-0.72221 0.49177,-0.86385 0.10887,-3.56306 -0.0156,-4.53636 -0.23216,-1.81636 -1.13968,-4.24815 -2.47929,-6.33088 -2.49149,-3.39525 -3.58272,-3.83595 -4.78982,-5.78641 -1.22938,-1.9864 -1.23624,-5.93727 -2.05367,-8.39708 -0.31023,-1.17952 -0.60185,-2.14682 -0.87265,-2.98089 0.0374,-8.23854 -0.22687,-14.48508 -1.92174,-24.94317 -1.77094,-10.92931 -5.57268,-19.09394 -7.61653,-23.31875 1.46621,-19.627 2.74918,-23.75541 2.81751,-41.30607 0.0445,-11.45118 0.0322,-31.17863 -11.16083,-31.57128 z"
+       id="path3893-5-1-99-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 197.46592,201.76447 c -12.57029,-3.68708 -21.78352,-3.76807 -33.69724,-0.74206 1.99644,-30.10313 5.68419,-37.19075 15.35769,-37.41625 11.27992,-0.26295 17.29036,5.46855 18.33955,38.15831 z"
+       id="path3893-4-8-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 205.64742,141.81643 -7.19713,-0.0317"
+       id="path4363-1-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 193.31645,110.30526 c 1.80509,2.24748 7.60895,-3.89885 11.6308,-2.247 2.32727,0.95587 4.39627,6.94922 3.42671,9.13626 -1.75521,1.46362 -16.66267,-1.5679 -22.68317,0.24319 -3.8256,7.30022 -6.09217,4.3996 -9.74447,6.89377 -1.87333,3.25474 -0.46597,12.06186 -2.71668,15.2776 -1.65743,2.36809 -5.01589,4.17019 -7.33297,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.5068,-5.14552 57.44441,-15.869066 31.10701,-2.07983 z"
+       id="rect4371-8-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 207.17449,119.65073 -12.48726,-1.92934 -0.56099,2.89663 12.62859,1.63001 z"
+       id="rect3827-2-2-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6-6"
+       transform="matrix(0.94850292,0,0,0.93524129,-183.86306,-183.44192)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6-6"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0-6"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3-7"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8-6"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 231.47001,650.62478 c -0.26163,2.45974 -0.28351,3.06979 -0.24171,5.91403 0.0258,1.75768 -0.1636,3.55155 -0.80034,4.14508 -1.15965,1.08099 -1.66911,0.7174 -7.53981,0.7194 -4.13691,9e-4 -7.48639,25.17157 -10.17742,25.17157 -7.68608,0 -15.98974,5.65021 -18.69289,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.21936 21.00369,-22.62754 11.94514,-0.34315 19.88854,-0.8032 25.43975,9.2977 2.16461,3.9387 0.35203,11.57605 0.013,18.73495 -0.79028,9.62224 5.21162,16.20257 1.70568,17.21282 -1.35075,-0.0437 -2.73338,-0.0903 -3.30343,-0.0475 z"
+       id="path2985-0-77"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14-19"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,198.15757,582.03231)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6-1"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,176.53908,495.87431)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0-6"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,166.29613,506.79393)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7-2"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,180.63877,530.81856)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 208.77111,644.29692 c 1.95834,2.72948 -2.20001,3.53979 -3.81538,2.52932 -0.86085,-0.53848 -2.22277,-0.26861 -3.82244,-5.4944 -1.04673,-3.41944 0.25091,-6.46267 4.09115,-6.49967 3.86624,0.11566 3.53403,2.66299 2.66145,4.36865 -0.48203,0.94223 0.72743,3.98846 0.88522,5.0961 z"
+       id="path3804-1-7"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 219.01824,675.33737 c -1.00784,0.0295 -2.0251,0.15108 -3.09527,0.31267 -7.53498,1.1377 -14.59316,-1.69328 -14.62927,17.3889 -0.0143,7.51998 0.34081,22.20948 0.86067,26.82183 1.05453,9.3562 2.26932,15.28189 4.11564,20.74997 0.76997,4.0486 1.81254,7.18906 4.06869,10.5868 2.41546,4.12658 6.45782,10.34423 8.893,19.00219 3.28941,11.69505 6.10982,18.35816 8.75214,22.76196 0.13133,1.42672 0.40868,3.31991 0.85386,5.90935 0.97588,3.68417 1.11694,4.71235 1.81447,8.19181 0.61088,3.04726 0.1016,9.49043 1.22743,10.53679 0.97872,0.90963 2.57475,0.70527 3.49552,-0.68786 0.55823,0.79987 1.60589,1.18074 2.13467,1.15685 0.56029,0.0178 1.10222,-0.0595 2.18803,-1.21939 0.92027,0.55841 0.97897,0.89764 2.00125,0.87546 0.97324,-0.0211 1.31844,-0.57756 2.00125,-1.28192 1.10087,0.46619 1.1996,0.43692 2.18803,0.21887 1.41941,-0.0838 -0.13608,-3.7365 0.037,-4.88324 1.26546,0.8487 1.59457,5.52583 2.15077,5.72426 0.73428,0.26191 1.83094,-0.0514 2.1883,-0.77849 0.41372,-0.84265 -0.0377,-3.40559 -0.18814,-4.33025 -0.28059,-1.72559 -1.19846,-4.01407 -2.49556,-5.95355 -2.39409,-3.15049 -3.40254,-3.5314 -4.57416,-5.34942 -1.19324,-1.85154 -1.35096,-5.62315 -2.18804,-7.94168 -0.32712,-1.11475 -0.62919,-2.02758 -0.90723,-2.81397 -0.2819,-7.86663 -0.76155,-13.8205 -2.7026,-23.74287 -2.02823,-10.36948 -3.06979,-18.13492 -5.08893,-22.09372 2.72061,-18.34645 2.64648,-22.3873 0.76835,-39.05086 -1.8134,-10.74871 -3.68422,-30.14411 -13.86984,-30.11049 z"
+       id="path3893-5-1-9-7-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 227.86094,926.28059 c -0.0632,-0.98492 -17.21877,-1.14058 -21.12924,-1.25804 -1.4137,-0.0424 0.13292,15.57911 -0.008,18.22704 -0.4909,9.20279 -0.0913,8.73526 22.35167,9.23096 22.91741,0.50616 23.70374,1.44 23.85011,-3.61288 0.0535,-1.84881 -1.86154,-6.38338 -6.55139,-6.76776 -6.78717,-0.55626 -17.73956,-3.75193 -18.51285,-15.81932 z"
+       id="path3896-8-4-77-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 219.10445,925.97253 c -0.0677,-0.9838 -18.44296,-1.13928 -22.63144,-1.2566 -1.51421,-0.0425 0.14237,15.56133 -0.008,18.20623 -0.5258,9.19228 -0.0977,8.72529 23.94078,9.22043 24.54675,0.50559 25.38897,1.43835 25.54576,-3.60876 0.0573,-1.8467 -1.99389,-6.37611 -7.01717,-6.76003 -7.26971,-0.55563 -19.00078,-3.74766 -19.82904,-15.80127 z"
+       id="path3896-8-7-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 219.0906,777.11387 c -19.58636,2.17485 -20.54457,0.24402 -19.99168,4.91827 1.04353,8.82213 1.19413,14.18539 4.26198,21.37758 3.82411,8.96511 2.94512,19.92881 5.84116,31.96841 0.0606,10.77162 -1.44155,22.33992 -1.91642,31.01332 -0.59859,10.93261 -1.09025,22.62577 -1.94068,30.35738 -2.85203,25.92889 -3.67856,27.06145 -3.32441,33.49067 15.60812,0.87598 20.38135,-0.1435 26.59193,-0.34134 3.17973,-0.10136 6.96852,-64.48241 9.10042,-85.38351 0.6507,-6.37925 1.71884,-9.50457 1.5033,-15.12418 0.68672,-8.22318 3.26272,-25.32358 1.07443,-44.87075 -0.57147,-5.10472 -3.7545,-6.95378 -21.2,-7.40591 z"
+       id="path3854-1-2-8-3-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 214.32282,776.14067 c -22.1039,2.2416 -23.18528,0.25151 -22.56133,5.06921 1.17767,9.09288 1.34761,14.6207 4.8098,22.03362 4.31565,9.24026 3.32367,20.54042 6.59196,32.94948 0.0684,11.10218 -1.62684,23.02549 -2.16276,31.96507 -0.67551,11.26812 -1.23037,23.32011 -2.19012,31.28899 -3.21861,26.72461 -4.15138,27.89193 -3.75171,34.51844 17.61433,0.90287 23.0011,-0.14787 30.00997,-0.35181 3.58841,-0.10443 7.8642,-66.46128 10.27016,-88.00378 0.73433,-6.57503 1.93975,-9.79626 1.6965,-15.58832 0.775,-8.47553 3.68211,-26.10073 1.21255,-46.24778 -0.64492,-5.26134 -4.23709,-7.16715 -23.92499,-7.63318 z"
+       id="path3854-1-2-3-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 240.64323,752.61658 c -0.17669,19.83004 0.43379,29.67265 -1.02498,29.66965 l -50.59579,0.8242 c 0.4501,-11.47453 -0.5477,-25.07483 -0.56345,-28.58361 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82459,-21.00575 8.22505,-3.13663 23.27415,0.0322 31.31614,10.46617 3.91968,5.08555 8.55309,18.03673 10.43239,27.73308 2.87623,14.84004 2.48946,36.18767 2.46106,44.27584 z"
+       id="path3819-7-5-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 210.63601,680.47548 c -1.10867,-0.0115 -2.23176,0.0729 -3.41476,0.19697 -8.3293,0.8733 -15.76521,8.16227 -16.25818,18.12544 -0.389,7.86185 -1.18879,22.68535 -0.82113,27.53066 0.7458,9.82875 1.81906,16.0767 3.60641,21.87262 0.66735,4.26625 1.67429,7.59425 4.00331,11.24228 2.47191,4.41691 6.63909,11.08896 8.9327,20.2455 3.09817,12.36852 5.90307,19.45509 8.61201,24.17144 0.0814,1.49754 0.30253,3.48903 0.67741,6.2157 0.90967,3.8938 1.01929,4.97496 1.63217,8.64299 0.53673,3.2124 -0.30718,9.9291 0.88366,11.07064 1.03524,0.99237 2.7979,0.84569 3.87108,-0.57253 0.57806,0.85993 1.71238,1.30223 2.29444,1.29946 0.61483,0.0422 1.2137,-0.0159 2.45792,-1.18331 0.98651,0.62263 1.03604,0.97985 2.16025,0.9996 1.07029,0.0188 1.47413,-0.54863 2.25545,-1.25655 1.18902,0.53376 1.29879,0.5073 2.39446,0.32079 1.56329,-0.0281 0.0154,-3.91325 0.25614,-5.10521 1.35299,0.9407 1.50821,5.84574 2.11058,6.07661 0.79523,0.30474 2.01402,0.0231 2.43875,-0.72221 0.49177,-0.86385 0.10887,-3.56306 -0.0156,-4.53636 -0.23216,-1.81636 -1.13968,-4.24815 -2.47929,-6.33088 -2.49149,-3.39525 -3.58272,-3.83595 -4.78982,-5.78641 -1.22938,-1.9864 -1.23624,-5.93727 -2.05367,-8.39708 -0.31023,-1.17952 -0.60185,-2.14682 -0.87265,-2.98089 0.0374,-8.23854 -0.22687,-14.48508 -1.92174,-24.94317 -1.77094,-10.92931 -5.57268,-19.09394 -7.61653,-23.31875 1.46621,-19.627 2.74918,-23.75541 2.81751,-41.30607 0.0445,-11.45118 0.0322,-31.17863 -11.16083,-31.57128 z"
+       id="path3893-5-1-99-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 222.92177,713.70978 c -12.57029,-3.68708 -21.78352,-3.76807 -33.69724,-0.74206 1.99644,-30.10313 5.68419,-37.19075 15.35769,-37.41625 11.27992,-0.26295 17.29036,5.46855 18.33955,38.15831 z"
+       id="path3893-4-8-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 231.10327,653.76174 -7.19713,-0.0317"
+       id="path4363-1-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 218.7723,622.25057 c 1.80509,2.24748 7.60895,-3.89885 11.6308,-2.247 2.32727,0.95587 4.39627,6.94922 3.42671,9.13626 -1.75521,1.46362 -16.66267,-1.5679 -22.68317,0.24319 -3.8256,7.30022 -6.09217,4.3996 -9.74447,6.89377 -1.87333,3.25474 -0.46597,12.06186 -2.71668,15.2776 -1.65743,2.36809 -5.01589,4.17019 -7.33297,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.5068,-5.14552 57.44441,-15.86907 31.10701,-2.07983 z"
+       id="rect4371-8-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 232.63034,631.59604 -12.48726,-1.92934 -0.56099,2.89663 12.62859,1.63001 z"
+       id="rect3827-2-2-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6-65"
+       transform="matrix(0.94850292,0,0,0.93524129,-158.40722,328.50339)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6-3"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0-2"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3-4"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8-4"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 531.28328,649.21057 c -0.26163,2.45974 -0.28351,3.06979 -0.24171,5.91403 0.0258,1.75768 -0.1636,3.55155 -0.80034,4.14508 -1.15965,1.08099 -1.66911,0.7174 -7.53981,0.7194 -4.13691,9e-4 -7.48639,25.17157 -10.17742,25.17157 -7.68608,0 -15.98974,5.65021 -18.69289,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.21936 21.00369,-22.62754 11.94514,-0.34315 19.88854,-0.8032 25.43975,9.2977 2.16461,3.9387 0.35203,11.57605 0.013,18.73495 -0.79028,9.62224 5.21162,16.20257 1.70568,17.21282 -1.35075,-0.0437 -2.73338,-0.0903 -3.30343,-0.0475 z"
+       id="path2985-0-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14-2"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,497.97084,580.6181)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6-7"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,476.35235,494.4601)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0-9"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,466.1094,505.37972)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7-23"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,480.45204,529.40435)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 508.58438,642.88271 c 1.95834,2.72948 -2.20001,3.53979 -3.81538,2.52932 -0.86085,-0.53848 -2.22277,-0.26861 -3.82244,-5.4944 -1.04673,-3.41944 0.25091,-6.46267 4.09115,-6.49967 3.86624,0.11566 3.53403,2.66299 2.66145,4.36865 -0.48203,0.94223 0.72743,3.98846 0.88522,5.0961 z"
+       id="path3804-1-73"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 518.83151,673.92316 c -1.00784,0.0295 -2.0251,0.15108 -3.09527,0.31267 -7.53498,1.1377 -14.59316,-1.69328 -14.62927,17.3889 -0.0143,7.51998 0.34081,22.20948 0.86067,26.82183 1.05453,9.3562 2.26932,15.28189 4.11564,20.74997 0.76997,4.0486 1.81254,7.18906 4.06869,10.5868 2.41546,4.12658 6.45782,10.34423 8.893,19.00219 3.28941,11.69505 6.10982,18.35816 8.75214,22.76196 0.13133,1.42672 0.40868,3.31991 0.85386,5.90935 0.97588,3.68417 1.11694,4.71235 1.81447,8.19181 0.61088,3.04726 0.1016,9.49043 1.22743,10.53679 0.97872,0.90963 2.57475,0.70527 3.49552,-0.68786 0.55823,0.79987 1.60589,1.18074 2.13467,1.15685 0.56029,0.0178 1.10222,-0.0595 2.18803,-1.21939 0.92027,0.55841 0.97897,0.89764 2.00125,0.87546 0.97324,-0.0211 1.31844,-0.57756 2.00125,-1.28192 1.10087,0.46619 1.1996,0.43692 2.18803,0.21887 1.41941,-0.0838 -0.13608,-3.7365 0.037,-4.88324 1.26546,0.8487 1.59457,5.52583 2.15077,5.72426 0.73428,0.26191 1.83094,-0.0514 2.1883,-0.77849 0.41372,-0.84265 -0.0377,-3.40559 -0.18814,-4.33025 -0.28059,-1.72559 -1.19846,-4.01407 -2.49556,-5.95355 -2.39409,-3.15049 -3.40254,-3.5314 -4.57416,-5.34942 -1.19324,-1.85154 -1.35096,-5.62315 -2.18804,-7.94168 -0.32712,-1.11475 -0.62919,-2.02758 -0.90723,-2.81397 -0.2819,-7.86663 -0.76155,-13.8205 -2.7026,-23.74287 -2.02823,-10.36948 -3.06979,-18.13492 -5.08893,-22.09372 2.72061,-18.34645 2.64648,-22.3873 0.76835,-39.05086 -1.8134,-10.74871 -3.68422,-30.14411 -13.86984,-30.11049 z"
+       id="path3893-5-1-9-7-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 527.67421,924.86638 c -0.0632,-0.98492 -17.21877,-1.14058 -21.12924,-1.25804 -1.4137,-0.0424 0.13292,15.57911 -0.008,18.22704 -0.4909,9.20279 -0.0913,8.73526 22.35167,9.23096 22.91741,0.50616 23.70374,1.44 23.85011,-3.61288 0.0535,-1.84881 -1.86154,-6.38338 -6.55139,-6.76776 -6.78717,-0.55626 -17.73956,-3.75193 -18.51285,-15.81932 z"
+       id="path3896-8-4-77-57"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 518.91772,924.55832 c -0.0677,-0.9838 -18.44296,-1.13928 -22.63144,-1.2566 -1.51421,-0.0425 0.14237,15.56133 -0.008,18.20623 -0.5258,9.19228 -0.0977,8.72529 23.94078,9.22043 24.54675,0.50559 25.38897,1.43835 25.54576,-3.60876 0.0573,-1.8467 -1.99389,-6.37611 -7.01717,-6.76003 -7.26971,-0.55563 -19.00078,-3.74766 -19.82904,-15.80127 z"
+       id="path3896-8-7-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 518.90387,775.69966 c -19.58636,2.17485 -20.54457,0.24402 -19.99168,4.91827 1.04353,8.82213 1.19413,14.18539 4.26198,21.37758 3.82411,8.96511 2.94512,19.92881 5.84116,31.96841 0.0606,10.77162 -1.44155,22.33992 -1.91642,31.01332 -0.59859,10.93261 -1.09025,22.62577 -1.94068,30.35738 -2.85203,25.92889 -3.67856,27.06145 -3.32441,33.49067 15.60812,0.87598 20.38135,-0.1435 26.59193,-0.34134 3.17973,-0.10136 6.96852,-64.48241 9.10042,-85.38351 0.6507,-6.37925 1.71884,-9.50457 1.5033,-15.12418 0.68672,-8.22318 3.26272,-25.32358 1.07443,-44.87075 -0.57147,-5.10472 -3.7545,-6.95378 -21.2,-7.40591 z"
+       id="path3854-1-2-8-3-58"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 514.13609,774.72646 c -22.1039,2.2416 -23.18528,0.25151 -22.56133,5.06921 1.17767,9.09288 1.34761,14.6207 4.8098,22.03362 4.31565,9.24026 3.32367,20.54042 6.59196,32.94948 0.0684,11.10218 -1.62684,23.02549 -2.16276,31.96507 -0.67551,11.26812 -1.23037,23.32011 -2.19012,31.28899 -3.21861,26.72461 -4.15138,27.89193 -3.75171,34.51844 17.61433,0.90287 23.0011,-0.14787 30.00997,-0.35181 3.58841,-0.10443 7.8642,-66.46128 10.27016,-88.00378 0.73433,-6.57503 1.93975,-9.79626 1.6965,-15.58832 0.775,-8.47553 3.68211,-26.10073 1.21255,-46.24778 -0.64492,-5.26134 -4.23709,-7.16715 -23.92499,-7.63318 z"
+       id="path3854-1-2-3-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 540.4565,751.20237 c -0.17669,19.83004 0.43379,29.67265 -1.02498,29.66965 l -50.59579,0.8242 c 0.4501,-11.47453 -0.5477,-25.07483 -0.56345,-28.58361 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82459,-21.00575 8.22505,-3.13663 23.27415,0.0322 31.31614,10.46617 3.91968,5.08555 8.55309,18.03673 10.43239,27.73308 2.87623,14.84004 2.48946,36.18767 2.46106,44.27584 z"
+       id="path3819-7-5-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 510.44928,679.06127 c -1.10867,-0.0115 -2.23176,0.0729 -3.41476,0.19697 -8.3293,0.8733 -15.76521,8.16227 -16.25818,18.12544 -0.389,7.86185 -1.18879,22.68535 -0.82113,27.53066 0.7458,9.82875 1.81906,16.0767 3.60641,21.87262 0.66735,4.26625 1.67429,7.59425 4.00331,11.24228 2.47191,4.41691 6.63909,11.08896 8.9327,20.2455 3.09817,12.36852 5.90307,19.45509 8.61201,24.17144 0.0814,1.49754 0.30253,3.48903 0.67741,6.2157 0.90967,3.8938 1.01929,4.97496 1.63217,8.64299 0.53673,3.2124 -0.30718,9.9291 0.88366,11.07064 1.03524,0.99237 2.7979,0.84569 3.87108,-0.57253 0.57806,0.85993 1.71238,1.30223 2.29444,1.29946 0.61483,0.0422 1.2137,-0.0159 2.45792,-1.18331 0.98651,0.62263 1.03604,0.97985 2.16025,0.9996 1.07029,0.0188 1.47413,-0.54863 2.25545,-1.25655 1.18902,0.53376 1.29879,0.5073 2.39446,0.32079 1.56329,-0.0281 0.0154,-3.91325 0.25614,-5.10521 1.35299,0.9407 1.50821,5.84574 2.11058,6.07661 0.79523,0.30474 2.01402,0.0231 2.43875,-0.72221 0.49177,-0.86385 0.10887,-3.56306 -0.0156,-4.53636 -0.23216,-1.81636 -1.13968,-4.24815 -2.47929,-6.33088 -2.49149,-3.39525 -3.58272,-3.83595 -4.78982,-5.78641 -1.22938,-1.9864 -1.23624,-5.93727 -2.05367,-8.39708 -0.31023,-1.17952 -0.60185,-2.14682 -0.87265,-2.98089 0.0374,-8.23854 -0.22687,-14.48508 -1.92174,-24.94317 -1.77094,-10.92931 -5.57268,-19.09394 -7.61653,-23.31875 1.46621,-19.627 2.74918,-23.75541 2.81751,-41.30607 0.0445,-11.45118 0.0322,-31.17863 -11.16083,-31.57128 z"
+       id="path3893-5-1-99-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 522.73504,712.29557 c -12.57029,-3.68708 -21.78352,-3.76807 -33.69724,-0.74206 1.99644,-30.10313 5.68419,-37.19075 15.35769,-37.41625 11.27992,-0.26295 17.29036,5.46855 18.33955,38.15831 z"
+       id="path3893-4-8-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 530.91654,652.34753 -7.19713,-0.0317"
+       id="path4363-1-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 518.58557,620.83636 c 1.80509,2.24748 7.60895,-3.89885 11.6308,-2.247 2.32727,0.95587 4.39627,6.94922 3.42671,9.13626 -1.75521,1.46362 -16.66267,-1.5679 -22.68317,0.24319 -3.8256,7.30022 -6.09217,4.3996 -9.74447,6.89377 -1.87333,3.25474 -0.46597,12.06186 -2.71668,15.2776 -1.65743,2.36809 -5.01589,4.17019 -7.33297,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.5068,-5.14552 57.44441,-15.86907 31.10701,-2.07983 z"
+       id="rect4371-8-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 532.44361,630.18183 -12.48726,-1.92934 -0.56099,2.89663 12.62859,1.63001 z"
+       id="rect3827-2-2-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6-5"
+       transform="matrix(0.94850292,0,0,0.93524129,141.40605,327.08918)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6-1"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0-0"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3-6"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8-45"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="active">
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 528.79668,136.27965 c -0.2616,2.45974 -0.2835,3.06979 -0.2417,5.91403 0.026,1.75768 -0.1636,3.55155 -0.8003,4.14508 -1.1597,1.08099 -1.6691,0.7174 -7.5398,0.7194 -4.1369,9e-4 -7.4864,25.17157 -10.1775,25.17157 -7.686,0 -15.9897,5.65021 -18.69285,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.219363 21.0037,-22.627543 11.9451,-0.34315 19.8885,-0.8032 25.4397,9.297703 2.1647,3.9387 0.3521,11.57605 0.013,18.73495 -0.7902,9.62224 5.2117,16.20257 1.7057,17.21282 -1.3507,-0.0437 -2.7334,-0.0903 -3.3034,-0.0475 z"
+       id="path2985-0-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14-22"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,495.48428,67.687167)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6-70"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,473.86577,-18.470833)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0-3"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,463.62282,-7.5512126)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7-1"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,477.96546,16.473417)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 506.09778,129.95179 c 1.9584,2.72948 -2.2,3.53979 -3.8154,2.52932 -0.8608,-0.53848 -2.2227,-0.26861 -3.8224,-5.4944 -1.0467,-3.41944 0.2509,-6.46267 4.0912,-6.49967 3.8662,0.11566 3.534,2.66299 2.6614,4.36865 -0.482,0.94223 0.7274,3.98846 0.8852,5.0961 z"
+       id="path3804-1-33"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 460.25861,396.50077 c 0.75826,-0.63178 -9.23108,-14.57994 -11.44186,-17.80764 -0.79926,-1.16682 -12.50471,9.29292 -14.72649,10.74035 -7.72246,5.02954 -7.10922,5.07663 5.72295,23.49585 13.10348,18.80859 12.81284,19.9943 16.9803,17.1333 1.52482,-1.04686 4.05821,-5.26721 1.60351,-9.28179 -3.55248,-5.80992 -7.429,-16.54024 1.86178,-24.27986 z"
+       id="path3896-8-4-77-5-0-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 577.79715,412.41611 c -0.14534,-0.97536 -18.47528,0.32403 -22.65991,0.53859 -1.51282,0.0775 1.37359,15.50125 1.43303,18.14974 0.20343,9.20508 0.59322,8.70567 24.59547,7.29661 24.50976,-1.43885 25.42317,-0.57567 25.17999,-5.61936 -0.0892,-1.84544 -2.4923,-6.1983 -7.53021,-6.18341 -7.29088,0.0215 -19.23779,-2.23201 -21.01749,-14.18226 z"
+       id="path3896-8-7-0-0-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 513.0976,264.85306 c -19.41401,-3.38406 -20.6696,-4.63071 -21.44468,0.0119 -1.46287,8.76236 -1.126,12.65664 -0.7555,20.46703 -0.95676,17.2988 3.67752,36.79467 -0.47313,53.88599 -15.15156,12.06954 -33.58176,28.04185 -48.72777,39.69351 7.84752,8.73745 13.94854,15.6824 19.3961,18.27649 5.33335,-0.3369 51.72263,-37.3082 53.84877,-41.76365 1.98769,-4.82207 6.9712,-25.72425 7.95933,-34.43029 1.08187,-7.45384 5.12331,-23.72676 8.48351,-43.10688 0.87751,-5.0611 -1.66215,-7.72584 -18.28659,-13.03413 z"
+       id="path3854-1-2-8-3-1-8-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csccccccscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 516.34498,160.99224 c -1.0079,0.0295 -2.0251,0.15108 -3.0953,0.31267 -7.535,1.1377 -14.5932,-1.69328 -14.6293,17.3889 -0.014,7.51998 0.3408,22.20948 0.8607,26.82183 1.0545,9.3562 2.2693,15.28189 4.1156,20.74997 0.77,4.0486 1.8126,7.18906 4.0687,10.5868 2.4155,4.12658 6.4578,10.34423 8.893,19.00219 3.2894,11.69505 6.1098,18.35816 8.7522,22.76196 0.1313,1.42672 0.4086,3.31991 0.8538,5.90935 0.9759,3.68417 1.117,4.71235 1.8145,8.19181 0.6109,3.04726 0.1016,9.49043 1.2274,10.53679 0.9787,0.90963 2.5748,0.70527 3.4955,-0.68786 0.5583,0.79987 1.6059,1.18074 2.1347,1.15685 0.5603,0.0178 1.1022,-0.0595 2.188,-1.21939 0.9203,0.55841 0.979,0.89764 2.0013,0.87546 0.9732,-0.0211 1.3184,-0.57756 2.0012,-1.28192 1.1009,0.46619 1.1996,0.43692 2.1881,0.21887 1.4194,-0.0838 -0.1361,-3.7365 0.037,-4.88324 1.2654,0.8487 1.5945,5.52583 2.1507,5.72426 0.7343,0.26191 1.831,-0.0514 2.1883,-0.77849 0.4138,-0.84265 -0.038,-3.40559 -0.1881,-4.33025 -0.2806,-1.72559 -1.1985,-4.01407 -2.4956,-5.95355 -2.3941,-3.15049 -3.4025,-3.5314 -4.5741,-5.34942 -1.1933,-1.85154 -1.351,-5.62315 -2.1881,-7.94168 -0.3271,-1.11475 -0.6292,-2.02758 -0.9072,-2.81397 -0.2819,-7.86663 -0.7615,-13.8205 -2.7026,-23.74287 -2.0282,-10.36948 -3.0698,-18.13492 -5.0889,-22.09372 2.7206,-18.34645 2.6465,-22.3873 0.7683,-39.05086 -1.8134,-10.74871 -3.6842,-30.14411 -13.8698,-30.11049 z"
+       id="path3893-5-1-9-7-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 507.5836,266.1032 c -8.67312,-2.5328 -18.88325,-4.2598 -19.32469,0.57804 -0.64962,7.11928 11.25583,24.58933 15.48592,31.59251 5.72621,9.4801 15.84938,18.98082 22.42252,28.88977 6.59194,7.96776 16.12144,15.49479 16.96732,17.19847 0.52386,1.82898 6.0313,20.3428 6.48364,30.22433 0.75912,16.58341 4.07487,41.2667 4.07487,41.2667 0,0 17.44481,0.6593 25.75227,0.18678 2.05341,-0.11684 -1.74749,-26.41768 -3.13026,-43.92423 -1.27554,-16.14895 -3.27699,-29.42588 -6.45029,-38.1226 -2.26779,-6.21509 -10.57645,-20.77318 -15.13911,-30.62509 -3.07696,-7.93521 -11.14388,-24.12929 -22.31956,-41.07351 -2.9185,-4.42492 -6.98347,-4.53343 -24.82263,3.80896 z"
+       id="path3854-1-2-3-4-7-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssccscssscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.84621334"
+       d="m 506.21862,171.36968 c -0.88293,0.36153 -1.74528,0.80396 -2.64189,1.29788 -6.31291,3.47731 -9.7724,11.74338 -6.83225,19.8087 2.32008,6.36428 6.64196,18.38627 8.55347,22.10553 3.87755,7.54457 6.81755,12.14017 10.17268,16.13858 1.95557,3.15989 3.86673,5.46225 6.93325,7.57632 3.43692,2.67603 7.27964,9.10502 13.79534,13.95622 7.28081,5.7647 16.66358,9.52897 22.741,15.18535 2.72704,2.09872 3.38897,2.75935 5.79529,4.8693 2.10738,1.84792 5.20374,6.78256 6.61891,6.89448 1.2303,0.0973 2.32473,-0.96058 2.26725,-2.49005 0.85355,0.25803 1.85021,-0.0651 2.23644,-0.38401 0.43266,-0.30682 0.79998,-0.6717 0.99309,-2.12726 0.99641,-0.12252 1.22396,0.0885 1.9837,-0.51072 0.72334,-0.57047 0.68328,-1.16846 0.81828,-2.06574 1.08291,-0.29202 1.14164,-0.36949 1.77,-1.09051 1.02623,-0.87026 -2.12156,-2.61535 -2.61014,-3.54088 1.41383,-0.11025 4.18902,3.07319 4.71608,2.89893 0.69584,-0.23017 1.35445,-1.0817 1.23144,-1.8096 -0.14291,-0.84342 -1.86827,-2.43319 -2.48163,-3.01362 -1.14409,-1.08367 -3.0733,-2.20951 -5.10028,-2.86745 -3.50936,-0.90494 -4.4764,-0.60417 -6.34306,-1.24615 -8.72508,-6.9221 -15.62924,-14.87187 -23.01425,-21.55805 -7.13308,-6.317 -11.42786,-14.70157 -14.46105,-17.3684 -5.39943,-16.05383 -1.92244,-15.41519 -7.73618,-29.35519 -3.79369,-9.09516 -10.39888,-24.73443 -19.40573,-21.3036 z"
+       id="path3893-5-1-99-8-5-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccccssccccccccccccccscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 537.96988,238.27145 c -0.1766,19.83004 0.4338,29.67265 -1.0249,29.66965 l -50.59583,0.8242 c 0.4501,-11.47453 -0.5477,-25.07483 -0.56345,-28.58361 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82459,-21.00575 8.22505,-3.13663 23.27415,0.0322 31.31615,10.46617 3.9197,5.08555 8.5531,18.03673 10.4324,27.73308 2.8762,14.84004 2.4894,36.18767 2.461,44.27584 z"
+       id="path3819-7-5-37"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 528.42998,139.41661 -7.1971,-0.0317"
+       id="path4363-1-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 516.09898,107.90544 c 1.8051,2.24748 7.609,-3.89885 11.6308,-2.247 2.3273,0.95587 4.3963,6.94922 3.4267,9.13626 -1.7552,1.46362 -16.6626,-1.5679 -22.6831,0.24319 -3.8256,7.30022 -6.0922,4.3996 -9.7445,6.89377 -1.8733,3.25474 -0.466,12.06186 -2.7167,15.2776 -1.65743,2.36809 -5.01589,4.17019 -7.33297,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.5068,-5.14552 57.4444,-15.869073 31.107,-2.07983 z"
+       id="rect4371-8-93"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 529.95708,117.25091 -12.4873,-1.92934 -0.561,2.89663 12.6286,1.63001 z"
+       id="rect3827-2-2-91"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6-8"
+       transform="matrix(0.94850292,0,0,0.93524129,138.91947,-185.84174)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6-2"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0-8"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3-0"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8-1"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 206.12974,138.73427 c -0.26163,2.45974 -0.28351,3.06979 -0.24171,5.91403 0.0258,1.75768 -0.1636,3.55155 -0.80034,4.14508 -1.15965,1.08099 -1.66911,0.7174 -7.53981,0.7194 -4.13691,9e-4 -7.48639,25.17157 -10.17742,25.17157 -7.68608,0 -15.98974,5.65021 -18.69289,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.219363 21.00369,-22.627543 11.94514,-0.34315 19.88854,-0.8032 25.43975,9.297703 2.16461,3.9387 0.35203,11.57605 0.013,18.73495 -0.79028,9.62224 5.21162,16.20257 1.70568,17.21282 -1.35075,-0.0437 -2.73338,-0.0903 -3.30343,-0.0475 z"
+       id="path2985-0-7-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14-1-4"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,172.8173,70.141787)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6-0-8"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,151.19881,-16.016213)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0-0-6"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,140.95586,-5.0965826)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7-8-0"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,155.2985,18.928037)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 183.43084,132.40641 c 1.95834,2.72948 -2.20001,3.53979 -3.81538,2.52932 -0.86085,-0.53848 -2.22277,-0.26861 -3.82244,-5.4944 -1.04673,-3.41944 0.25091,-6.46267 4.09115,-6.49967 3.86624,0.11566 3.53403,2.66299 2.66145,4.36865 -0.48203,0.94223 0.72743,3.98846 0.88522,5.0961 z"
+       id="path3804-1-3-9"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 193.67797,163.44686 c -1.00784,0.0295 -2.0251,0.15108 -3.09527,0.31267 -7.53498,1.1377 -14.59316,-1.69328 -14.62927,17.3889 -0.0143,7.51998 0.34081,22.20948 0.86067,26.82183 1.05453,9.3562 2.26932,15.28189 4.11564,20.74997 0.76997,4.0486 1.81254,7.18906 4.06869,10.5868 2.41546,4.12658 6.45782,10.34423 8.893,19.00219 3.28941,11.69505 6.10982,18.35816 8.75214,22.76196 0.13133,1.42672 0.40868,3.31991 0.85386,5.90935 0.97588,3.68417 1.11694,4.71235 1.81447,8.19181 0.61088,3.04726 0.1016,9.49043 1.22743,10.53679 0.97872,0.90963 2.57475,0.70527 3.49552,-0.68786 0.55823,0.79987 1.60589,1.18074 2.13467,1.15685 0.56029,0.0178 1.10222,-0.0595 2.18803,-1.21939 0.92027,0.55841 0.97897,0.89764 2.00125,0.87546 0.97324,-0.0211 1.31844,-0.57756 2.00125,-1.28192 1.10087,0.46619 1.1996,0.43692 2.18803,0.21887 1.41941,-0.0838 -0.13608,-3.7365 0.037,-4.88324 1.26546,0.8487 1.59457,5.52583 2.15077,5.72426 0.73428,0.26191 1.83094,-0.0514 2.1883,-0.77849 0.41372,-0.84265 -0.0377,-3.40559 -0.18814,-4.33025 -0.28059,-1.72559 -1.19846,-4.01407 -2.49556,-5.95355 -2.39409,-3.15049 -3.40254,-3.5314 -4.57416,-5.34942 -1.19324,-1.85154 -1.35096,-5.62315 -2.18804,-7.94168 -0.32712,-1.11475 -0.62919,-2.02758 -0.90723,-2.81397 -0.2819,-7.86663 -0.76155,-13.8205 -2.7026,-23.74287 -2.02823,-10.36948 -3.06979,-18.13492 -5.08893,-22.09372 2.72061,-18.34645 2.64648,-22.3873 0.76835,-39.05086 -1.8134,-10.74871 -3.68422,-30.14411 -13.86984,-30.11049 z"
+       id="path3893-5-1-9-7-4-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 139.28714,404.70398 c 0.69256,-0.70319 -10.61824,-13.60294 -13.1353,-16.59794 -0.90999,-1.08268 -11.53168,10.47601 -13.60059,12.13462 -7.19121,5.76359 -6.57632,5.75023 8.00265,22.82027 14.88719,17.43088 14.71439,18.6394 18.58076,15.38299 1.41464,-1.19156 3.52134,-5.6403 0.68426,-9.39442 -4.10587,-5.43295 -9.01739,-15.73073 -0.53157,-24.34532 z"
+       id="path3896-8-4-77-5-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 252.93683,411.05922 c -0.39733,-0.90254 -17.73636,5.18288 -21.71641,6.49297 -1.43889,0.47353 5.41132,14.59085 6.16683,17.13 2.62279,8.82585 2.86715,8.24135 25.64897,0.55486 23.26352,-7.84902 24.37217,-7.25716 22.80801,-12.05834 -0.57238,-1.7567 -4.03809,-5.32205 -8.89388,-3.97965 -7.02732,1.9427 -19.14571,2.91825 -24.01268,-8.14015 z"
+       id="path3896-8-7-0-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 190.157,268.34191 c -19.41401,-3.38406 -19.7946,-5.50571 -20.56968,-0.86313 -1.46287,8.76236 -1.30575,13.91901 -1.8805,21.71703 -2.58044,20.30447 -0.44917,50.14359 -8.32821,59.82013 -4.37925,7.83 -13.8843,16.57416 -19.18083,22.27045 -11.48281,12.34948 -16.98625,14.75107 -20.91736,19.78576 11.73661,5.37869 14.83242,11.97009 20.27998,14.56418 5.33335,-0.3369 32.19936,-25.30192 46.02098,-41.12482 7.1571,-8.1934 11.0559,-33.64583 12.41903,-39.10187 2.95687,-7.70384 7.08302,-24.65354 10.44322,-44.03366 0.87751,-5.0611 -1.66215,-7.72584 -18.28659,-13.03413 z"
+       id="path3854-1-2-8-3-1-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 184.643,269.59205 c -8.67312,-2.5328 -18.88325,-4.2598 -19.32469,0.57804 -0.64962,7.11928 11.25583,24.58933 15.48592,31.59251 5.72621,9.4801 14.78872,19.68793 21.36186,29.59688 6.59194,7.96776 9.5807,12.13603 13.78534,19.85012 2.11485,14.55691 2.48018,20.27899 4.4141,28.06901 4.14676,16.70364 9.0342,37.62986 10.96548,42.63649 16.17648,-7.02856 16.7377,-7.64921 22.92384,-10.95034 1.81454,-0.9683 -5.4169,-18.85397 -8.03711,-40.42638 -1.95323,-16.08107 -1.95377,-34.4363 -5.12707,-43.13302 -2.26779,-6.21509 -6.33381,-9.9898 -10.89647,-19.84171 -3.07696,-7.93521 -9.55289,-24.8364 -20.72857,-41.78062 -2.9185,-4.42492 -6.98347,-4.53343 -24.82263,3.80896 z"
+       id="path3854-1-2-3-4-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssccscssscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.84621334"
+       d="m 188.63213,163.05968 c -0.88293,0.36153 -1.74528,0.80396 -2.64189,1.29788 -6.31291,3.47731 -9.7724,11.74338 -6.83225,19.8087 2.32008,6.36428 6.64196,18.38627 8.55347,22.10553 3.87755,7.54457 6.81755,12.14017 10.17268,16.13858 1.95557,3.15989 3.86673,5.46225 6.93325,7.57632 3.43692,2.67603 7.27964,9.10502 13.79534,13.95622 7.28081,5.7647 16.66358,9.52897 22.741,15.18535 2.72704,2.09872 3.38897,2.75935 5.79529,4.8693 2.10738,1.84792 5.20374,6.78256 6.61891,6.89448 1.2303,0.0973 2.32473,-0.96058 2.26725,-2.49005 0.85355,0.25803 1.85021,-0.0651 2.23644,-0.38401 0.43266,-0.30682 0.79998,-0.6717 0.99309,-2.12726 0.99641,-0.12252 1.22396,0.0885 1.9837,-0.51072 0.72334,-0.57047 0.68328,-1.16846 0.81828,-2.06574 1.08291,-0.29202 1.14164,-0.36949 1.77,-1.09051 1.02623,-0.87026 -2.12156,-2.61535 -2.61014,-3.54088 1.41383,-0.11025 4.18902,3.07319 4.71608,2.89893 0.69584,-0.23017 1.35445,-1.0817 1.23144,-1.8096 -0.14291,-0.84342 -1.86827,-2.43319 -2.48163,-3.01362 -1.14409,-1.08367 -3.0733,-2.20951 -5.10028,-2.86745 -3.50936,-0.90494 -4.4764,-0.60417 -6.34306,-1.24615 -8.72508,-6.9221 -15.62924,-14.87187 -23.01425,-21.55805 -7.13308,-6.317 -11.42786,-14.70157 -14.46105,-17.3684 -5.39943,-16.05383 -1.92244,-15.41519 -7.73618,-29.35519 -3.79369,-9.09516 -10.39888,-24.73443 -19.40573,-21.3036 z"
+       id="path3893-5-1-99-8-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccccssccccccccccccccscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 215.30296,240.72607 c -0.17669,19.83004 0.43379,29.67265 -1.02498,29.66965 l -50.59579,0.8242 c 0.4501,-11.47453 -0.5477,-25.07483 -0.56345,-28.58361 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82459,-21.00575 8.22505,-3.13663 23.27415,0.0322 31.31614,10.46617 3.91968,5.08555 8.55309,18.03673 10.43239,27.73308 2.87623,14.84004 2.48946,36.18767 2.46106,44.27584 z"
+       id="path3819-7-5-5-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 188.28198,168.56045 c -0.99162,-0.49595 -2.03821,-0.91202 -3.15603,-1.31866 -7.87027,-2.86334 -17.74761,0.43211 -22.55485,9.17272 -3.79335,6.89713 -11.00533,19.87262 -12.79716,24.38942 -3.41364,10.88098 -17.51185,43.45736 -9.37231,50.05029 11.60025,7.75197 19.56034,21.86667 29.2457,30.83109 0.56245,1.39028 1.41721,3.20256 2.65573,5.66046 2.12279,3.38866 2.57696,4.3759 4.34579,7.64718 1.5491,2.86495 2.92806,9.49252 4.42465,10.18639 1.30102,0.60319 2.92095,-0.10696 3.47645,-1.79648 0.82561,0.62611 2.04205,0.67682 2.59178,0.48552 0.59531,-0.1594 1.14301,-0.40849 1.94163,-1.91616 1.13509,0.26921 1.29773,0.59109 2.36764,0.24534 1.01859,-0.32917 1.21668,-0.99686 1.72633,-1.91983 1.29784,0.1195 1.3931,0.0589 2.36914,-0.47273 1.46978,-0.53335 -1.25396,-3.70693 -1.41261,-4.91257 1.58487,0.45132 3.32175,5.04117 3.96643,5.06431 0.85108,0.0305 1.91276,-0.63103 2.07294,-1.47377 0.18519,-0.97661 -1.05202,-3.40595 -1.48528,-4.28634 -0.80842,-1.64302 -2.45524,-3.64931 -4.39765,-5.18532 -3.45757,-2.40426 -4.63274,-2.46742 -6.40692,-3.92127 -1.80692,-1.48061 -3.09413,-5.21591 -4.66482,-7.27791 -0.67583,-1.01526 -1.26527,-1.8358 -1.79182,-2.53704 -2.63526,-7.80579 -3.16016,-8.12936 -8.15365,-17.4733 -5.2182,-9.76506 -11.46134,-16.25642 -14.76436,-19.59055 13.45145,-16.04245 17.68054,-20.34019 25.97762,-36.38058 5.26113,-10.17112 13.68582,-28.01439 3.79567,-33.27014 z"
+       id="path3893-5-1-99-6-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssccccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 184.76914,203.81834 c -9.68524,-8.8206 -17.93213,-12.92899 -29.9676,-15.42717 14.98052,-26.18718 21.4002,-30.94339 30.19511,-26.90891 10.25543,4.70445 13.14809,12.48956 -0.22751,42.33608 z"
+       id="path3893-4-8-2-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 205.763,141.87123 -7.19713,-0.0317"
+       id="path4363-1-0-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 193.43203,110.36006 c 1.80509,2.24748 7.60895,-3.89885 11.6308,-2.247 2.32727,0.95587 4.39627,6.94922 3.42671,9.13626 -1.75521,1.46362 -16.66267,-1.5679 -22.68317,0.24319 -3.8256,7.30022 -6.09217,4.3996 -9.74447,6.89377 -1.87333,3.25474 -0.46597,12.06186 -2.71668,15.2776 -1.65743,2.36809 -5.01589,4.17019 -7.33297,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.5068,-5.14552 57.44441,-15.869073 31.10701,-2.07983 z"
+       id="rect4371-8-3-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 207.29007,119.70553 -12.48726,-1.92934 -0.56099,2.89663 12.62859,1.63001 z"
+       id="rect3827-2-2-5-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6-6-3"
+       transform="matrix(0.94850292,0,0,0.93524129,-183.74748,-183.38712)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6-6-9"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0-6-4"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3-7-8"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8-6-3"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 231.58559,650.67958 c -0.26163,2.45974 -0.28351,3.06979 -0.24171,5.91403 0.0258,1.75768 -0.1636,3.55155 -0.80034,4.14508 -1.15965,1.08099 -1.66911,0.7174 -7.53981,0.7194 -4.13691,9e-4 -7.48639,25.17157 -10.17742,25.17157 -7.68608,0 -15.98974,5.65021 -18.69289,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.21936 21.00369,-22.62754 11.94514,-0.34315 19.88854,-0.8032 25.43975,9.2977 2.16461,3.9387 0.35203,11.57605 0.013,18.73495 -0.79028,9.62224 5.21162,16.20257 1.70568,17.21282 -1.35075,-0.0437 -2.73338,-0.0903 -3.30343,-0.0475 z"
+       id="path2985-0-77-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14-19-7"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,198.27315,582.08711)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6-1-6"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,176.65466,495.92911)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0-6-4"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,166.41171,506.84873)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7-2-5"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,180.75435,530.87336)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 208.88669,644.35172 c 1.95834,2.72948 -2.20001,3.53979 -3.81538,2.52932 -0.86085,-0.53848 -2.22277,-0.26861 -3.82244,-5.4944 -1.04673,-3.41944 0.25091,-6.46267 4.09115,-6.49967 3.86624,0.11566 3.53403,2.66299 2.66145,4.36865 -0.48203,0.94223 0.72743,3.98846 0.88522,5.0961 z"
+       id="path3804-1-7-8"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 219.13382,675.39217 c -1.00784,0.0295 -2.0251,0.15108 -3.09527,0.31267 -7.53498,1.1377 -14.59316,-1.69328 -14.62927,17.3889 -0.0143,7.51998 0.34081,22.20948 0.86067,26.82183 1.05453,9.3562 2.26932,15.28189 4.11564,20.74997 0.76997,4.0486 1.81254,7.18906 4.06869,10.5868 2.41546,4.12658 6.45782,10.34423 8.893,19.00222 3.28941,11.695 6.10982,18.3581 8.75214,22.7619 0.13133,1.4267 0.40868,3.3199 0.85386,5.9094 0.97588,3.6841 1.11694,4.7123 1.81447,8.1918 0.61088,3.0472 0.1016,9.4904 1.22743,10.5368 0.97872,0.9096 2.57475,0.7052 3.49552,-0.6879 0.55823,0.7999 1.60589,1.1808 2.13467,1.1569 0.56029,0.018 1.10222,-0.06 2.18803,-1.2194 0.92027,0.5584 0.97897,0.8976 2.00125,0.8754 0.97324,-0.021 1.31844,-0.5775 2.00125,-1.2819 1.10087,0.4662 1.1996,0.4369 2.18803,0.2189 1.41941,-0.084 -0.13608,-3.7365 0.037,-4.8833 1.26546,0.8487 1.59457,5.5259 2.15077,5.7243 0.73428,0.2619 1.83094,-0.051 2.1883,-0.7785 0.41372,-0.8426 -0.0377,-3.4056 -0.18814,-4.3302 -0.28059,-1.7256 -1.19846,-4.0141 -2.49556,-5.9536 -2.39409,-3.1505 -3.40254,-3.5314 -4.57416,-5.3494 -1.19324,-1.8515 -1.35096,-5.6232 -2.18804,-7.9417 -0.32712,-1.1147 -0.62919,-2.0276 -0.90723,-2.814 -0.2819,-7.8666 -0.76155,-13.8205 -2.7026,-23.7428 -2.02823,-10.3695 -3.06979,-18.13494 -5.08893,-22.09374 2.72061,-18.34645 2.64648,-22.3873 0.76835,-39.05086 -1.8134,-10.74871 -3.68422,-30.14411 -13.86984,-30.11049 z"
+       id="path3893-5-1-9-7-2-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 227.97652,926.33536 c -0.0632,-0.9849 -17.21877,-1.1406 -21.12924,-1.258 -1.4137,-0.042 0.13292,15.5791 -0.008,18.227 -0.4909,9.2028 -0.0913,8.7353 22.35167,9.231 22.91741,0.5061 23.70374,1.44 23.85011,-3.6129 0.0535,-1.8488 -1.86154,-6.3834 -6.55139,-6.7678 -6.78717,-0.5562 -17.73956,-3.7519 -18.51285,-15.8193 z"
+       id="path3896-8-4-77-7-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 219.22003,926.02736 c -0.0677,-0.9838 -18.44296,-1.1393 -22.63144,-1.2566 -1.51421,-0.043 0.14237,15.5613 -0.008,18.2062 -0.5258,9.1923 -0.0977,8.7253 23.94078,9.2204 24.54675,0.5056 25.38897,1.4384 25.54576,-3.6087 0.0573,-1.8467 -1.99389,-6.3761 -7.01717,-6.7601 -7.26971,-0.5556 -19.00078,-3.7476 -19.82904,-15.8012 z"
+       id="path3896-8-7-6-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 219.20618,777.16866 c -19.58636,2.1749 -20.54457,0.244 -19.99168,4.9183 1.04353,8.8221 1.19413,14.1854 4.26198,21.3776 3.82411,8.9651 2.94512,19.9288 5.84116,31.9684 0.0606,10.7716 -1.44155,22.3399 -1.91642,31.0133 -0.59859,10.9326 -1.09025,22.6258 -1.94068,30.3574 -2.85203,25.9289 -3.67856,27.0614 -3.32441,33.4906 15.60812,0.876 20.38135,-0.1435 26.59193,-0.3413 3.17973,-0.1014 6.96852,-64.4824 9.10042,-85.3835 0.6507,-6.3793 1.71884,-9.5046 1.5033,-15.1242 0.68672,-8.2232 3.26272,-25.3236 1.07443,-44.8707 -0.57147,-5.1048 -3.7545,-6.9538 -21.2,-7.406 z"
+       id="path3854-1-2-8-3-5-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 214.4384,776.19546 c -22.1039,2.2416 -23.18528,0.2515 -22.56133,5.0692 1.17767,9.0929 1.34761,14.6207 4.8098,22.0336 4.31565,9.2403 3.32367,20.5405 6.59196,32.9495 0.0684,11.1022 -1.62684,23.0255 -2.16276,31.9651 -0.67551,11.2681 -1.23037,23.3201 -2.19012,31.289 -3.21861,26.7246 -4.15138,27.8919 -3.75171,34.5184 17.61433,0.9029 23.0011,-0.1479 30.00997,-0.3518 3.58841,-0.1044 7.8642,-66.4613 10.27016,-88.0038 0.73433,-6.575 1.93975,-9.7962 1.6965,-15.5883 0.775,-8.4755 3.68211,-26.1007 1.21255,-46.2478 -0.64492,-5.2613 -4.23709,-7.1671 -23.92499,-7.6332 z"
+       id="path3854-1-2-3-1-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 240.75881,752.67138 c -0.17669,19.83008 0.43379,29.67268 -1.02498,29.66968 l -50.59579,0.8242 c 0.4501,-11.4746 -0.5477,-25.07486 -0.56345,-28.58364 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82459,-21.00575 8.22505,-3.13663 23.27415,0.0322 31.31614,10.46617 3.91968,5.08555 8.55309,18.03673 10.43239,27.73308 2.87623,14.84004 2.48946,36.18767 2.46106,44.27584 z"
+       id="path3819-7-5-3-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 210.75159,680.53028 c -1.10867,-0.0115 -2.23176,0.0729 -3.41476,0.19697 -8.3293,0.8733 -15.76521,8.16227 -16.25818,18.12544 -0.389,7.86185 -1.18879,22.68535 -0.82113,27.53066 0.7458,9.82875 1.81906,16.0767 3.60641,21.87262 0.66735,4.26625 1.67429,7.59425 4.00331,11.24228 2.47191,4.41691 6.63909,11.08891 8.9327,20.24551 3.09817,12.3685 5.90307,19.4551 8.61201,24.1714 0.0814,1.4976 0.30253,3.4891 0.67741,6.2157 0.90967,3.8938 1.01929,4.975 1.63217,8.643 0.53673,3.2124 -0.30718,9.9291 0.88366,11.0707 1.03524,0.9923 2.7979,0.8456 3.87108,-0.5726 0.57806,0.86 1.71238,1.3023 2.29444,1.2995 0.61483,0.042 1.2137,-0.016 2.45792,-1.1833 0.98651,0.6226 1.03604,0.9798 2.16025,0.9996 1.07029,0.019 1.47413,-0.5487 2.25545,-1.2566 1.18902,0.5338 1.29879,0.5073 2.39446,0.3208 1.56329,-0.028 0.0154,-3.9132 0.25614,-5.1052 1.35299,0.9407 1.50821,5.8457 2.11058,6.0766 0.79523,0.3048 2.01402,0.023 2.43875,-0.7222 0.49177,-0.8638 0.10887,-3.5631 -0.0156,-4.5364 -0.23216,-1.8163 -1.13968,-4.2481 -2.47929,-6.3308 -2.49149,-3.3953 -3.58272,-3.836 -4.78982,-5.7864 -1.22938,-1.9864 -1.23624,-5.9373 -2.05367,-8.3971 -0.31023,-1.1795 -0.60185,-2.1468 -0.87265,-2.9809 0.0374,-8.2386 -0.22687,-14.4851 -1.92174,-24.9432 -1.77094,-10.92929 -5.57268,-19.09392 -7.61653,-23.31873 1.46621,-19.627 2.74918,-23.75541 2.81751,-41.30607 0.0445,-11.45118 0.0322,-31.17863 -11.16083,-31.57128 z"
+       id="path3893-5-1-99-9-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 223.03735,713.76458 c -12.57029,-3.68708 -21.78352,-3.76807 -33.69724,-0.74206 1.99644,-30.10313 5.68419,-37.19075 15.35769,-37.41625 11.27992,-0.26295 17.29036,5.46855 18.33955,38.15831 z"
+       id="path3893-4-8-9-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 231.21885,653.81654 -7.19713,-0.0317"
+       id="path4363-1-5-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 218.88788,622.30537 c 1.80509,2.24748 7.60895,-3.89885 11.6308,-2.247 2.32727,0.95587 4.39627,6.94922 3.42671,9.13626 -1.75521,1.46362 -16.66267,-1.5679 -22.68317,0.24319 -3.8256,7.30022 -6.09217,4.3996 -9.74447,6.89377 -1.87333,3.25474 -0.46597,12.06186 -2.71668,15.2776 -1.65743,2.36809 -5.01589,4.17019 -7.33297,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.5068,-5.14552 57.44441,-15.86907 31.10701,-2.07983 z"
+       id="rect4371-8-9-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 232.74592,631.65084 -12.48726,-1.92934 -0.56099,2.89663 12.62859,1.63001 z"
+       id="rect3827-2-2-2-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6-65-5"
+       transform="matrix(0.94850292,0,0,0.93524129,-158.29164,328.55819)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6-3-3"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0-2-2"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3-4-6"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8-4-8"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+    <path
+       style="fill:#decd87;fill-rule:evenodd;stroke:#000000;stroke-width:0.71404862px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 531.39888,649.26537 c -0.2616,2.45974 -0.2835,3.06979 -0.2417,5.91403 0.026,1.75768 -0.1636,3.55155 -0.8004,4.14508 -1.1596,1.08099 -1.6691,0.7174 -7.5398,0.7194 -4.1369,9e-4 -7.4864,25.17157 -10.1774,25.17157 -7.6861,0 -15.9897,5.65021 -18.69289,-1.25456 -1.31571,-3.36072 1.00573,-13.58149 1.06687,-18.61545 0.0743,-6.11722 -9.33792,-23.02742 -8.47322,-38.6505 0.49487,-8.94071 6.7951,-22.21936 21.00374,-22.62754 11.9451,-0.34315 19.8885,-0.8032 25.4397,9.2977 2.1646,3.9387 0.352,11.57605 0.013,18.73495 -0.7903,9.62224 5.2116,16.20257 1.7057,17.21282 -1.3508,-0.0437 -2.7334,-0.0903 -3.3034,-0.0475 z"
+       id="path2985-0-4-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssssssssscccc" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#ffe6d5"
+       id="path2987-14-2-6"
+       sodipodi:cx="136.42857"
+       sodipodi:cy="241.6479"
+       sodipodi:rx="23.571428"
+       sodipodi:ry="23.571428"
+       d="m 160,241.6479 a 23.571428,23.571428 0 1 1 -47.14285,0 23.571428,23.571428 0 1 1 47.14285,0 z"
+       transform="matrix(0.21184249,0,0,0.2254599,498.08638,580.6729)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#00aad4"
+       id="path2989-6-7-6"
+       sodipodi:cx="175"
+       sodipodi:cy="455.93362"
+       sodipodi:rx="13.571428"
+       sodipodi:ry="13.571428"
+       d="m 188.57143,455.93362 a 13.571428,13.571428 0 1 1 -27.14286,0 13.571428,13.571428 0 1 1 27.14286,0 z"
+       transform="matrix(0.28868494,0,0,0.30846579,476.46793,494.5149)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#1c2422"
+       id="path2991-0-9-3"
+       sodipodi:cx="242.85715"
+       sodipodi:cy="485.21933"
+       sodipodi:rx="11.428572"
+       sodipodi:ry="11.428572"
+       d="m 254.28572,485.21933 a 11.428572,11.428572 0 1 1 -22.85714,0 11.428572,11.428572 0 1 1 22.85714,0 z"
+       transform="matrix(0.25019981,0,0,0.26734365,466.22498,505.43452)" />
+    <path
+       sodipodi:type="arc"
+       style="fill:#dbe3e2"
+       id="path2993-7-23-9"
+       sodipodi:cx="173.57143"
+       sodipodi:cy="373.79074"
+       sodipodi:rx="5"
+       sodipodi:ry="5"
+       d="m 178.57143,373.79074 a 5,5 0 1 1 -10,0 5,5 0 1 1 10,0 z"
+       transform="matrix(0.26134391,0,0,0.27925136,480.56762,529.45915)" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.32102677"
+       d="m 508.69998,642.93751 c 1.9583,2.72948 -2.2,3.53979 -3.8154,2.52932 -0.8608,-0.53848 -2.2228,-0.26861 -3.8224,-5.4944 -1.0468,-3.41944 0.2509,-6.46267 4.0911,-6.49967 3.8663,0.11566 3.534,2.66299 2.6615,4.36865 -0.4821,0.94223 0.7274,3.98846 0.8852,5.0961 z"
+       id="path3804-1-73-4"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90"
+       sodipodi:nodetypes="csscsc" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.91658515"
+       d="m 518.94708,673.97796 c -1.0078,0.0295 -2.0251,0.15108 -3.0953,0.31267 -7.5349,1.1377 -14.5931,-1.69328 -14.6292,17.3889 -0.014,7.51998 0.3408,22.20948 0.8606,26.82183 1.0546,9.3562 2.2694,15.28189 4.1157,20.74997 0.77,4.0486 1.8125,7.18906 4.0687,10.5868 2.4154,4.12658 6.4578,10.34423 8.893,19.00223 3.2894,11.695 6.1098,18.3581 8.7521,22.7619 0.1313,1.4267 0.4087,3.3199 0.8539,5.9094 0.9759,3.6841 1.1169,4.7123 1.8144,8.1918 0.6109,3.0472 0.1016,9.4904 1.2275,10.5368 0.9787,0.9096 2.5747,0.7052 3.4955,-0.6879 0.5582,0.7999 1.6059,1.1807 2.1347,1.1569 0.5603,0.018 1.1022,-0.06 2.188,-1.2194 0.9203,0.5584 0.979,0.8976 2.0012,0.8754 0.9733,-0.021 1.3185,-0.5775 2.0013,-1.2819 1.1009,0.4662 1.1996,0.4369 2.188,0.2189 1.4194,-0.084 -0.1361,-3.7365 0.037,-4.8833 1.2655,0.8487 1.5946,5.5259 2.1508,5.7243 0.7343,0.2619 1.8309,-0.051 2.1883,-0.7785 0.4137,-0.8426 -0.038,-3.4056 -0.1881,-4.3302 -0.2806,-1.7256 -1.1985,-4.0141 -2.4956,-5.9536 -2.3941,-3.1505 -3.4025,-3.5314 -4.5742,-5.3494 -1.1932,-1.8516 -1.3509,-5.6232 -2.188,-7.9417 -0.3271,-1.1147 -0.6292,-2.0276 -0.9072,-2.814 -0.2819,-7.8666 -0.7616,-13.8205 -2.7026,-23.74283 -2.0283,-10.36948 -3.0698,-18.13492 -5.089,-22.09372 2.7206,-18.34645 2.6465,-22.3873 0.7684,-39.05086 -1.8134,-10.74871 -3.6842,-30.14411 -13.8699,-30.11049 z"
+       id="path3893-5-1-9-7-1-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccsccc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.92634946;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 527.78978,924.92116 c -0.063,-0.9849 -17.2188,-1.1406 -21.1292,-1.258 -1.4137,-0.042 0.1329,15.5791 -0.01,18.227 -0.4909,9.2028 -0.091,8.7353 22.3516,9.231 22.9175,0.5061 23.7038,1.44 23.8502,-3.6129 0.053,-1.8488 -1.8616,-6.3834 -6.5514,-6.7678 -6.7872,-0.5562 -17.7396,-3.7519 -18.5129,-15.8193 z"
+       id="path3896-8-4-77-57-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#241f1c;fill-opacity:1;stroke:#000000;stroke-width:0.95816654;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 519.03328,924.61316 c -0.068,-0.9838 -18.4429,-1.1393 -22.6314,-1.2566 -1.51423,-0.043 0.1424,15.5613 -0.01,18.2062 -0.5258,9.1923 -0.098,8.7253 23.9408,9.2204 24.5467,0.5056 25.3889,1.4384 25.5457,-3.6087 0.057,-1.8467 -1.9939,-6.3762 -7.0171,-6.7601 -7.2698,-0.5556 -19.0008,-3.7476 -19.8291,-15.8012 z"
+       id="path3896-8-7-8-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sssssss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.02946293;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 519.01948,775.75446 c -19.5864,2.1748 -20.5446,0.244 -19.9917,4.9183 1.0435,8.8221 1.1941,14.1854 4.262,21.3775 3.8241,8.9652 2.9451,19.9289 5.8411,31.9685 0.061,10.7716 -1.4415,22.3399 -1.9164,31.0133 -0.5986,10.9326 -1.0902,22.6257 -1.9407,30.3574 -2.852,25.9288 -3.6785,27.0614 -3.3244,33.4906 15.6081,0.876 20.3814,-0.1435 26.592,-0.3413 3.1797,-0.1014 6.9685,-64.4824 9.1004,-85.3835 0.6507,-6.3793 1.7188,-9.5046 1.5033,-15.1242 0.6867,-8.2232 3.2627,-25.3236 1.0744,-44.8708 -0.5715,-5.1047 -3.7545,-6.9537 -21.2,-7.4059 z"
+       id="path3854-1-2-8-3-58-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#502d16;fill-opacity:1;stroke:#000000;stroke-width:1.1102792;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 514.25168,774.78126 c -22.10391,2.2416 -23.18529,0.2515 -22.56134,5.0692 1.17767,9.0929 1.34761,14.6207 4.80984,22.0336 4.3156,9.2403 3.3236,20.5404 6.5919,32.9495 0.068,11.1022 -1.6268,23.0255 -2.1627,31.9651 -0.6755,11.2681 -1.2304,23.3201 -2.1902,31.289 -3.2186,26.7246 -4.15134,27.8919 -3.75167,34.5184 17.61437,0.9029 23.00107,-0.1479 30.00997,-0.3518 3.5884,-0.1044 7.8642,-66.4613 10.2702,-88.0038 0.7343,-6.575 1.9397,-9.7962 1.6965,-15.5883 0.775,-8.4755 3.6821,-26.1007 1.2125,-46.2478 -0.6449,-5.2613 -4.2371,-7.1671 -23.925,-7.6332 z"
+       id="path3854-1-2-3-3-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csscsscsscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.89999998;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 540.57208,751.25717 c -0.1767,19.82999 0.4338,29.67269 -1.025,29.66969 l -50.59577,0.8242 c 0.4501,-11.4746 -0.5477,-25.07487 -0.56345,-28.58365 -0.017,-3.7972 -5.07902,-44.09624 -1.84996,-63.37958 1.51692,-9.05876 4.60027,-19.08279 9.82458,-21.00575 8.2251,-3.13663 23.2742,0.0322 31.3162,10.46617 3.9196,5.08555 8.553,18.03673 10.4323,27.73308 2.8763,14.84004 2.4895,36.18767 2.4611,44.27584 z"
+       id="path3819-7-5-2-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsscssc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 510.56488,679.11607 c -1.1087,-0.0115 -2.2318,0.0729 -3.4148,0.19697 -8.3293,0.8733 -15.76519,8.16227 -16.25816,18.12544 -0.389,7.86185 -1.18879,22.68535 -0.82113,27.53066 0.7458,9.82875 1.81906,16.0767 3.60641,21.87262 0.66735,4.26625 1.67428,7.59425 4.00328,11.24228 2.4719,4.41691 6.6391,11.08892 8.9327,20.24552 3.0982,12.3685 5.9031,19.4551 8.612,24.1714 0.081,1.4976 0.3026,3.489 0.6775,6.2157 0.9096,3.8938 1.0192,4.975 1.6321,8.643 0.5368,3.2124 -0.3072,9.9291 0.8837,11.0706 1.0352,0.9924 2.7979,0.8457 3.8711,-0.5725 0.578,0.8599 1.7123,1.3022 2.2944,1.2995 0.6148,0.042 1.2137,-0.016 2.4579,-1.1833 0.9865,0.6226 1.0361,0.9798 2.1603,0.9996 1.0703,0.019 1.4741,-0.5487 2.2554,-1.2566 1.189,0.5338 1.2988,0.5073 2.3945,0.3208 1.5633,-0.028 0.015,-3.9132 0.2561,-5.1052 1.353,0.9407 1.5082,5.8457 2.1106,6.0766 0.7952,0.3047 2.014,0.023 2.4388,-0.7222 0.4917,-0.8639 0.1088,-3.5631 -0.016,-4.5364 -0.2322,-1.8163 -1.1397,-4.2481 -2.4793,-6.3308 -2.4915,-3.3953 -3.5828,-3.836 -4.7899,-5.7865 -1.2293,-1.9864 -1.2362,-5.9372 -2.0536,-8.397 -0.3103,-1.1796 -0.6019,-2.1469 -0.8727,-2.9809 0.037,-8.2386 -0.2268,-14.4851 -1.9217,-24.9432 -1.771,-10.9293 -5.5727,-19.09393 -7.6165,-23.31874 1.4662,-19.627 2.7491,-23.75541 2.8175,-41.30607 0.045,-11.45118 0.032,-31.17863 -11.1609,-31.57128 z"
+       id="path3893-5-1-99-4-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="csssccsccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 522.85058,712.35037 c -12.5702,-3.68708 -21.7835,-3.76807 -33.6972,-0.74206 1.99644,-30.10313 5.68419,-37.19075 15.3577,-37.41625 11.2799,-0.26295 17.2904,5.46855 18.3395,38.15831 z"
+       id="path3893-4-8-1-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.90331739;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 531.03208,652.40233 -7.1971,-0.0317"
+       id="path4363-1-1-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:#a05a2c;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.39315441;stroke-miterlimit:4"
+       d="m 518.70118,620.89116 c 1.8051,2.24748 7.6089,-3.89885 11.6308,-2.247 2.3272,0.95587 4.3962,6.94922 3.4267,9.13626 -1.7552,1.46362 -16.6627,-1.5679 -22.6832,0.24319 -3.8256,7.30022 -6.0922,4.3996 -9.7445,6.89377 -1.8733,3.25474 -0.4659,12.06186 -2.7166,15.2776 -1.6575,2.36809 -5.01593,4.17019 -7.33301,2.35387 -3.43452,-9.30329 -6.31535,-23.72092 -3.68723,-29.57786 7.50684,-5.14552 57.44444,-15.86907 31.10704,-2.07983 z"
+       id="rect4371-8-5-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cscccsccc" />
+    <path
+       style="fill:#552200;fill-opacity:1;stroke:#000000;stroke-width:0.2354788"
+       d="m 532.55918,630.23663 -12.4872,-1.92934 -0.561,2.89663 12.6286,1.63001 z"
+       id="rect3827-2-2-9-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <g
+       id="g3051-6-5-6"
+       transform="matrix(0.94850292,0,0,0.93524129,141.52163,327.14398)">
+      <path
+         sodipodi:nodetypes="cccccssccssc"
+         inkscape:connector-curvature="0"
+         id="path4384-6-1-2"
+         d="m 387.38438,284.44644 c -0.43023,-0.004 -0.87821,0.0143 -1.32197,0.0241 -24.14882,1.52475 -25.1896,23.84359 -25.1896,23.84359 l 0.14421,7.22036 -1.54795,5.66286 c 12.66721,0.81559 20.45503,-0.30757 30.61759,-0.71901 9.40474,-0.38075 12.77131,-0.77942 19.11226,-0.52157 2.36336,0.096 11.13133,0.97788 11.68738,1.14585 0.48176,-0.085 -0.37418,-2.25131 -0.37418,-2.25131 0,0 -4.26957,-0.61474 -4.63419,-1.52777 -3.84962,-9.63989 -1.38733,-32.60229 -28.49352,-32.87704 z"
+         style="fill:#ffcc00;stroke:#000000;stroke-width:0.76914811px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         sodipodi:nodetypes="cssc"
+         inkscape:connector-curvature="0"
+         id="path4404-0-0-6"
+         d="m 360.94957,315.8208 c 0,0 1.38881,-10.06267 3.54202,-13.92715 2.92128,-5.24301 6.67388,-14.12263 22.26606,-14.83501 13.46644,-0.61524 21.37198,7.46319 21.62985,7.13165"
+         style="fill:none;stroke:#000000;stroke-width:0.76246822;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csc"
+         inkscape:connector-curvature="0"
+         id="path4412-3-6-8"
+         d="m 416.06408,317.37306 c -6.79732,-1.34601 -12.20654,-1.27854 -23.23491,0.0959 -7.98736,0.99552 -33.09107,3.51284 -33.09107,3.51284"
+         style="fill:none;stroke:#000000;stroke-width:0.86144257;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+      <path
+         sodipodi:nodetypes="csssccssc"
+         inkscape:connector-curvature="0"
+         id="rect4426-8-45-2"
+         d="m 366.4043,321.79055 4.23925,0.0334 c 0.003,2e-5 0.006,0.004 0.006,0.009 0,0 1.09327,5.22142 -0.75671,8.35662 -1.87664,3.18033 -5.30943,4.34888 -5.53423,3.85082 -0.29635,-2.31248 -0.27461,-5.57627 -0.62778,-4.68943 2.49008,-2.81696 2.84416,-1.9751 2.66655,-7.55142 -1.9e-4,-0.005 0.01,-0.009 0.006,-0.009 z"
+         style="fill:#131617;fill-opacity:0.98823529;stroke:#000000;stroke-width:0.07734022;stroke-miterlimit:4" />
+    </g>
+    <path
+       style="fill:#decd87;fill-opacity:1;stroke:#000000;stroke-width:0.98331416"
+       d="m 510.93927,167.34522 c -1.08134,-0.24496 -2.19698,-0.39923 -3.37955,-0.52734 -8.3262,-0.90229 -17.13164,4.65524 -19.71394,14.29058 -2.03767,7.60313 -5.94453,21.92489 -6.6066,26.73881 -0.71816,11.38125 -6.63433,46.38095 2.84342,50.84079 13.11512,4.75946 24.2138,16.56654 35.75872,22.96043 0.878,1.21586 2.14057,2.77178 3.92991,4.86308 2.87018,2.78412 3.54684,3.63442 6.04528,6.38903 2.18808,2.41247 5.10892,8.51941 6.72787,8.83606 1.40737,0.27526 2.81101,-0.80098 2.94724,-2.57425 0.95118,0.41098 2.14458,0.16991 2.63276,-0.14714 0.54007,-0.29686 1.01249,-0.66947 1.42821,-2.32417 1.16654,-0.009 1.4013,0.26429 2.35777,-0.32683 0.9106,-0.56276 0.94361,-1.25843 1.21826,-2.27636 1.28886,-0.19367 1.3669,-0.27531 2.18787,-1.02448 1.30002,-0.86872 -2.10242,-3.30055 -2.54423,-4.43349 1.64679,0.06 4.42888,4.10274 5.06046,3.97134 0.83378,-0.17345 1.70689,-1.06929 1.66132,-1.92589 -0.053,-0.99262 -1.83449,-3.05646 -2.46534,-3.80801 -1.17719,-1.40261 -3.25524,-2.9579 -5.5081,-3.98595 -3.93146,-1.5096 -5.08774,-1.29048 -7.15762,-2.27888 -2.10808,-1.0066 -4.24955,-4.32674 -6.26697,-5.95431 -0.8986,-0.82462 -1.66685,-1.48078 -2.34553,-2.03608 -4.42203,-6.95131 -5.00899,-7.14026 -12.0882,-15.02245 -7.39794,-8.23751 -15.00988,-13.05132 -19.01319,-15.5008 9.23408,-18.78919 12.31527,-23.97206 16.54441,-41.5291 2.68167,-11.13283 6.60445,-30.47112 -4.25424,-33.21462 z"
+       id="path3893-5-1-99-6-3-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cssccccsscccccccccccsccscscc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="fill:#004455;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 515.94255,202.42265 c -11.51049,-6.25425 -20.49957,-8.27572 -32.78348,-7.82935 8.29784,-29.00569 13.39689,-35.15657 22.90052,-33.33766 11.08184,2.12096 15.74891,8.99074 9.88296,41.16701 z"
+       id="path3893-4-8-2-5-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccsc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\player_idle.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>

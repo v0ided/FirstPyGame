@@ -30,7 +30,6 @@ class LevelObject(BaseObject):
             self.idle_anim.scale((var_dict['w'], var_dict['h']))
         self.rect.x = var_dict['x']
         self.rect.y = var_dict['y']
-        self.yvel = 0
         self.col_object = None
         self.on_object = None
         self._layer = var_dict['layer']
@@ -42,12 +41,11 @@ class LevelObject(BaseObject):
     def draw(self, screen, translated):
         self.idle_anim.blit(screen, translated)
 
-    #def update(self):
+    def update(self):
+        self.move()
 
     def do_gravity(self, gravity):
-        if self.obey_gravity:
-            self.yvel += gravity
-            self.rect.y += self.yvel
+        self._change_vel(DIR_DOWN, gravity)
 
     def collide(self, obj):
         if self.rect.colliderect(obj.rect):
@@ -71,6 +69,7 @@ class LevelObject(BaseObject):
             config.set(self.name, 'file' + str(i), fobj)
             i += 1
 
+    #NOT USED
     def get_prop_enum(self):
         prop_dict = {}
         prop_dict['type'] = obj_type_str(self.type)

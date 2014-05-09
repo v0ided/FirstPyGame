@@ -81,9 +81,8 @@ class Level():
         #update object positions
         for obj in self.objects:
             obj.update()
-            if obj.obey_gravity:
+            if obj.obey_gravity and obj.rect.y + obj.rect.h < self.height:
                 obj.do_gravity(self.gravity)
-
         self.check_collisions()
         self.camera.update(self.player)
 

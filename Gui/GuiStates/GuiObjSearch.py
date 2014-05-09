@@ -1,7 +1,7 @@
-from Gui.GuiStates.GuiState import GuiState
-
 __author__ = 'thvoidedline'
 
+import pygame
+from Gui.GuiStates.GuiState import GuiState
 from Binding import Binding
 from Binding import ListboxUpBind
 from Binding import ListboxDownBind
@@ -20,6 +20,7 @@ class GuiObjSearch(GuiState):
         print('Create GuiObjSearch called')
         GuiState.create(self, *args)
         try:
+            pygame.mouse.set_visible(False)
             self.level = args[0]
             self.keybindings.add(PrePlaceObjectBind(pygame.MOUSEBUTTONUP, self, self.level))
             self.keybindings.add(PrePlaceObjectBind(pygame.K_RETURN, self, self.level))
@@ -52,6 +53,8 @@ class GuiObjSearch(GuiState):
         self.level = None
 
     def pre_place_object(self):
+        pygame.mouse.set_visible(True)
+        pygame.mouse.set_pos((self.textbox.rect.x, self.textbox.rect.y))
         self.level.pre_place_object(self.listbox.get_text())
         self.destroy()
 

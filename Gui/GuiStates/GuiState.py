@@ -73,6 +73,7 @@ class GuiState():
                 return False
             else:
                 print('clicked gui object' + str(clicked_obj.type))
+                self.focus(clicked_obj)
                 if clicked_obj.type == BUTTON:
                     if clicked_obj.close_state:
                         self.destroy()

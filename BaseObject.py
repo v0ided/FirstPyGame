@@ -18,8 +18,8 @@ class BaseObject(pygame.sprite.Sprite):
         self.collidable = False
         self.xvel = 0
         self.yvel = 0
-        self.maxXvel = .5
-        self.maxYvel = .5
+        self.maxXvel = 8
+        self.maxYvel = 8
         self.move_dir = DIR_LEFT
         x = var_dict.get('x', 'no')
         y = var_dict.get('y', 'no')

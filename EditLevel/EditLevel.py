@@ -177,12 +177,6 @@ class EditLevel(Level):
         else:
             print('NoneType sent to select_object')
 
-    def mouse_click(self):
-        if self.selected_obj:
-            self.place_object()
-        else:
-            self.select_object_at(pygame.mouse.get_pos())
-
     #bounds checking? Error checking?
     def edit_object(self, var_list):
         """Set new variables for object, must obey order"""

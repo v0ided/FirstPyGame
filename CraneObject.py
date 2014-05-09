@@ -15,12 +15,8 @@ class CraneObject(LevelObject):
         #Contains coordinates and wait time for each destination
         self.dests = []
         self.cur_dest = 0
-        #Arm has to be declared before the crane object or they will be set to None
-        self.arm = next((x for x in BaseObject._objects if x.name == var_dict['arm']), None)
-
-        if not self.arm:
-            print("Couldn't find arm or magnet for crane.")
-
+        self.arm = None
+        self.arm_name = var_dict['arm']
         self.moving = False
 
         #These variables' values will be set in self.__setup_vars(var_dict)
@@ -42,9 +38,9 @@ class CraneObject(LevelObject):
         self._power = False
         self.state = OFF
 
-        #These x and y values represent the crane's position when telling it to move somewhere (ie the arm/claw)
-        self.x = self.arm.rect.right
-        self.y = self.arm.rect.bottom
+        #These x and y values represent the crane's position when telling it to move somewhere (claw)
+        self.claw_x = 0
+        self.claw_y = 0
 
         #Objects that are possible to pick up and held objects
         self.pos_pickup = []
@@ -53,9 +49,15 @@ class CraneObject(LevelObject):
         #Area of the crane that objects can be picked up from
         pickup_w = 60
         pickup_h = 30
-        pickup_x = self.x - pickup_w
-        pickup_y = self.y - pickup_h
+        pickup_x = self.claw_x - pickup_w
+        pickup_y = self.claw_y - pickup_h
         self.pickup_area = pygame.Rect(pickup_x, pickup_y, pickup_w, pickup_h)
+
+    def setup(self):
+        self.arm = next((x for x in BaseObject._objects if x.name == self.arm_name), None)
+        assert(self.arm)
+        self.claw_x = self.arm.rect.right
+        self.claw_y = self.arm.rect.bottom
 
     #Called when the crane is done waiting at dest and is about to move to the next
     def _next_dest(self):
@@ -105,16 +107,16 @@ class CraneObject(LevelObject):
     def _move(self):
         if self._power and self.arm:
             #if destx to the right of x
-            if self.dests[self.cur_dest][X] > self.x:
+            if self.dests[self.cur_dest][X] > self.claw_x:
                 self._change_vel(DIR_RIGHT, self.xspeed)
             #if destx is to the left of x
-            elif self.dests[self.cur_dest][X] < self.x:
+            elif self.dests[self.cur_dest][X] < self.claw_x:
                 self._change_vel(DIR_LEFT, self.xspeed)
             #if desty below y
-            elif self.dests[self.cur_dest][Y] > self.y:
+            elif self.dests[self.cur_dest][Y] > self.claw_y:
                 self._change_vel(DIR_DOWN, self.yspeed)
             #if desty above y
-            elif self.dests[self.cur_dest][Y] < self.y:
+            elif self.dests[self.cur_dest][Y] < self.claw_y:
                 self._change_vel(DIR_UP, self.yspeed)
             else:
                 if not self._waiting:
@@ -126,8 +128,8 @@ class CraneObject(LevelObject):
         self._update_pos()
 
     def _update_pos(self):
-        self.x += self.xvel
-        self.y += self.yvel
+        self.claw_x += self.xvel
+        self.claw_y += self.yvel
         self.pickup_area.x += self.xvel
         self.pickup_area.y += self.yvel
         self.arm.rect.x += self.xvel
@@ -145,6 +147,8 @@ class CraneObject(LevelObject):
             self._drop()
 
     def update(self):
+        if not self.arm:
+            self.setup()
         self._move()
 
     def add_dest(self, x, y, wait, action=NOTHING):
@@ -169,8 +173,7 @@ class CraneObject(LevelObject):
 
     def serialize(self, config):
         #Seralize referenced arm object first
-        self.arm.serialize(config)
-        BaseObject.serialize(self, config)
+        LevelObject.serialize(self, config)
         config.set(self.name, 'xmin', str(self.xmin))
         config.set(self.name, 'ymin', str(self.ymin))
         config.set(self.name, 'xmax', str(self.xmax))
