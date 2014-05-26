@@ -30,7 +30,7 @@ class GuiObjSearch(GuiState):
                                               'bg_color': (255, 255, 255)})
             results_pos = (self.textbox.rect.x, self.textbox.rect.y + self.textbox.rect.h + 25)
             self.listbox = self.add(LIST_BOX, {'name': "results", 'cords': results_pos, 'bg_color': (255, 255, 255)})
-            self.textbox.attach(self.listbox)
+            self.textbox.attach('objlist', self.listbox)
 
             self.listbox.update_list(self.get_path_results(), True)
             self.focus(self.textbox)

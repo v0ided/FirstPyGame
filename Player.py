@@ -1,8 +1,10 @@
 import os
+
+from Objects.BaseObject import BaseObject
 import pyganim
 from Timer import Timer
-from BaseObject import BaseObject
 from Constants import *
+from AnimationPlayer import Animation_Player
 
 
 class PlayerSprite(BaseObject):
@@ -11,9 +13,9 @@ class PlayerSprite(BaseObject):
         self.type = PLAYER
         self.xvel = 0
         self.yvel = 0
-        self.jumpvel = 0.75
-        self.walkvel = 0.1
-        self.maxXvel = 2.5
+        self.jumpvel = 1
+        self.walkvel = 0.05
+        self.maxXvel = 2.3
         self.maxYvel = 8
         self.direction = DIR_RIGHT
         self.iswalking = False
@@ -21,8 +23,8 @@ class PlayerSprite(BaseObject):
         self.col_object = None
         self.jump_state = NOT_JUMPING
         self.airborne = True
-        self.j_delay_timer = Timer(500, self.__next_jump_state, False)
-        self.jump_timer = Timer(200, self.__next_jump_state, False)
+        self.j_delay_timer = Timer(50, self.__next_jump_state, False)
+        self.jump_timer = Timer(240, self.__next_jump_state, False)
         self._layer = 10
         #array of objects currently colliding with
         #used to track objects that are possible to interact with
@@ -35,27 +37,26 @@ class PlayerSprite(BaseObject):
         self.obey_gravity = True
         self.visible = True
 
+        self.animation = Animation_Player()
+
         #Jumping Animation:
-        self.jumping_anim = pyganim.PygAnimation([(os.path.join('PlayerJumping1.bmp'), 0.1),
-                                                  (os.path.join('PlayerJumping2.bmp'), 0.1),
-                                                  (os.path.join('PlayerJumping3.bmp'), 0.2),
-                                                  (os.path.join('PlayerJumping4.bmp'), 0.4),
-                                                  (os.path.join('PlayerJumping5.bmp'), 0.4),
-                                                  (os.path.join('PlayerStanding.bmp'), 1)])
+        self.jumping_anim = pyganim.PygAnimation([(os.path.join('player_jumping1.png'), .4),
+                                                  (os.path.join('player_jumping2.png'), .4),
+                                                  (os.path.join('player_jumping3.png'), .5)])
         self.jumping_anim.set_colorkey((255, 255, 255))
 
         #Walking Animation:
-        self.walking_anim = pyganim.PygAnimation([(os.path.join('PlayerStanding.bmp'), 0.25),
-                                                  (os.path.join('PlayerWalking1.bmp'), 0.25),
-                                                  (os.path.join('PlayerWalking2.bmp'), 0.25),
-                                                  (os.path.join('PlayerWalking3.bmp'), 0.25),
-                                                  (os.path.join('PlayerWalking4.bmp'), 0.25),
-                                                  (os.path.join('PlayerWalking5.bmp'), 0.25),
-                                                  (os.path.join('PlayerWalking6.bmp'), 0.25)])
+        self.walking_anim = pyganim.PygAnimation([(os.path.join('player_walking1.png'), 0.15),
+                                                  (os.path.join('player_walking2.png'), 0.15),
+                                                  (os.path.join('player_walking3.png'), 0.15),
+                                                  (os.path.join('player_walking4.png'), 0.15),
+                                                  (os.path.join('player_walking5.png'), 0.15),
+                                                  (os.path.join('player_walking6.png'), 0.15),
+                                                  (os.path.join('player_walking7.png'), 0.15),
+                                                  (os.path.join('player_walking8.png'), 0.15),
+                                                  (os.path.join('player_walking9.png'), 0.15),
+                                                  (os.path.join('player_walking10.png'), 0.15)])
         self.walking_anim.set_colorkey((255, 255, 255))
-        self.rect.x = var_dict['x']
-        self.rect.y = var_dict['y']
-        #self.rect = pygame.Rect(var_dict['x'], var_dict['y'], walk_wh[0], walk_wh[1])
         self.walking_anim.play()
 
     def draw(self, screen, rect_loc):
@@ -117,9 +118,9 @@ class PlayerSprite(BaseObject):
         self.update_pos()
 
     def move_direction(self, player_dir):
-        #check if changing direction, if so reset x velocity
+        #check if changing direction, if so lessen x velocity
         if player_dir != self.direction:
-            #self.xvel = 0
+            self.xvel -= self.xvel / 2
             self._flip_image()
         self.direction = player_dir
         self.iswalking = True
@@ -138,6 +139,9 @@ class PlayerSprite(BaseObject):
                     self.rect.bottom = obj.rect.top
                     #save the object the player is on
                     self.on_object = obj
+                    #If falling, let jump state know player landed
+                    if self.jump_state == FALLING:
+                        self.__next_jump_state()
                 elif obj.rect.collidepoint(self.rect.bottomleft):
                     if self.direction == DIR_LEFT:
                         self.xvel = 0
@@ -161,6 +165,8 @@ class PlayerSprite(BaseObject):
             self.jump_timer.start_timer()
             self._change_vel(DIR_UP, 2)
         elif self.jump_state == JUMP:
+            self.jump_state = FALLING
+        elif self.jump_state == FALLING:
             self.jump_state = NOT_JUMPING
         else:
             print("Invalid player jump state: " + str(self.jump_state))
@@ -183,16 +189,16 @@ class PlayerSprite(BaseObject):
         if self._can_use:
             #interact with held item
             if self.held_item:
-                if self.interact(self.held_item):
+                if self.interact(self.held_item, PLACE):
                     self._can_use = False
                     self._use_timer.start_timer()
                     return
 
             for obj in self.pos_interact:
-                if self.interact(obj):
+                if self.interact(obj, TOGGLE_POWER):
                     return
 
-    def interact(self, obj):
+    def interact(self, obj, behvaior):
         print('interacting with ' + obj.name)
         for behavior in self.behaviors:
             if self.delegate_behavior(obj, behavior):
@@ -204,10 +210,8 @@ class PlayerSprite(BaseObject):
             return self.pickup(obj)
         if behavior == PLACE:
             return self.drop()
-        if behavior == TOGGLE_POWER:
-            return self.toggle_power(obj)
-        print('Failed to delegate behavior')
-        return False
+
+        return obj.interact(self, behavior)
 
     def drop(self):
         if self.held_item:
@@ -231,12 +235,6 @@ class PlayerSprite(BaseObject):
             self.held_ofs_x = self.held_item.rect.x - self.rect.x
             self.held_ofs_y = self.held_item.rect.y - self.rect.y
             print('picked up item')
-            return True
-        return False
-
-    def toggle_power(self, obj):
-        if obj.type == CRANE_OBJECT:
-            obj.toggle_power()
             return True
         return False
 

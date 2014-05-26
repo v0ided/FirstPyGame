@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="140"
+   height="30"
+   id="svg3254"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="build_platform_good.svg">
+  <defs
+     id="defs3256" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-15.103601"
+     inkscape:cy="-12.68256"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="962"
+     inkscape:window-x="-8"
+     inkscape:window-y="168"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3259">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-1022.3622)">
+    <path
+       sodipodi:type="arc"
+       style="fill:#66ff00;fill-opacity:1;stroke:#000000;stroke-width:0.80000001;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path3268"
+       sodipodi:cx="67.680222"
+       sodipodi:cy="4.2411098"
+       sodipodi:rx="56.063465"
+       sodipodi:ry="9.3439112"
+       d="m 123.74369,4.2411098 a 56.063465,9.3439112 0 1 1 -112.126934,0 56.063465,9.3439112 0 1 1 112.126934,0 z"
+       transform="matrix(1.1991798,0,0,1.1132316,-11.160755,1028.695)"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\platform_g.png"
+       inkscape:export-xdpi="94.105209"
+       inkscape:export-ydpi="94.105209" />
+    <path
+       style="fill:#aca793;fill-opacity:1;stroke:#000000;stroke-width:0.98039526;stroke-miterlimit:4;stroke-dasharray:none"
+       d="m 2.3573565,1027.5812 c -0.029622,0.018 -0.031207,0.066 -0.031207,0.094 l 0,8.2974 -2.07270389,0 c -0.0907913,0 -0.15603256,0.087 -0.15603256,0.1415 l 0,15.8854 c 0,0.056 0.06524123,0.094 0.15603256,0.094 l 139.49311439,0 c 0.0908,0 0.15603,-0.039 0.15603,-0.094 l 0,-15.8854 c 0,-0.056 -0.0652,-0.1415 -0.15603,-0.1415 l -2.13922,0 0,-8.2974 c 0,-0.1154 -0.24349,-0.094 -0.15604,-0.094 l -134.9691179,0 c -0.045395,0 -0.095205,-0.018 -0.1248259,0 z"
+       id="rect3262"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="sscsssssssscscss"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\platform_g.png"
+       inkscape:export-xdpi="94.105209"
+       inkscape:export-ydpi="94.105209" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.43275511px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 2.4575128,1035.7311 c 47.6854032,2.9253 86.7343742,3.958 134.9879272,0.076"
+       id="path3270"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="C:\Users\thvoidedline\PycharmProjects\FirstPyGame\data\design files\platform_g.png"
+       inkscape:export-xdpi="94.105209"
+       inkscape:export-ydpi="94.105209" />
+  </g>
+</svg>

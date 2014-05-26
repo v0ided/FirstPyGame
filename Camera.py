@@ -8,9 +8,9 @@ class Camera(pygame.sprite.Sprite):
         self.rect = self.image.get_rect()
         self.rect.x = 0
         self.rect.y = 0
-        self.focus_tol = 200
-        self.x_speed = 2
-        self.y_speed = 1.5
+        self.focus_tol = 400
+        self.x_speed = 1.6
+        self.y_speed = 0.5
 
     def update(self, target):
         if target.rect.x > self.rect.x + (self.rect.w - self.focus_tol):

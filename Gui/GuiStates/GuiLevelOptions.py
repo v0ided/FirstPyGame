@@ -28,8 +28,8 @@ class GuiLevelOptions(GuiState):
             file_txtbox = self.add(TXT_BOX, {'name': 'saveas_txtbox', 'cords': (330, 460), 'bg_color': (255, 255, 255)})
             file_txtbox.text = level._filename
 
-            load_bttn.attach(file_txtbox)
-            save_bttn.attach(file_txtbox)
+            load_bttn.attach('filename', file_txtbox)
+            save_bttn.attach('filename', file_txtbox)
             self.focus(file_txtbox)
         except (IndexError, ValueError, TypeError, KeyError):
             print('Error during creation of GuiLevelOptions')

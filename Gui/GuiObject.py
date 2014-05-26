@@ -16,7 +16,7 @@ class GuiObject():
         self.font = pygame.font.SysFont("Calibri", 24)
         self.margin = 5
         self.type = GUI_OBJ
-        self.attached = []
+        self.attached = {}  # identifier : value
         self.visible = True
         self.is_focus = False
 
@@ -26,9 +26,9 @@ class GuiObject():
     def update(self):
         pass
 
-    def attach(self, to_be):
-        if to_be not in self.attached and to_be is not None:
-            self.attached.append(to_be)
+    def attach(self, identifier, value):
+        if identifier not in self.attached and value is not None:
+            self.attached[identifier] = value
         else:
             print('Invalid GUI object attach: ' + self.name)
 

@@ -1,8 +1,8 @@
-
-from Gui.GuiObject import GuiObject
-
 __author__ = 'thvoidedline'
 
+
+from Gui.GuiObject import GuiObject
+from HelpFunctions import to_num
 from Constants import *
 
 
@@ -42,10 +42,9 @@ class GuiButton(GuiObject):
         if user_input == pygame.MOUSEBUTTONUP:
             print('executing action')
             if self.attached:
-                if len(self.attached) > 1:
-                    text_list = [txtbox.get_text() for txtbox in self.attached]
-                    self.action(text_list)
-                else:
-                    self.action(self.attached[0].get_text())
+                #replace gui object saved in field var with text from gui object, convert to number if digit
+                for name, field in self.attached.items():
+                    self.attached[name] = to_num(field.get_text())
+                self.action(self.attached)
             else:
                 self.action()

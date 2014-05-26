@@ -1,9 +1,11 @@
 __author__ = 'thvoidedline'
 
 import configparser
+import collections
 from EditLevel.EditCamera import EditCamera
+from EditLevel.SelectionTarget import SelectionTarget
 from Level import Level
-from LevelObjFactory import ObjFactory
+from ObjectFactory import ObjFactory
 from HelpFunctions import *
 from Gui.GuiStates.GuiLevelOptions import GuiLevelOptions
 from Gui.GuiStates.GuiQuitLevel import GuiQuitLevel
@@ -33,6 +35,7 @@ class EditLevel(Level):
         self._sel_m_x = 0
         self._sel_m_y = 0
         self._menu_focus = False
+        self.sel_target = SelectionTarget(data_path)
 
         level_options = GuiLevelOptions(False)
         quit_lvl_gui = GuiQuitLevel(False)
@@ -74,6 +77,12 @@ class EditLevel(Level):
             elif user_input == self.spawn_bind:
                 self.gui_manager.toggle_state(OBJECT_SEARCH, self)
 
+    def draw(self, screen):
+        Level.draw(self, screen)
+        if self.selected_obj:
+            translated = self.camera.translate_to(self.selected_obj.rect)
+            self.sel_target.draw(screen, translated)
+
     def edit_obj_menu(self, obj):
         if obj:
             self.gui_manager.toggle_state(EDIT_OBJ, self, self.selected_obj)
@@ -96,15 +105,10 @@ class EditLevel(Level):
             m_x, m_y = pygame.mouse.get_pos()
             self.update_pre_place_pos(m_x, m_y)
 
-    def save(self, filename=""):
-        #If no filename is given, default to current filename (save)
-        #If a filename is given, set the current filename to the new filename (save as)
-        if filename == "":
-            filename = self._filename
-        else:
-            self._filename = filename
+    def save(self, filedict):
+        self._filename = filedict['filename']
         config = configparser.ConfigParser()
-        sfile = open(os.path.join(self._data_dir, 'level_data', filename), "w")
+        sfile = open(os.path.join(self._data_dir, 'level_data', self._filename), "w")
         for obj in self.objects:
             #If object with this name has already been added, skip it
             if obj.name in config.sections():
@@ -122,6 +126,9 @@ class EditLevel(Level):
         if obj in self.objects:
             self.objects.remove(obj)
 
+    def spawn_object(self, var_dict):
+        self.objects.add(ObjFactory(var_dict['type'], var_dict))
+
     def pre_place_object(self, filename):
         self.objects.add(ObjFactory('levelobject', {'name': 'pre_place',
                                                     'type': 'LevelObject',
@@ -131,7 +138,7 @@ class EditLevel(Level):
                                                     'w': 0,
                                                     'h': 0,
                                                     'layer': 15,
-                                                    'collide': 'False',
+                                                    'collide': 'True',
                                                     'trans': 'True',
                                                     'gravity': 'False'}))
         self.select_object(next((x for x in self.objects if x.name == 'pre_place'), None))
@@ -144,10 +151,20 @@ class EditLevel(Level):
     def place_object(self):
         print('placing object')
         if self.selected_obj:
+            #Executed only if no name is set
             if self.selected_obj.name is None or self.selected_obj.name == 'pre_place':
-                self.selected_obj.name = "LevelObject" + str(len(self.objects) + 1)
+                x = 1
+                while True:
+                    name = "LevelObject" + str(len(self.objects) + x)
+                    exisit = next((obj for obj in self.objects if obj.name == name), None)
+                    if exisit is None:
+                        self.selected_obj.name = name
+                        print('Placed: ' + name)
+                        break
+                    else:
+                        print(exisit.name + ' exists')
+                    x += 1
             self.selected_obj = None
-            print(str(self.selected_obj))
         else:
             print("Trying to place an object, but none is selected")
 
@@ -174,23 +191,12 @@ class EditLevel(Level):
     def select_object(self, obj):
         if obj:
             self.selected_obj = obj
+            self.sel_target.resize(self.selected_obj.rect)
         else:
             print('NoneType sent to select_object')
 
-    #bounds checking? Error checking?
-    def edit_object(self, var_list):
-        """Set new variables for object, must obey order"""
-        print('editing object')
-        if len(var_list) > 7 and self.selected_obj:
-            self.selected_obj.name = var_list[0]
-            self.selected_obj.rect.x = to_num(var_list[1])
-            self.selected_obj.rect.y = to_num(var_list[2])
-            self.selected_obj.idle_anim.scale((to_num(var_list[3]), to_num(var_list[4])))
-            self.selected_obj.obey_gravity = to_bool(var_list[5])
-            self.selected_obj.collidable = to_bool(var_list[6])
-            self.selected_obj._layer = to_num(var_list[7])
-            #After editing, place object in level
-            print(str(self.selected_obj))
-            self.place_object()
-        else:
-            print("Not enough variables passed to edit object or there is no object selected")
+    def edit_object(self, var_dict):
+        """Remove selected object and spawn an object using variables passed"""
+        self.remove_object(self.selected_obj)
+        self.selected_obj = None
+        self.spawn_object(var_dict)

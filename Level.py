@@ -4,7 +4,7 @@ import os
 from HelpFunctions import load_image, to_num
 from Constants import PLAYER
 from Camera import Camera
-from LevelObjFactory import ObjFactory
+from ObjectFactory import ObjFactory
 from Gui.GuiManager import GuiManager
 
 
@@ -81,7 +81,7 @@ class Level():
         #update object positions
         for obj in self.objects:
             obj.update()
-            if obj.obey_gravity and obj.rect.y + obj.rect.h < self.height:
+            if obj.obey_gravity:
                 obj.do_gravity(self.gravity)
         self.check_collisions()
         self.camera.update(self.player)
