@@ -51,8 +51,8 @@ class Platform(LevelObject):
                     return
             self.state = FINISHED
 
-    def serialize(self, config):
-        LevelObject.serialize(self, config)
-        config.set(self.name, 'recipe', self.recipe_list)
-        config.set(self.name, 'good', self.good_file)
-        config.set(self.name, 'bad', self.bad_file)
+    def provide_type_vars(self):
+        LevelObject.provide_type_vars(self)
+        yield (self.name, 'recipe', self.recipe_list)
+        yield (self.name, 'good', self.good_file)
+        yield (self.name, 'bad', self.bad_file)

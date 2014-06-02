@@ -2,10 +2,11 @@ import configparser
 import pygame
 import os
 from HelpFunctions import load_image, to_num
-from Constants import PLAYER
+from Constants import PLAYER, BUILD_PROC
 from Camera import Camera
 from ObjectFactory import ObjFactory
 from Gui.GuiManager import GuiManager
+from BuildManager import BuildManager
 
 
 class Background(pygame.sprite.Sprite):
@@ -33,6 +34,7 @@ class Level():
         self.player = self._get_player_from_objects()
         self.input_binds = []
         self.gui_manager = GuiManager()
+        self.build_manager = BuildManager(self.spawn_object)
 
     def get_filename(self):
         return self._filename
@@ -83,6 +85,8 @@ class Level():
             obj.update()
             if obj.obey_gravity:
                 obj.do_gravity(self.gravity)
+            if obj.type == BUILD_PROC:
+                self.build_manager.check_build(obj)
         self.check_collisions()
         self.camera.update(self.player)
 
@@ -109,3 +113,6 @@ class Level():
             return col_objs
         else:
             return None
+
+    def spawn_object(self, var_dict):
+        self.objects.add(ObjFactory(var_dict['type'], var_dict))

@@ -29,10 +29,11 @@ class LevelObject(BaseObject):
         self.rect.y = var_dict['y']
         self.col_objects = []
         self.on_object = None
-        self._layer = var_dict['layer']
-        self.collidable = to_bool(var_dict['collide'])
+        self._layer = var_dict['_layer']
+        self.layer = self._layer
+        self.collidable = to_bool(var_dict['collidable'])
         self.idle_anim.play()
-        self.obey_gravity = to_bool(var_dict['gravity'])
+        self.obey_gravity = to_bool(var_dict['obey_gravity'])
         self.visible = True
 
     def draw(self, screen, translated):
@@ -57,22 +58,19 @@ class LevelObject(BaseObject):
         elif obj in self.col_objects:
             self.col_objects.remove(obj)
 
+    def config_files(self, config, counter):
+        config.set(self.name, 'file' + str(counter), self.files[counter])
+        if counter >= len(self.files):
+            counter += 1
+            self.config_files(config, counter)
+
+    def provide_type_vars(self):
+        BaseObject.provide_type_vars(self)
+        yield ('type', obj_type_str(self.type))
+        yield ('layer', str(self._layer))
+        yield ('trans', "True")  # Transparency
+        for file, i in enumerate(self.files):
+            yield ('file' + str(i), self.files[i])
+
     def serialize(self, config):
         BaseObject.serialize(self, config)
-        config.set(self.name, 'layer', str(self._layer))
-        config.set(self.name, 'trans', "True")
-
-        i = 1
-        for fobj in self.files:
-            config.set(self.name, 'file' + str(i), fobj)
-            i += 1
-
-    #NOT USED
-    def get_prop_enum(self):
-        prop_dict = {}
-        prop_dict['type'] = obj_type_str(self.type)
-        prop_dict['layer'] = self._layer
-        prop_dict['trans'] = "True"
-        prop_dict['file1'] = self.files[0]
-        for prop in prop_dict:
-            yield prop, prop_dict[prop]

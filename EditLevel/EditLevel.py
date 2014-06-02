@@ -11,6 +11,7 @@ from Gui.GuiStates.GuiLevelOptions import GuiLevelOptions
 from Gui.GuiStates.GuiQuitLevel import GuiQuitLevel
 from Gui.GuiStates.GuiObjSearch import GuiObjSearch
 from Gui.GuiStates.GuiEditObj import GuiEditObj
+from Objects.Part import Part
 
 
 class EditLevel(Level):
@@ -126,9 +127,6 @@ class EditLevel(Level):
         if obj in self.objects:
             self.objects.remove(obj)
 
-    def spawn_object(self, var_dict):
-        self.objects.add(ObjFactory(var_dict['type'], var_dict))
-
     def pre_place_object(self, filename):
         self.objects.add(ObjFactory('levelobject', {'name': 'pre_place',
                                                     'type': 'LevelObject',
@@ -137,10 +135,10 @@ class EditLevel(Level):
                                                     'y': pygame.mouse.get_pos()[Y],
                                                     'w': 0,
                                                     'h': 0,
-                                                    'layer': 15,
-                                                    'collide': 'True',
+                                                    '_layer': 15,
+                                                    'collidable': 'True',
                                                     'trans': 'True',
-                                                    'gravity': 'False'}))
+                                                    'obey_gravity': 'False'}))
         self.select_object(next((x for x in self.objects if x.name == 'pre_place'), None))
 
     def update_pre_place_pos(self, x, y):

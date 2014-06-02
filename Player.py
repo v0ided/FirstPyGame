@@ -40,9 +40,9 @@ class PlayerSprite(BaseObject):
         self.animation = Animation_Player()
 
         #Jumping Animation:
-        self.jumping_anim = pyganim.PygAnimation([(os.path.join('player_jumping1.png'), .4),
-                                                  (os.path.join('player_jumping2.png'), .4),
-                                                  (os.path.join('player_jumping3.png'), .5)])
+        self.jumping_anim = pyganim.PygAnimation([(os.path.join('player_jumping1.png'), .35),
+                                                  (os.path.join('player_jumping2.png'), .35),
+                                                  (os.path.join('player_jumping3.png'), .35)])
         self.jumping_anim.set_colorkey((255, 255, 255))
 
         #Walking Animation:

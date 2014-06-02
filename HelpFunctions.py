@@ -96,6 +96,8 @@ def obj_type_str(obj_type):
         return "platform"
     if obj_type == BUILD_PROC:
         return "buildprocess"
+    if obj_type == PART:
+        return "part"
 
 
 def index_by_value(value, container):

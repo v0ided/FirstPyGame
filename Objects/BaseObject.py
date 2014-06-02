@@ -38,6 +38,9 @@ class BaseObject(pygame.sprite.Sprite):
         self.behaviors = [to_behavior(str_behavior) for str_behavior in str_behaviors if str_behavior != NOTHING]
         print(self.name + " behaviors: " + str(len(self.behaviors)))
 
+        #self.type_vars = {'type': self.type, 'x': self.rect.x, 'y': self.rect.y, 'w': self.rect.w, 'h': self.rect.h,
+                          #'gravity': self.obey_gravity, 'collide': self.collidable}
+
         BaseObject._objects.append(self)
 
     @staticmethod
@@ -100,15 +103,36 @@ class BaseObject(pygame.sprite.Sprite):
         self.rect.x += self.xvel
         self.rect.y += self.yvel
 
-    #Argument is configparser object
     def serialize(self, config):
-        config.add_section(self.name)
-        config.set(self.name, 'type', obj_type_str(self.type))
-        config.set(self.name, 'x', str(self.rect.x))
-        config.set(self.name, 'y', str(self.rect.y))
-        config.set(self.name, 'w', str(self.rect.w))
-        config.set(self.name, 'h', str(self.rect.h))
-        config.set(self.name, 'gravity', str(self.obey_gravity))
-        config.set(self.name, 'collide', str(self.collidable))
-        for i, behavior in enumerate(self.behaviors):
-            config.set(self.name, 'behavior' + str(i), behavior_str(behavior))
+        try:
+            config.add_section(self.name)
+            member_vars = vars(self)
+            for name, value in member_vars.items():
+                #If value is None, give it a blank string
+                if value is None:
+                    value = ''
+                #If value is the type, convert it for readability
+                if name == 'type':
+                    value = obj_type_str(value)
+                #If its a rect, save the x,y,w,h as seperate variables
+                if name == 'rect':
+                    config.set(self.name, 'x', str(value.x))
+                    config.set(self.name, 'y', str(value.y))
+                    config.set(self.name, 'w', str(value.w))
+                    config.set(self.name, 'h', str(value.h))
+                #If files, enumerate and save
+                if name == 'files':
+                    i = 1
+                    for f in value:
+                        config.set(self.name, 'file' + str(i), f)
+                        i += 1
+
+                #If value is int, convert it to string
+                if isinstance(value, int):
+                    value = str(value)
+                #Save any strings data type member variables to file
+                if isinstance(value, str):
+                    config.set(self.name, name, value)
+        except TypeError as exception:
+            print(exception)
+            raise

@@ -1,8 +1,10 @@
 __author__ = 'thvoidedline'
 
+import pygame
 from Gui.GuiObjectFactory import GuiObjFactory
 from Keybindings import Keybindings
-from Constants import *
+from Constants import BUTTON
+from Binding import Binding
 
 
 class GuiState():
@@ -26,12 +28,14 @@ class GuiState():
     def create(self, *args):
         print('GuiState parent create called')
         self._active = True
+        self.keybindings.add(EscExitBind(pygame.K_ESCAPE, self))
 
     #Delete any data that needs to be reset or is only wanted when the state is active (such as keybindings)
     def destroy(self):
         print('GuiState parent destroy called')
         self.focus(None)
         self._active = False
+        self.keybindings.remove(pygame.K_ESCAPE)
 
     def toggle(self, *args):
         if self._active:
@@ -141,3 +145,15 @@ class GuiState():
 
         self.focus(self.controls[self._focus_index])
         print(str(self._focus_index))
+
+
+class EscExitBind(Binding):
+    def __init__(self, key, *args):
+        Binding.__init__(self, key, *args)
+
+    def function(self):
+        try:
+            self.args[0].destroy()
+        except KeyError:
+            print('invalid state sent to EscExitBind')
+            raise

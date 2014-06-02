@@ -172,22 +172,15 @@ class CraneObject(LevelObject):
         else:
             self._power = True
 
-    def serialize(self, config):
-        #Save as levelobject if no arm exists. Cranes must have arms..
-        #Must precede LevelObject.serialize for type change to save, this is why
-        #LevelObject.serlialize is on both sides of the if statement
-        if not self.arm:
-            self.type = LEVEL_OBJECT
-            LevelObject.serialize(self, config)
-        else:
-            LevelObject.serialize(self, config)
-            config.set(self.name, 'xmin', str(self.xmin))
-            config.set(self.name, 'ymin', str(self.ymin))
-            config.set(self.name, 'xmax', str(self.xmax))
-            config.set(self.name, 'ymax', str(self.ymax))
-            config.set(self.name, 'xhome', str(self.xhome))
-            config.set(self.name, 'yhome', str(self.yhome))
-            config.set(self.name, 'xspeed', str(self.xspeed))
-            config.set(self.name, 'yspeed', str(self.yspeed))
-            config.set(self.name, 'arm', self.arm.name)
+    def provide_type_vars(self):
+        LevelObject.provide_type_vars(self)
+        yield (self.name, 'xmin', str(self.xmin))
+        yield (self.name, 'ymin', str(self.ymin))
+        yield (self.name, 'xmax', str(self.xmax))
+        yield self.name, 'ymax', str(self.ymax)
+        yield (self.name, 'xhome', str(self.xhome))
+        yield (self.name, 'yhome', str(self.yhome))
+        yield (self.name, 'xspeed', str(self.xspeed))
+        yield (self.name, 'yspeed', str(self.yspeed))
+        yield (self.name, 'arm', self.arm.name)
 

@@ -75,7 +75,7 @@ class GuiEditObj(GuiState):
                             'font_size': 18, 'text': "Layer:"})
             layerfield = self.add(TXT_BOX, {'name': 'layertxtbox', 'cords': (400, 455), 'bg_color': (255, 255, 255)})
             layerfield.text = str(obj._layer)
-            confirm_bttn.attach('layer', layerfield)
+            confirm_bttn.attach('_layer', layerfield)
 
             self.add(TEXT, {'name': 'typelabel', 'cords': (310, 480), 'font_color': (234, 234, 234),
                             'font_size': 18, 'text': "Type:"})
