@@ -26,6 +26,28 @@ def search_file(path, term):
     return results
 
 
+def to_string(var_name, value):
+    """Attempts to convert several known types to str"""
+    var_str = ''
+    if value is None:
+        var_str = ''
+    elif var_name == 'type':
+        var_str = obj_type_str(value)
+    #If files, create comma delim string
+    elif var_name == 'files':
+        for f in value:
+            var_str += f + ','
+    #If value is int, convert it to string
+    elif isinstance(value, int) or isinstance(value, float):
+        var_str = str(value)
+    #Save any strings data type member variables to file
+    elif isinstance(value, str):
+        var_str = value
+
+    print(var_name + ": " + var_str)
+    return var_str
+
+
 def to_num(s):
     try:
         s = int(s)

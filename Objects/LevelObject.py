@@ -7,16 +7,17 @@ class LevelObject(BaseObject):
     def __init__(self, var_dict):
         BaseObject.__init__(self, var_dict)
         self.type = LEVEL_OBJECT
-        self.files = []
+        self.files = var_dict['files'].split(',')
 
-        if 'file2' in var_dict.keys():
-            self.files.append(var_dict['file2'])
-            self.idle_anim = pyganim.PygAnimation([(os.path.join(var_dict['file1']), .75),
-                                                   (os.path.join(var_dict['file2']), .75)])
+        #HACK - ANIMATION WILL CHANGE THIS
+        #If files is larger than 1, create animation with 2 frames
+        if len(self.files) > 1 and self.files[1] != '':
+            self.idle_anim = pyganim.PygAnimation([(os.path.join(self.files[0]), .75),
+                                                   (os.path.join(self.files[1]), .75)])
             self.idle_anim.set_colorkey((255, 255, 255))
-        elif 'file1' in var_dict.keys():
-            self.files.append(var_dict['file1'])
-            self.idle_anim = pyganim.PygAnimation([(os.path.join(var_dict['file1']), 1)])
+        #Else if files has 1 file, create animation with 1 frame
+        elif len(self.files) > 0:
+            self.idle_anim = pyganim.PygAnimation([(os.path.join(self.files[0]), 1)])
             self.idle_anim.set_colorkey((255, 255, 255))
 
         #If width or height is 0, use default w/h

@@ -21,13 +21,13 @@ class BaseObject(pygame.sprite.Sprite):
         self.maxXvel = 8
         self.maxYvel = 8
         self.move_dir = DIR_LEFT
-        x = var_dict.get('x', 'no')
-        y = var_dict.get('y', 'no')
-        w = var_dict.get('w', 'no')
-        h = var_dict.get('h', 'no')
+        self.x = var_dict.get('x', 'no')
+        self.y = var_dict.get('y', 'no')
+        self.w = var_dict.get('w', 'no')
+        self.h = var_dict.get('h', 'no')
         #Not None because 0 = False
-        if x != 'no' and y != 'no' and w != 'no' and h != 'no':
-            self.rect = pygame.Rect(x, y, w, h)
+        if self.x != 'no' and self.y != 'no' and self.w != 'no' and self.h != 'no':
+            self.rect = pygame.Rect(self.x, self.y, self.w, self.h)
         else:
             print(self.name + " is missing a value")
             self.rect = pygame.Rect(0, 0, 0, 0)
@@ -102,37 +102,15 @@ class BaseObject(pygame.sprite.Sprite):
     def _update_pos(self):
         self.rect.x += self.xvel
         self.rect.y += self.yvel
+        self.x = self.rect.x
+        self.y = self.rect.y
 
     def serialize(self, config):
         try:
             config.add_section(self.name)
             member_vars = vars(self)
             for name, value in member_vars.items():
-                #If value is None, give it a blank string
-                if value is None:
-                    value = ''
-                #If value is the type, convert it for readability
-                if name == 'type':
-                    value = obj_type_str(value)
-                #If its a rect, save the x,y,w,h as seperate variables
-                if name == 'rect':
-                    config.set(self.name, 'x', str(value.x))
-                    config.set(self.name, 'y', str(value.y))
-                    config.set(self.name, 'w', str(value.w))
-                    config.set(self.name, 'h', str(value.h))
-                #If files, enumerate and save
-                if name == 'files':
-                    i = 1
-                    for f in value:
-                        config.set(self.name, 'file' + str(i), f)
-                        i += 1
-
-                #If value is int, convert it to string
-                if isinstance(value, int):
-                    value = str(value)
-                #Save any strings data type member variables to file
-                if isinstance(value, str):
-                    config.set(self.name, name, value)
+                config.set(self.name, name, to_string(name, value))
         except TypeError as exception:
             print(exception)
             raise

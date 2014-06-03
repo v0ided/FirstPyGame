@@ -21,4 +21,3 @@ def ObjFactory(obj_type, var_dict):
         return Part(var_dict)
     else:
         print("Unknown type sent to object factory.")
-
