@@ -1,6 +1,7 @@
 import pyganim
 from Objects.BaseObject import *
 from HelpFunctions import to_bool
+from Animation import Animation
 
 
 class LevelObject(BaseObject):
@@ -8,17 +9,20 @@ class LevelObject(BaseObject):
         BaseObject.__init__(self, var_dict)
         self.type = LEVEL_OBJECT
         self.files = var_dict['files'].split(',')
+        self.times = var_dict['times'].split(',')
 
         #HACK - ANIMATION WILL CHANGE THIS
         #If files is larger than 1, create animation with 2 frames
-        if len(self.files) > 1 and self.files[1] != '':
-            self.idle_anim = pyganim.PygAnimation([(os.path.join(self.files[0]), .75),
-                                                   (os.path.join(self.files[1]), .75)])
-            self.idle_anim.set_colorkey((255, 255, 255))
-        #Else if files has 1 file, create animation with 1 frame
-        elif len(self.files) > 0:
-            self.idle_anim = pyganim.PygAnimation([(os.path.join(self.files[0]), 1)])
-            self.idle_anim.set_colorkey((255, 255, 255))
+        # if len(self.files) > 1 and self.files[1] != '':
+        #     self.idle_anim = pyganim.PygAnimation([(os.path.join(self.files[0]), .75),
+        #                                            (os.path.join(self.files[1]), .75)])
+        #     self.idle_anim.set_colorkey((255, 255, 255))
+        # #Else if files has 1 file, create animation with 1 frame
+        # elif len(self.files) > 0:
+        #     self.idle_anim = pyganim.PygAnimation([(os.path.join(self.files[0]), 1)])
+        #     self.idle_anim.set_colorkey((255, 255, 255))
+
+        self.idle_anim = Animation(self.files, self.times)
 
         #If width or height is 0, use default w/h
         if var_dict['w'] == 0 or var_dict['h'] == 0:
@@ -64,14 +68,6 @@ class LevelObject(BaseObject):
         if counter >= len(self.files):
             counter += 1
             self.config_files(config, counter)
-
-    def provide_type_vars(self):
-        BaseObject.provide_type_vars(self)
-        yield ('type', obj_type_str(self.type))
-        yield ('layer', str(self._layer))
-        yield ('trans', "True")  # Transparency
-        for file, i in enumerate(self.files):
-            yield ('file' + str(i), self.files[i])
 
     def serialize(self, config):
         BaseObject.serialize(self, config)

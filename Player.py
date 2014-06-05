@@ -1,10 +1,15 @@
-import os
+__author__ = 'thvoidedline'
+
 
 from Objects.BaseObject import BaseObject
-import pyganim
+from Animation import Animation
 from Timer import Timer
 from Constants import *
 from AnimationPlayer import Animation_Player
+
+IDLE_ANIM = 0
+WALK_ANIM = 1
+JUMP_ANIM = 2
 
 
 class PlayerSprite(BaseObject):
@@ -26,8 +31,7 @@ class PlayerSprite(BaseObject):
         self.j_delay_timer = Timer(50, self.__next_jump_state, False)
         self.jump_timer = Timer(240, self.__next_jump_state, False)
         self._layer = 10
-        #array of objects currently colliding with
-        #used to track objects that are possible to interact with
+        #Array of objects currently colliding with rect - Tracks objects that are possible to interact with
         self.pos_interact = []
         self.held_item = None
         self.drop_item = None
@@ -37,41 +41,40 @@ class PlayerSprite(BaseObject):
         self.obey_gravity = True
         self.visible = True
 
-        self.animation = Animation_Player()
-
-        #Jumping Animation:
-        self.jumping_anim = pyganim.PygAnimation([(os.path.join('player_jumping1.png'), .35),
-                                                  (os.path.join('player_jumping2.png'), .35),
-                                                  (os.path.join('player_jumping3.png'), .35)])
-        self.jumping_anim.set_colorkey((255, 255, 255))
-
-        #Walking Animation:
-        self.walking_anim = pyganim.PygAnimation([(os.path.join('player_walking1.png'), 0.15),
-                                                  (os.path.join('player_walking2.png'), 0.15),
-                                                  (os.path.join('player_walking3.png'), 0.15),
-                                                  (os.path.join('player_walking4.png'), 0.15),
-                                                  (os.path.join('player_walking5.png'), 0.15),
-                                                  (os.path.join('player_walking6.png'), 0.15),
-                                                  (os.path.join('player_walking7.png'), 0.15),
-                                                  (os.path.join('player_walking8.png'), 0.15),
-                                                  (os.path.join('player_walking9.png'), 0.15),
-                                                  (os.path.join('player_walking10.png'), 0.15)])
+        self.idle_files = var_dict['idle_files'].split(',')
+        self.idle_times = var_dict['idle_times'].split(',')
+        self.jump_files = var_dict['jump_files'].split(',')
+        self.jump_times = var_dict['jump_times'].split(',')
+        self.walk_files = var_dict['walk_files'].split(',')
+        self.walk_times = var_dict['walk_times'].split(',')
+        self.idle_anim = Animation(self.idle_files, self.idle_times)
+        self.jumping_anim = Animation(self.jump_files, self.jump_times)
+        self.walking_anim = Animation(self.walk_files, self.walk_times)
         self.walking_anim.set_colorkey((255, 255, 255))
-        self.walking_anim.play()
+
+        if var_dict['w'] == 0 or var_dict['h'] == 0:
+            self.rect.w = self.idle_anim.getRect().w
+            self.rect.h = self.idle_anim.getRect().h
+        else:
+            pass
+            #Needs to scale all animations while keeping aspect ratio.
+            #self.walking_anim.scale((var_dict['w'], var_dict['h']))
+            #self.jumping_anim.scale((var_dict['w'], var_dict['h']))
+        self.anim_player = Animation_Player()
+        self.anim_player.add(self.walking_anim, WALK_ANIM)
+        self.anim_player.add(self.jumping_anim, JUMP_ANIM)
+        self.anim_player.add(self.idle_anim, IDLE_ANIM)
+        self.anim_player.set(IDLE_ANIM, True)
 
     def draw(self, screen, rect_loc):
         if self.jump_state > 0:
-            self.jumping_anim.play()
-            self.walking_anim.stop()
-            self.jumping_anim.blit(screen, rect_loc)
+            self.anim_player.set(JUMP_ANIM)
         elif self.iswalking is True:
-            self.walking_anim.play()
-            self.jumping_anim.stop()
-            self.walking_anim.blit(screen, rect_loc)
+            self.anim_player.set(WALK_ANIM)
         else:
-            self.walking_anim.play()
-            self.jumping_anim.stop()
-            self.walking_anim.blitFrameNum(0, screen, rect_loc)
+            self.anim_player.set(IDLE_ANIM)
+
+        self.anim_player.draw(screen, rect_loc)
 
     def move(self):
         if self.iswalking is False:
@@ -121,17 +124,23 @@ class PlayerSprite(BaseObject):
         #check if changing direction, if so lessen x velocity
         if player_dir != self.direction:
             self.xvel -= self.xvel / 2
-            self._flip_image()
+            self.anim_player.flip()
         self.direction = player_dir
         self.iswalking = True
 
-    # This function checks if the object is colliding and handles how the player
-    # responds to collisions and maintains the list of possible interactive objects
     def collide(self, obj):
+        """Returns if object is colliding, calls _respond_collision on True and _check_pos_interact every time"""
+        colliding = False
         if self.rect.colliderect(obj.rect):
-            if obj not in self.pos_interact:
-                    self.pos_interact.append(obj)
-            if obj.collidable:
+            colliding = True
+            self._respond_collision(obj)
+
+        self._check_pos_interact(obj, colliding)
+        return colliding
+
+    def _respond_collision(self, obj):
+        """Responds to a collision, trusts the caller that the objects are colliding"""
+        if obj.collidable:
                 #save the last collided object
                 self.col_object = obj
                 if obj.rect.collidepoint(self.rect.midbottom):
@@ -148,13 +157,15 @@ class PlayerSprite(BaseObject):
                 elif obj.rect.collidepoint(self.rect.bottomright):
                     if self.direction == DIR_RIGHT:
                         self.xvel = 0
+
+    def _check_pos_interact(self, obj, colliding):
+        """Maintains list of objects with possible interaction"""
+        if colliding:
+            if obj not in self.pos_interact:
+                self.pos_interact.append(obj)
         else:
             if obj in self.pos_interact:
-                    self.pos_interact.remove(obj)
-
-    def _flip_image(self):
-        self.walking_anim.flip(True, False)
-        self.jumping_anim.flip(True, False)
+                self.pos_interact.remove(obj)
 
     def __next_jump_state(self):
         if self.jump_state == NOT_JUMPING:

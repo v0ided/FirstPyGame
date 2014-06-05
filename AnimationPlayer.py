@@ -14,7 +14,7 @@ class Animation_Player:
             print('Invalid Animation or Id')
             raise KeyError
 
-    def set(self, anim_id, is_idle_anim):
+    def set(self, anim_id, is_idle_anim=False):
         try:
             self._current_id = anim_id
             if is_idle_anim:
@@ -22,8 +22,12 @@ class Animation_Player:
         except TypeError:
             print("Invalid animation id")
             raise TypeError
+        self.play()
 
     def draw(self, screen, loc):
+        if self._current_id is None:
+            return
+
         try:
             self.anims[self._current_id].blit(screen, loc)
         except (TypeError, KeyError):
@@ -31,6 +35,9 @@ class Animation_Player:
             raise KeyError
 
     def play(self):
+        if self._current_id is None:
+            return
+
         try:
             self.anims[self._current_id].play()
         except KeyError:
@@ -38,6 +45,9 @@ class Animation_Player:
             raise KeyError
 
     def pause(self):
+        if self._current_id is None:
+            return
+
         try:
             self.anims[self._current_id].pause()
         except KeyError:
@@ -45,8 +55,21 @@ class Animation_Player:
             raise KeyError
 
     def stop(self):
+        if self._current_id is None:
+            return
+
         try:
-            self.anims[self._current_id].play()
+            self.anims[self._current_id].stop()
         except KeyError:
             print('Invalid or no current animation')
             raise KeyError
+
+    def flip(self, anim_id=None):
+        """"Flip animations on the x axis, if anim_id=None, flip all animations"""
+        if anim_id is None:
+            [anim.flip(True, False) for anim in self.anims.values()]
+        else:
+            try:
+                self.anims[anim_id].flip(True, False)
+            except KeyError:
+                print('Invalid id sent to flip function. Valid animations ids are:' + str(self.anims.keys()))

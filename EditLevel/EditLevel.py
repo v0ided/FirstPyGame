@@ -130,7 +130,8 @@ class EditLevel(Level):
     def pre_place_object(self, filename):
         self.objects.add(ObjFactory('levelobject', {'name': 'pre_place',
                                                     'type': 'LevelObject',
-                                                    'file1': filename,
+                                                    'files': filename,
+                                                    'times': '1',
                                                     'x': pygame.mouse.get_pos()[X],
                                                     'y': pygame.mouse.get_pos()[Y],
                                                     'w': 0,

@@ -48,6 +48,14 @@ class BaseObject(pygame.sprite.Sprite):
         obj = next((x for x in BaseObject._objects if x.name == obj_name), None)
         return obj
 
+    def __eq__(self, other):
+        if type(other) is type(self):
+            return self.name == other.name
+        return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
     def interact(self, obj, behavior):
         return
 

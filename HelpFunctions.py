@@ -33,10 +33,13 @@ def to_string(var_name, value):
         var_str = ''
     elif var_name == 'type':
         var_str = obj_type_str(value)
-    #If files, create comma delim string
-    elif var_name == 'files':
-        for f in value:
-            var_str += f + ','
+    #If list, create comma delim string
+    elif isinstance(value, list):
+        for item in value:
+            if isinstance(item, int) or isinstance(item, float) or isinstance(item, str):
+                var_str += str(item) + ','
+        #var_str = var_str.rstrip(',')
+        print(var_str)
     #If value is int, convert it to string
     elif isinstance(value, int) or isinstance(value, float):
         var_str = str(value)
@@ -44,7 +47,6 @@ def to_string(var_name, value):
     elif isinstance(value, str):
         var_str = value
 
-    print(var_name + ": " + var_str)
     return var_str
 
 
